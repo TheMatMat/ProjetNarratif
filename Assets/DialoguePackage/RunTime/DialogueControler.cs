@@ -81,6 +81,7 @@ public class DialogueControler : MonoBehaviour
                     sentences.Enqueue(other.sentence.FR);
                 }
 
+
                 DisplayNextSentence();
                 break;
 
