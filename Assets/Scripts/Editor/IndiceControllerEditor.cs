@@ -12,15 +12,14 @@ public class IndiceControllerEditor : Editor
 
     private IndiceController _source;
 
-    private int _indiceIndex = 0;
-    private IndiceData _data;
+    private int _indiceIndex;
 
     public void OnEnable()
     {
         _source = (IndiceController)target;
     }
 
-    public override void OnInspectorGUI()
+    /*public override void OnInspectorGUI()
     {
         InitStyle();
 
@@ -54,9 +53,10 @@ public class IndiceControllerEditor : Editor
             GUILayout.Label("Select the evidence you want:", _titles);
             GUILayout.Space(10);
             _indiceIndex = EditorGUILayout.Popup(_indiceIndex == 0 ? 0 : _indiceIndex, indiceNames.ToArray());
-            EditorGUILayout.EndHorizontal();
-
             _source.data = _source.indiceDB.indiceDatas[_indiceIndex];
+
+            Debug.Log(_indiceIndex);
+            EditorGUILayout.EndHorizontal();
         }
 
         void DrawEvidencePreview()
@@ -89,7 +89,7 @@ public class IndiceControllerEditor : Editor
 
             EditorGUILayout.EndVertical();
         }
-    }
+    }*/
 
     public void InitStyle()
     {

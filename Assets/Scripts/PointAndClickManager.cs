@@ -7,10 +7,14 @@ using UnityEngine;
 public class PointAndClickManager : MonoBehaviour
 {
     public GameObject inventory;
+    public GameObject detailPanel;
     public GameObject EvidenceIconPrefab;
+
+    public EvidenceInventoryController tempEIC = null;
 
     private static PointAndClickManager instance = null;
     public static PointAndClickManager Instance => instance;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -25,14 +29,16 @@ public class PointAndClickManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void NewEvidenceFound(IndiceData data)
+
+    public void NewEvidenceFound(IndiceController indiceController)
     {
         GameObject newIcon = Instantiate(EvidenceIconPrefab, inventory.transform);
+        newIcon.SetActive(false);
 
-        EvidenceInventoryController eic = newIcon.GetComponent<EvidenceInventoryController>();
+        EvidenceInventoryController eIC = newIcon.GetComponent<EvidenceInventoryController>();
+        eIC.correspondingIndiceController = indiceController;
 
-        eic.Appear();
-
-        eic.data = data;
+        tempEIC = eIC;
+        detailPanel.GetComponent<DetailPanelController>().FadeIn(indiceController.evidenceData.detailSprite);
     }
 }
