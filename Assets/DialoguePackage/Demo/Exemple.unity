@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &95937538
 RectTransform:
   m_ObjectHideFlags: 0
@@ -283,6 +283,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &247194551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247194552}
+  m_Layer: 5
+  m_Name: 'RIGHT_PLACE '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &247194552
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247194551}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410915067}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -225, y: 425}
+  m_SizeDelta: {x: 300, y: 420}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &254668996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 254668997}
+  m_Layer: 5
+  m_Name: LEFT_PLACE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &254668997
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254668996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410915067}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 225, y: 425}
+  m_SizeDelta: {x: 300, y: 420}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &348684626
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +792,108 @@ MonoBehaviour:
   csvFile:
   - {fileID: 4900000, guid: 6521b6b1c9e28bb46847bb5f09292cca, type: 3}
   - {fileID: 4900000, guid: 4abbebc3bf6a77c4f9abc1b5155960bc, type: 3}
-  allDialogueEvents: []
+  allDialogueEvents:
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 1
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: custom
+          FR: 1234679
+          EN: 
+        csvIndex: -1
+        animEnter: 0
+        emotion: 0
+      - sentence:
+          ID: 1
+          FR: Bonjour
+          EN: Hello
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 2
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: 10
+          FR: je ne sais pas
+          EN: I don't know
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+      - sentence:
+          ID: 3
+          FR: Je suis inocent
+          EN: I'm innocent
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+  - <source>k__BackingField: 1
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 1
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: 10
+          FR: Feu
+          EN: Fire
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+      - sentence:
+          ID: 10
+          FR: "Je suis \xE0 sec"
+          EN: I'm dry
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+      - sentence:
+          ID: 5
+          FR: "David essaie de se rappeler si dans la lanc\xE9e de sa jeunesse fougueuse,
+            il n\u2019aurait pas install\xE9 une bombe logique sur les ordinateurs
+            de l\u2019arm\xE9e, mais il ne se rappelait pas avoir fait une telle
+            b\xEAtise. Planter tout le syst\xE8me informatique de la base aurait
+            \xE9t\xE9 trop grave de cons\xE9quences."
+          EN: David tried to remember if in the heat of his youth he would have installed
+            a logic bomb on the army computers, but he didn't remember doing anything
+            stupid like that. Crashing the entire base computer system would have
+            been too serious a consequence.
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+  - <source>k__BackingField: 1
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 1
+      screenPos: 1
   delaiAutoPass: 4
 --- !u!4 &848481279
 Transform:
@@ -954,7 +1127,7 @@ RectTransform:
   - {fileID: 616478750}
   - {fileID: 348684627}
   m_Father: {fileID: 1410915067}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1031,6 +1204,8 @@ RectTransform:
   m_Children:
   - {fileID: 95937538}
   - {fileID: 1428499943}
+  - {fileID: 254668997}
+  - {fileID: 247194552}
   - {fileID: 1373503190}
   m_Father: {fileID: 1753761069}
   m_RootOrder: 1
@@ -1054,8 +1229,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameSpeeker: {fileID: 616478751}
   txtSentence: {fileID: 1688126319}
-  imgSpriteLeft: {fileID: 95937539}
-  imgSpriteRight: {fileID: 1428499944}
+  leftSpace: {fileID: 254668997}
+  rightSpace: {fileID: 247194552}
+  characterPrefab: {fileID: 6769246621376394222, guid: a28485f349644eb4c82ae6fad204433e, type: 3}
 --- !u!82 &1410915069
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1169,7 +1345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1428499943
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1352,7 +1528,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1688126320

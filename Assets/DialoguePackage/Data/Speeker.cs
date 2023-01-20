@@ -9,7 +9,7 @@ public class Speeker
     public struct SpeekerStatu
     {
         public EMOTION emotion;
-        public Animation animation;
+        public AnimationClip animation;
     }
 
     [System.Serializable]

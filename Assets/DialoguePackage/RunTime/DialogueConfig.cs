@@ -62,10 +62,8 @@ public class DialogueConfig : MonoBehaviour
 
     public void StartDialogue()
     {
-        Debug.Log("INIT");
         if (DialogueControler.instance)
         {
-            Debug.Log("INSTANCE");
             DialogueControler.instance.StartDialogue(this, this.speekerConfig);
         }
     }

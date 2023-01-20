@@ -14,6 +14,7 @@ public class DialogueEvent
 
     public SentenceConfig sentenceConfig = null;
     public EventConfig eventConfig = null;
+    //public ChoiceConfig choiceConfig = null;
 
     public DialogueEvent(SentenceConfig _Sc)
     {
@@ -26,6 +27,12 @@ public class DialogueEvent
         source = TYPE_EVENT.EVENT;
         eventConfig = _Ec;
     }
+
+    /*public DialogueEvent(ChoiceConfig Cc)
+    {
+        source = TYPE_EVENT.CHOICE;
+        choiceConfig = Cc;
+    }*/
 
     public enum TYPE_EVENT
     {

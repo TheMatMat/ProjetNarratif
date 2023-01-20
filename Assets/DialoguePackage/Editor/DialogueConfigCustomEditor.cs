@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System.Linq;
+using System.Reflection;
 
 [CustomEditor(typeof(DialogueConfig))]
 [CanEditMultipleObjects]
@@ -26,6 +27,9 @@ public class DialogueConfigCustomEditor : Editor
 
     private List<string> speekerName = new List<string>();
     private List<string> csvName = new List<string>();
+
+    private DialogueConfig lastSave;
+    private bool isDirty;
 
     public struct Result
     {
@@ -209,7 +213,12 @@ public class DialogueConfigCustomEditor : Editor
             }
 
             GUILayout.Space(10);
+            //int b = currentDialogueEvent.idSpeeker;
             currentDialogueEvent.idSpeeker = EditorGUILayout.Popup(currentDialogueEvent.idSpeeker, speekerName.ToArray(), GUILayout.Width(150));
+
+            /*if (b != currentDialogueEvent.idSpeeker)
+                isDirty = true;*/
+
             GUILayout.FlexibleSpace();
 
             if (GUILayout.Button(new GUIContent("", "Move the speeker up"), "up", GUILayout.Width(20f)))
@@ -360,14 +369,25 @@ public class DialogueConfigCustomEditor : Editor
 
         GUILayout.Space(20);
         if (GUILayout.Button(new GUIContent("Add speeker", "Add a new speeker")))
+        {
             _source.allDialogueEvents.Add(new DialogueEvent(new SentenceConfig()));
+
+        }
         
         GUILayout.Space(5);
 
         if (GUILayout.Button(new GUIContent("Add Event", "Add a new event")))
+        {
             _source.allDialogueEvents.Add(new DialogueEvent(new EventConfig()));
+            isDirty = true;
+        }
         
         GUILayout.Space(40);
+
+        if (isDirty)
+        {
+            EditorUtility.SetDirty(_source);
+        }
     }
 
     private void Refresh()
