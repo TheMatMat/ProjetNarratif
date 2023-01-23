@@ -90,9 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2af7128638c41e4ca264729985db74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indiceDB: {fileID: 11400000, guid: 033043225b354f2499de80bfa4e620c9, type: 2}
-  data:
-    name: blood
+  evidenceData:
+    evidenceName: 
     sceneID: 0
     sceneSprite: {fileID: 0}
     detailSprite: {fileID: 0}
@@ -116,7 +115,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 5692217297725007402}
           m_TargetAssemblyTypeName: IndiceController, Assembly-CSharp
-          m_MethodName: OnPointerDown
+          m_MethodName: OnPointerDownScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

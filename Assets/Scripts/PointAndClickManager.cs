@@ -6,11 +6,12 @@ using UnityEngine;
 
 public class PointAndClickManager : MonoBehaviour
 {
-    public GameObject inventory;
+    public GameObject inventoryElements;
+    public GameObject detailElement;
     public GameObject detailPanel;
     public GameObject EvidenceIconPrefab;
 
-    public EvidenceInventoryController tempEIC = null;
+    public InventoryController inventoryController;
 
     private static PointAndClickManager instance = null;
     public static PointAndClickManager Instance => instance;
@@ -32,13 +33,15 @@ public class PointAndClickManager : MonoBehaviour
 
     public void NewEvidenceFound(IndiceController indiceController)
     {
-        GameObject newIcon = Instantiate(EvidenceIconPrefab, inventory.transform);
-        newIcon.SetActive(false);
+        GameObject newIcon = Instantiate(EvidenceIconPrefab, inventoryController.inventoryElements.transform);
+        newIcon.GetComponent<IndiceController>().evidenceData = indiceController.evidenceData;
+        newIcon.GetComponent<IndiceController>().InitSprite(1);
 
-        EvidenceInventoryController eIC = newIcon.GetComponent<EvidenceInventoryController>();
-        eIC.correspondingIndiceController = indiceController;
-
-        tempEIC = eIC;
         detailPanel.GetComponent<DetailPanelController>().FadeIn(indiceController.evidenceData.detailSprite);
+    }
+
+    public void ShowOneEvidenceInfos(IndiceController indiceController)
+    {
+        inventoryController.DetailElementInOut(indiceController);
     }
 }

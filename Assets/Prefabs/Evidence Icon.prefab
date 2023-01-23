@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5540701806687018911}
   - component: {fileID: 3584873284535931373}
   - component: {fileID: 2969689429561858899}
-  - component: {fileID: 4729628798025986632}
   - component: {fileID: -7022518001087936959}
+  - component: {fileID: 3324970949087825367}
   m_Layer: 5
   m_Name: Evidence Icon
   m_TagString: Untagged
@@ -78,19 +78,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4729628798025986632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4345859106080472570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4035e8b7ae1aaa743a11811d71b94193, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correspondingIndiceController: {fileID: 0}
 --- !u!114 &-7022518001087936959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,9 +95,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4729628798025986632}
-          m_TargetAssemblyTypeName: EvidenceInventoryController, Assembly-CSharp
-          m_MethodName: ShowDetail
+        - m_Target: {fileID: 3324970949087825367}
+          m_TargetAssemblyTypeName: IndiceController, Assembly-CSharp
+          m_MethodName: OnPointerDownInventory
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -120,3 +107,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &3324970949087825367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345859106080472570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2af7128638c41e4ca264729985db74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evidenceData:
+    evidenceName: 
+    sceneID: 0
+    sceneSprite: {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
+    detailSprite: {fileID: 0}
+    inventorySprite: {fileID: 21300000, guid: d6a44ab95b0def041a7929981a2c23a1, type: 3}

@@ -10,7 +10,7 @@ public class DetailPanelController : MonoBehaviour
     public Image blackBG;
     public Image detailSprite;
 
-    public Transform startPos, endPos;
+    public Transform endPos, startPosUp, startPosRight;
 
     public bool isFading = false;
 
@@ -18,7 +18,7 @@ public class DetailPanelController : MonoBehaviour
     void Start()
     {
         this.gameObject.SetActive(false);
-        detailSprite.transform.position = startPos.transform.position;
+        detailSprite.transform.position = startPosUp.transform.position;
     }
 
     public void FadeIn(Sprite spriteToDisplay)
@@ -38,7 +38,7 @@ public class DetailPanelController : MonoBehaviour
         detailSprite.gameObject.transform.DOMove(endPos.transform.position, 0.8f).OnComplete(() => SetState(true));
     }
 
-    public void FadeOut()
+    public void FadeOut(bool isFirstTime = true)
     {
         if (isFading)
             return;
@@ -48,10 +48,8 @@ public class DetailPanelController : MonoBehaviour
         blackBG.DOFade(0f, 0.2f);
 
         detailSprite.DOFade(0f, 0.4f);
-        detailSprite.gameObject.transform.DOMove(startPos.transform.position, 0.8f).OnComplete(() => SetState(false));
 
-        if (PointAndClickManager.Instance.tempEIC != null)
-            PointAndClickManager.Instance.tempEIC.ShowInInventory();
+        detailSprite.gameObject.transform.DOMove(startPosUp.transform.position, 0.8f).OnComplete(() => SetState(false));
     }
 
     public void SetState(bool newState)

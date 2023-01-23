@@ -27,11 +27,13 @@ public class IndiceController : MonoBehaviour
 
     [Header("evidence data")]
     public EvidenceData evidenceData;
+    private Image _sprite;
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Image>().sprite = evidenceData.sceneSprite;
+        _sprite = this.GetComponent<Image>();
+        InitSprite(0);
     }
 
     // Update is called once per frame
@@ -40,7 +42,23 @@ public class IndiceController : MonoBehaviour
         
     }
 
-    public void OnPointerDown()
+    public void InitSprite(int mode = 0)
+    {
+        if (_sprite == null)
+            return;
+
+        switch (mode)
+        {
+            case 0:
+                this.GetComponent<Image>().sprite = evidenceData.sceneSprite;
+                break;
+            case 1:
+                this.GetComponent<Image>().sprite = evidenceData.inventorySprite;
+                break;
+        }
+    }
+
+    public void OnPointerDownScene()
     {
         Debug.Log("indice has been found: " + evidenceData.evidenceName);
 
@@ -52,5 +70,11 @@ public class IndiceController : MonoBehaviour
         disapearSequence.Play();
 
         PointAndClickManager.Instance.NewEvidenceFound(this);
+    }
+
+    public void OnPointerDownInventory()
+    {
+        PointAndClickManager.Instance.ShowOneEvidenceInfos(this);
+        Debug.Log("this indice is: " + evidenceData.evidenceName);
     }
 }
