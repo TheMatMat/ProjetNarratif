@@ -67,14 +67,14 @@ public class InventoryController : MonoBehaviour
         {
             Sequence changeSprite = DOTween.Sequence();
 
-            changeSprite.Append(evidenceDetailSprite.DOFade(0f, 0.2f).OnComplete(() => evidenceDetailSprite.sprite = indiceController.evidenceData.detailSprite));
-            changeSprite.Append(evidenceDetailSprite.DOFade(1.0f, 0.2f));
+            changeSprite.Append(evidenceDetailSprite.DOFade(0f, 0.3f).OnComplete(() => UpdateVisibleData(indiceController)));
+            changeSprite.Append(evidenceDetailSprite.DOFade(1.0f, 0.3f));
 
             changeSprite.Play();
         }
         else
         {
-            evidenceDetailSprite.sprite = indiceController.evidenceData.detailSprite;
+            UpdateVisibleData(indiceController);
             evidenceDetail.transform.DOMove(evidenceVisiblePos.position, 0.5f);
             blackBG.DOFade(0.8f, 0.2f);
 
@@ -82,18 +82,9 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    public void ShowDetail()
+    private void UpdateVisibleData(IndiceController indiceController)
     {
-        if (!correspondingIndiceController)
-            return;
-
-        dPC.FadeIn(correspondingIndiceController.evidenceData.detailSprite);
-        Debug.Log("show detail: " + correspondingIndiceController.evidenceData.evidenceName);
-    }
-
-    public void HideDetail()
-    {
-        dPC.FadeOut();
-        Debug.Log("hide detail: " + correspondingIndiceController.evidenceData.evidenceName);
+        evidenceDetailSprite.sprite = indiceController.evidenceData.detailSprite;
+        evidenceDetailText.text = indiceController.evidenceData.evidenceDescription;
     }
 }

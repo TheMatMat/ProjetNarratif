@@ -13,15 +13,15 @@ public class IndiceController : MonoBehaviour
         public int sceneID;
         public Sprite sceneSprite;
         public Sprite detailSprite;
-        public Sprite inventorySprite;
+        [TextArea] public string evidenceDescription;
 
-        public EvidenceData(string _evidenceName, int _sceneID, Sprite _sceneSprite, Sprite _detailSprite, Sprite _inventorySprite)
+        public EvidenceData(string _evidenceName, int _sceneID, Sprite _sceneSprite, Sprite _detailSprite, string _evidenceDescription)
         {
             evidenceName = _evidenceName;
             sceneID = _sceneID;
             sceneSprite = _sceneSprite;
             detailSprite = _detailSprite;
-            inventorySprite = _inventorySprite;
+            evidenceDescription = _evidenceDescription;
         }
     }
 
@@ -53,7 +53,7 @@ public class IndiceController : MonoBehaviour
                 this.GetComponent<Image>().sprite = evidenceData.sceneSprite;
                 break;
             case 1:
-                this.GetComponent<Image>().sprite = evidenceData.inventorySprite;
+                this.GetComponent<Image>().sprite = evidenceData.detailSprite;
                 break;
         }
     }
