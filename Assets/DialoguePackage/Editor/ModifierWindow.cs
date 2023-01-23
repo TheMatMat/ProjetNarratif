@@ -181,11 +181,11 @@ public class ModifierWindow : EditorWindow
         }
     }
 
-    private void OnLostFocus()
+    /*private void OnLostFocus()
     {
         //Close();
         Debug.Log("FOCUS EVENT");
-    }
+    }*/
 
     private void Initialize()
     {

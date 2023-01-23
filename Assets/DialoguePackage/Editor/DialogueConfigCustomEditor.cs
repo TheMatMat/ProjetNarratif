@@ -352,7 +352,29 @@ public class DialogueConfigCustomEditor : Editor
                 #region CHOICE
                 else if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.CHOICE)
                 {
+                    for (int it = 0; it < currentDialogueEvent.choiceConfig.allChoices.Count; it++)
+                    {
+                        GUILayout.BeginVertical("actionin");
+                        string a = GUILayout.TextArea(currentDialogueEvent.choiceConfig.allChoices[it].sentence.FR);
+                        string b = GUILayout.TextArea(currentDialogueEvent.choiceConfig.allChoices[it].sentence.EN);
 
+
+                        currentDialogueEvent.choiceConfig.allChoices[it] = new ChoiceConfig.Choice(new DialogueTable.Row(a,b), currentDialogueEvent.choiceConfig.allChoices[it].OnClick);
+
+                        SerializedProperty m_event = serializedObject.FindProperty("allDialogueEvents").GetArrayElementAtIndex(currentIndex).FindPropertyRelative("choiceConfig").FindPropertyRelative("allChoices").GetArrayElementAtIndex(it).FindPropertyRelative("OnClick");
+                        EditorGUILayout.PropertyField(m_event);
+                        serializedObject.ApplyModifiedProperties();
+
+                        if (GUILayout.Button("Delete", "buttoncenter"))
+                            currentDialogueEvent.choiceConfig.allChoices.RemoveAt(it);
+
+                        GUILayout.EndVertical();
+                    }
+
+
+                    if(currentDialogueEvent.choiceConfig.allChoices.Count < 4)
+                        if(GUILayout.Button(new GUIContent("Add Answer", "Add a new answer")))
+                            currentDialogueEvent.choiceConfig.allChoices.Add(new ChoiceConfig.Choice());
                 }
                 #endregion
             }

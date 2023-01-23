@@ -20,6 +20,8 @@ public class DialogueControler : MonoBehaviour
     public Transform rightSpace;
     public Transform middleSpace;
     public GameObject characterPrefab;
+    public GameObject choice;
+    public Transform choiceButtonParent;
 
     private DialogueConfig _dialog;
     private SpeekerConfig _speekerConfig;
@@ -27,6 +29,8 @@ public class DialogueControler : MonoBehaviour
     private int eventCount = -1;
 
     private List<GameObject> speakerInScene = new List<GameObject>();
+    private GameObject lastSpeaker;
+
     private Queue<SentenceConfig.Sentence> sentences = new Queue<SentenceConfig.Sentence>();
     private AudioSource _audioSource;
 
@@ -84,6 +88,7 @@ public class DialogueControler : MonoBehaviour
         _dialog = dialogue;
         _speekerConfig = speekers;
         gameObject.SetActive(true);
+        lastSpeaker = null;
 
         DialoguePanelOpen = true;
 
@@ -114,7 +119,39 @@ public class DialogueControler : MonoBehaviour
                 break;
         }
     }
-    
+
+
+    private void NewSentenceConfiguration(DialogueEvent dialogueEvent)
+    {
+        nameSpeeker.text = _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name;
+        sentences.Clear();
+
+        // Changement de personnage hombre/lumière
+        if(lastSpeaker && lastSpeaker.name != _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name)
+        {
+            // DECOLORATION
+            lastSpeaker.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
+        }
+
+        foreach(GameObject speaker in speakerInScene)
+        {
+            if(speaker.name == _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name)
+            {
+                // COLORATION
+                lastSpeaker = speaker;
+                lastSpeaker.GetComponent<Image>().color = new Color(1f, 1f, 1f);
+                break;
+            }
+        }
+
+        foreach (SentenceConfig.Sentence other in dialogueEvent.sentenceConfig.talking)
+        {
+            sentences.Enqueue(other);
+        }
+
+        DisplayNextSentence();
+    }
+
     public void DisplayNextSentence()
     {
         if (!haveFinishDisplaySentence) return;
@@ -126,6 +163,7 @@ public class DialogueControler : MonoBehaviour
         }
 
         SentenceConfig.Sentence sentence = sentences.Dequeue();
+        StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
 
@@ -146,6 +184,7 @@ public class DialogueControler : MonoBehaviour
                 break;
         }
 
+        // ------------------------------------------------ TO DO ------------------------------------------------ //
         // ANIMATION
 
         foreach (char letter in traductSentence.ToCharArray())
@@ -155,23 +194,12 @@ public class DialogueControler : MonoBehaviour
         }
 
         haveFinishDisplaySentence = true;
-    }
 
-
-    private void NewSentenceConfiguration(DialogueEvent dialogueEvent)
-    {
-        nameSpeeker.text = _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name;
-        sentences.Clear();
-
-        // ------------------------------------------------ TO DO ------------------------------------------------ //
-        // Changement de personnage hombre/lumière
-
-        foreach (SentenceConfig.Sentence other in dialogueEvent.sentenceConfig.talking)
+        if (_dialog.allDialogueEvents[eventCount].autoPass)
         {
-            sentences.Enqueue(other);
+            yield return new WaitForSeconds(_dialog.delaiAutoPass);
+            DisplayNextSentence();
         }
-
-        DisplayNextSentence();
     }
 
     private void NewEventConfiguration(DialogueEvent dialogueEvent)
@@ -190,14 +218,16 @@ public class DialogueControler : MonoBehaviour
                         break;
 
                     case EventConfig.POSITION.RIGHT:
-                        character = Instantiate<GameObject>(characterPrefab, leftSpace);
+                        character = Instantiate<GameObject>(characterPrefab, rightSpace);
                         break;
 
                     case EventConfig.POSITION.MIDDLE:
-                        character = Instantiate<GameObject>(characterPrefab, leftSpace);
+                        character = Instantiate<GameObject>(characterPrefab, middleSpace);
                         break;
                 }
                 break;
+
+                //character = Instantiate<GameObject>(characterPrefab,
 
             case EventConfig.ACTION_TYPE.SPEAKER_OUT:
 
@@ -217,6 +247,9 @@ public class DialogueControler : MonoBehaviour
         character.name = _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name;
         speakerInScene.Add(character);
         UpdateCharacterProfile(character);
+
+        if (dialogueEvent.autoPass)
+            StartCoroutine(AutomaticPass());
     }
 
     private void UpdateCharacterProfile(GameObject prefab, Speaker.EMOTION _emotion = Speaker.EMOTION.NEUTRAL)
@@ -244,7 +277,7 @@ public class DialogueControler : MonoBehaviour
     private IEnumerator AutomaticPass()
     {
         yield return new WaitForSeconds(_dialog.delaiAutoPass);
-        
+        NextDialogueEvent();
     }
 
     private void DialogueEnd()
