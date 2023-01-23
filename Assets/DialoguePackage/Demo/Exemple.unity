@@ -283,6 +283,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &184099373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184099374}
+  m_Layer: 5
+  m_Name: MIDDLE_PLACE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &184099374
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184099373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410915067}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -295}
+  m_SizeDelta: {x: 300, y: 420}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &247194551
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +830,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 4abbebc3bf6a77c4f9abc1b5155960bc, type: 3}
   allDialogueEvents:
   - <source>k__BackingField: 0
-    isColapse: 1
+    isColapse: 0
     idSpeeker: 1
     autoPass: 0
     sentenceConfig:
@@ -823,16 +859,16 @@ MonoBehaviour:
     sentenceConfig:
       talking:
       - sentence:
-          ID: 10
-          FR: je ne sais pas
-          EN: I don't know
+          ID: 3
+          FR: Je suis inocent
+          EN: I'm innocent
         csvIndex: 0
         animEnter: 0
         emotion: 0
       - sentence:
-          ID: 3
-          FR: Je suis inocent
-          EN: I'm innocent
+          ID: 10
+          FR: je ne sais pas
+          EN: I don't know
         csvIndex: 0
         animEnter: 0
         emotion: 0
@@ -847,7 +883,7 @@ MonoBehaviour:
       talking: []
     eventConfig:
       actionType: 0
-      screenPos: 1
+      screenPos: 2
   - <source>k__BackingField: 0
     isColapse: 1
     idSpeeker: 0
@@ -859,14 +895,14 @@ MonoBehaviour:
           FR: Feu
           EN: Fire
         csvIndex: 0
-        animEnter: 0
+        animEnter: 1
         emotion: 0
       - sentence:
           ID: 10
           FR: "Je suis \xE0 sec"
           EN: I'm dry
         csvIndex: 0
-        animEnter: 0
+        animEnter: 1
         emotion: 0
       - sentence:
           ID: 5
@@ -894,6 +930,51 @@ MonoBehaviour:
     eventConfig:
       actionType: 1
       screenPos: 1
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 3
+    autoPass: 0
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+  - <source>k__BackingField: 2
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+  - <source>k__BackingField: 1
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+  - <source>k__BackingField: 2
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 0
   delaiAutoPass: 4
 --- !u!4 &848481279
 Transform:
@@ -1127,7 +1208,7 @@ RectTransform:
   - {fileID: 616478750}
   - {fileID: 348684627}
   m_Father: {fileID: 1410915067}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1206,6 +1287,7 @@ RectTransform:
   - {fileID: 1428499943}
   - {fileID: 254668997}
   - {fileID: 247194552}
+  - {fileID: 184099374}
   - {fileID: 1373503190}
   m_Father: {fileID: 1753761069}
   m_RootOrder: 1
@@ -1231,6 +1313,7 @@ MonoBehaviour:
   txtSentence: {fileID: 1688126319}
   leftSpace: {fileID: 254668997}
   rightSpace: {fileID: 247194552}
+  middleSpace: {fileID: 0}
   characterPrefab: {fileID: 6769246621376394222, guid: a28485f349644eb4c82ae6fad204433e, type: 3}
 --- !u!82 &1410915069
 AudioSource:

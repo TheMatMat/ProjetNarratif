@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public class DialogueControler : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class DialogueControler : MonoBehaviour
 
     public Transform leftSpace;
     public Transform rightSpace;
+    public Transform middleSpace;
     public GameObject characterPrefab;
 
     private DialogueConfig _dialog;
@@ -25,7 +27,7 @@ public class DialogueControler : MonoBehaviour
     private int eventCount = -1;
 
     private List<GameObject> speakerInScene = new List<GameObject>();
-    private Queue<string> sentences = new Queue<string>();
+    private Queue<SentenceConfig.Sentence> sentences = new Queue<SentenceConfig.Sentence>();
     private AudioSource _audioSource;
 
     private bool haveFinishDisplaySentence = true;
@@ -39,9 +41,17 @@ public class DialogueControler : MonoBehaviour
     [System.Serializable]
     public enum TEXT_ANIMATION
     {
-        DEFAULT,
-        GRADUAL_ONSET,
-        SHAKE
+        CHAR_ONSET,
+        CHAR_SHAKE,
+        CHAR_SHAKE_ONCE,
+
+        WORD_ONSET,
+        WORD_SHAKE,
+        WORD_SHAKE_ONCE,
+
+        SENT_ONSET,
+        SENT_SHAKE,
+        SENT_SHAKE_ONCE
     }
 
     
@@ -50,6 +60,9 @@ public class DialogueControler : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         instance = this;
         gameObject.SetActive(false);
+
+        // -------------------------------------------------------- TO REMOVE -------------------------------------------------------- //
+        gameLanguage = 0;
     }
 
     private void Update()
@@ -90,52 +103,16 @@ public class DialogueControler : MonoBehaviour
         switch (_dialog.allDialogueEvents[eventCount].source)
         {
             case DialogueEvent.TYPE_EVENT.SENTENCE:
-
-                nameSpeeker.text = _speekerConfig.allSpeekers[_dialog.allDialogueEvents[eventCount].idSpeeker].name;
-                sentences.Clear();
-
-                foreach (SentenceConfig.Sentence other in _dialog.allDialogueEvents[eventCount].sentenceConfig.talking)
-                {
-                    // -------------------------------------------------------- TO DO -------------------------------------------------------- //
-                    // Prendre la bonne traduction
-                    string whatToSay = "";
-
-                    switch (gameLanguage)
-                    {
-                        case 0:
-                            whatToSay = other.sentence.FR;
-                            break;
-                        case 1:
-                            whatToSay = other.sentence.EN;
-                            break;
-                    }
-
-                    sentences.Enqueue(whatToSay);
-                }
-
-
-                DisplayNextSentence();
+                NewSentenceConfiguration(_dialog.allDialogueEvents[eventCount]);
                 break;
 
             case DialogueEvent.TYPE_EVENT.EVENT:
-
-                NewEventConfiguration(_dialog.allDialogueEvents[eventCount].eventConfig, _dialog.allDialogueEvents[eventCount].idSpeeker);
+                NewEventConfiguration(_dialog.allDialogueEvents[eventCount]);
                 break;
 
             case DialogueEvent.TYPE_EVENT.CHOICE:
                 break;
         }
-    }
-
-    private void DialogueEnd()
-    {
-        eventCount = -1;
-
-        _dialog = null;
-        _speekerConfig = null;
-        DialoguePanelOpen = false;
-
-        gameObject.SetActive(false);
     }
     
     public void DisplayNextSentence()
@@ -148,16 +125,30 @@ public class DialogueControler : MonoBehaviour
             return;
         }
 
-        string sentence = sentences.Dequeue();
+        SentenceConfig.Sentence sentence = sentences.Dequeue();
         StartCoroutine(TypeSentence(sentence));
     }
 
-    private IEnumerator TypeSentence(string sentence)
+    private IEnumerator TypeSentence(SentenceConfig.Sentence sentence)
     {
         haveFinishDisplaySentence = false;
         txtSentence.text = "";
 
-        foreach (char letter in sentence.ToCharArray())
+        // TRADUCTION
+        string traductSentence = "...";
+        switch (gameLanguage)
+        {
+            case 0:
+                traductSentence = sentence.sentence.FR;
+                break;
+            case 1:
+                traductSentence = sentence.sentence.EN;
+                break;
+        }
+
+        // ANIMATION
+
+        foreach (char letter in traductSentence.ToCharArray())
         {
             txtSentence.text += letter;
             yield return new WaitForSeconds(0.1f);
@@ -167,16 +158,32 @@ public class DialogueControler : MonoBehaviour
     }
 
 
-    private void NewEventConfiguration(EventConfig eventConfig, int _idSpeeker)
+    private void NewSentenceConfiguration(DialogueEvent dialogueEvent)
+    {
+        nameSpeeker.text = _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name;
+        sentences.Clear();
+
+        // ------------------------------------------------ TO DO ------------------------------------------------ //
+        // Changement de personnage hombre/lumière
+
+        foreach (SentenceConfig.Sentence other in dialogueEvent.sentenceConfig.talking)
+        {
+            sentences.Enqueue(other);
+        }
+
+        DisplayNextSentence();
+    }
+
+    private void NewEventConfiguration(DialogueEvent dialogueEvent)
     {
         GameObject character = new GameObject();
 
-        switch (eventConfig.actionType)
+        switch (dialogueEvent.eventConfig.actionType)
         {
             case EventConfig.ACTION_TYPE.SPEAKER_IN:
 
                 Debug.Log("SPEEKER IN");
-                switch (eventConfig.screenPos)
+                switch (dialogueEvent.eventConfig.screenPos)
                 {
                     case EventConfig.POSITION.LEFT:
                         character = Instantiate<GameObject>(characterPrefab, leftSpace);
@@ -187,6 +194,7 @@ public class DialogueControler : MonoBehaviour
                         break;
 
                     case EventConfig.POSITION.MIDDLE:
+                        character = Instantiate<GameObject>(characterPrefab, leftSpace);
                         break;
                 }
                 break;
@@ -196,7 +204,7 @@ public class DialogueControler : MonoBehaviour
                 Debug.Log("SPEEKER OUT");
                 foreach(GameObject speaker in speakerInScene)
                 {
-                    if (speaker.name == _speekerConfig.allSpeekers[_idSpeeker].name)
+                    if (speaker.name == _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name)
                     {
                         speakerInScene.Remove(speaker);
                         Destroy(speaker);
@@ -206,12 +214,12 @@ public class DialogueControler : MonoBehaviour
                 break;
         }
 
-        character.name = _speekerConfig.allSpeekers[_idSpeeker].name;
+        character.name = _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name;
         speakerInScene.Add(character);
         UpdateCharacterProfile(character);
     }
 
-    private void UpdateCharacterProfile(GameObject prefab, Speeker.EMOTION _emotion = Speeker.EMOTION.NEUTRAL)
+    private void UpdateCharacterProfile(GameObject prefab, Speaker.EMOTION _emotion = Speaker.EMOTION.NEUTRAL)
     {
         int i = 0;
         for (; i < _speekerConfig.allSpeekers.Count; i++)
@@ -223,7 +231,7 @@ public class DialogueControler : MonoBehaviour
         if (i >= _speekerConfig.allSpeekers.Count) return;
 
         prefab.GetComponent<Image>().sprite = _speekerConfig.allSpeekers[i].sprite;
-        foreach (Speeker.SpeekerStatu other in _speekerConfig.allSpeekers[i].status)
+        foreach (Speaker.SpeekerStatu other in _speekerConfig.allSpeekers[i].status)
         {
             if(other.emotion == _emotion)
             {
@@ -231,6 +239,23 @@ public class DialogueControler : MonoBehaviour
                 break;
             }
         }
+    }
+
+    private IEnumerator AutomaticPass()
+    {
+        yield return new WaitForSeconds(_dialog.delaiAutoPass);
+        
+    }
+
+    private void DialogueEnd()
+    {
+        eventCount = -1;
+
+        _dialog = null;
+        _speekerConfig = null;
+        DialoguePanelOpen = false;
+
+        gameObject.SetActive(false);
     }
 
     /*
