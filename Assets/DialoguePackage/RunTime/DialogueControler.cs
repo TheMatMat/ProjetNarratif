@@ -206,7 +206,7 @@ public class DialogueControler : MonoBehaviour
         foreach (char letter in traductSentence.ToCharArray())
         {
             txtSentence.text += letter;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
         }
 
         alowInput = true;
