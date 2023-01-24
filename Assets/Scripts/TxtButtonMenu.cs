@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class TxtButtonMenu : MonoBehaviour
 {
     [SerializeField] private string FrTraduction;
     [SerializeField] private string EnTraduction;
+    [SerializeField] private Image img;
+
+    [Header("Img settings")]
+    [SerializeField] private Sprite francaisSprite;
+    [SerializeField] private Sprite englishSprite;
 
     private TextMeshProUGUI txtButton;
 
@@ -28,9 +34,14 @@ public class TxtButtonMenu : MonoBehaviour
         {
             case GameManager.LANGUAGE.FR:
                 txtButton.text = FrTraduction;
+                if (img)
+                    img.sprite = francaisSprite;
                 break;
+
             case GameManager.LANGUAGE.EN:
                 txtButton.text = EnTraduction;
+                if (img)
+                    img.sprite = englishSprite;
                 break;
         }
     }
