@@ -20,7 +20,7 @@ public class DialogueControler : MonoBehaviour
     public Transform rightSpace;
     public Transform middleSpace;
     public GameObject characterPrefab;
-    public GameObject choice;
+    public GameObject choiceGameObject;
     public Transform choiceButtonParent;
 
     private DialogueConfig _dialog;
@@ -34,7 +34,7 @@ public class DialogueControler : MonoBehaviour
     private Queue<SentenceConfig.Sentence> sentences = new Queue<SentenceConfig.Sentence>();
     private AudioSource _audioSource;
 
-    private bool haveFinishDisplaySentence = true;
+    private bool alowInput = true;
 
     //private int speekerCount = -1;
 
@@ -65,18 +65,20 @@ public class DialogueControler : MonoBehaviour
         instance = this;
         gameObject.SetActive(false);
 
+        nameSpeeker.text = "";
+        txtSentence.text = "";
+
         // -------------------------------------------------------- TO REMOVE -------------------------------------------------------- //
         gameLanguage = 0;
     }
 
     private void Update()
     {
-        if (!DialoguePanelOpen) return;
+        if (!DialoguePanelOpen || !alowInput) return;
 
         if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
             DisplayNextSentence();
-            Debug.Log("INPUT");
         }
     }
 
@@ -84,15 +86,27 @@ public class DialogueControler : MonoBehaviour
     {
         if (dialogue.allDialogueEvents.Count == 0) return;
 
-        // initialisation
-        _dialog = dialogue;
-        _speekerConfig = speekers;
-        gameObject.SetActive(true);
-        lastSpeaker = null;
+        // Start a dialogue with an other DialogueConfig
+        if (_dialog != null)
+        {
+            Debug.Log("RESTART NEW DIALOGUE");
+            eventCount = -1;
+            _dialog = dialogue;
+            _speekerConfig = speekers;
+        }
+        else
+        {
+            Debug.Log("new dialogue");
+            // initialisation
+            _dialog = dialogue;
+            _speekerConfig = speekers;
+            gameObject.SetActive(true);
+            lastSpeaker = null;
 
-        DialoguePanelOpen = true;
+            DialoguePanelOpen = true;
 
-        NextDialogueEvent();
+            NextDialogueEvent();
+        }
     }
 
     private void NextDialogueEvent()
@@ -116,6 +130,7 @@ public class DialogueControler : MonoBehaviour
                 break;
 
             case DialogueEvent.TYPE_EVENT.CHOICE:
+                NewChoiceConfiguration(_dialog.allDialogueEvents[eventCount]);
                 break;
         }
     }
@@ -154,8 +169,6 @@ public class DialogueControler : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if (!haveFinishDisplaySentence) return;
-
         if (sentences.Count == 0)
         {
             NextDialogueEvent();
@@ -169,7 +182,7 @@ public class DialogueControler : MonoBehaviour
 
     private IEnumerator TypeSentence(SentenceConfig.Sentence sentence)
     {
-        haveFinishDisplaySentence = false;
+        alowInput = false;
         txtSentence.text = "";
 
         // TRADUCTION
@@ -193,7 +206,7 @@ public class DialogueControler : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
 
-        haveFinishDisplaySentence = true;
+        alowInput = true;
 
         if (_dialog.allDialogueEvents[eventCount].autoPass)
         {
@@ -277,6 +290,55 @@ public class DialogueControler : MonoBehaviour
     private IEnumerator AutomaticPass()
     {
         yield return new WaitForSeconds(_dialog.delaiAutoPass);
+        NextDialogueEvent();
+    }
+
+    private void NewChoiceConfiguration(DialogueEvent dialogueEvent)
+    {
+        choiceGameObject.SetActive(true);
+        alowInput = false;
+
+        int i = 0;
+        for (; i < dialogueEvent.choiceConfig.allChoices.Count && i <= 4; i++)
+        {
+            choiceButtonParent.GetChild(i).gameObject.SetActive(true);
+
+            // Traduction
+            string traductSentence = "...";
+            switch (gameLanguage)
+            {
+                case 0:
+                    traductSentence = dialogueEvent.choiceConfig.allChoices[i].sentence.FR;
+                    break;
+                case 1:
+                    traductSentence = dialogueEvent.choiceConfig.allChoices[i].sentence.EN;
+                    break;
+            }
+
+            choiceButtonParent.GetChild(i).GetChild(0).GetComponent<TextMeshProUGUI>().text = traductSentence;
+        }
+
+        for (; i < choiceButtonParent.childCount; i++)
+            choiceButtonParent.GetChild(i).gameObject.SetActive(false);
+    }
+
+    public void OnClickButton(GameObject button)
+    {
+        choiceGameObject.SetActive(false);
+        alowInput = true;
+
+        int index = 0;
+        for (; index < choiceButtonParent.childCount; index++)
+        {
+            if (choiceButtonParent.GetChild(index).name == button.name)
+                return;
+        }
+
+        if (_dialog.allDialogueEvents[eventCount].choiceConfig.allChoices[index].OnClick != null)
+            Debug.Log("bite");
+
+        _dialog.allDialogueEvents[eventCount].choiceConfig.allChoices[index].OnClick?.Invoke();
+
         NextDialogueEvent();
     }
 

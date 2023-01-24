@@ -10,9 +10,9 @@ public class ChoiceConfig
     public struct Choice
     {
         public DialogueTable.Row sentence;
-        public UnityEvent OnClick;
+        public OnClickHandle OnClick;
 
-        public Choice(DialogueTable.Row _row, UnityEvent _event)
+        public Choice(DialogueTable.Row _row, OnClickHandle _event)
         {
             sentence = new DialogueTable.Row();
             sentence.FR = _row.FR;
@@ -21,6 +21,8 @@ public class ChoiceConfig
         }
     }
 
-    SentenceConfig.Sentence question;
+    public delegate void OnClickHandle();
+
+    //SentenceConfig.Sentence question;
     public List<Choice> allChoices = new List<Choice>();
 }

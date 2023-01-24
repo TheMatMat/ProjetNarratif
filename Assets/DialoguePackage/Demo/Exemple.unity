@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 238877337}
   - component: {fileID: 238877336}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: BUTTON_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -571,7 +571,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 238877337}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1410915068}
+        m_TargetAssemblyTypeName: DialogueControler, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 238877334}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &238877337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,6 +1132,43 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 6521b6b1c9e28bb46847bb5f09292cca, type: 3}
   - {fileID: 4900000, guid: 4abbebc3bf6a77c4f9abc1b5155960bc, type: 3}
   allDialogueEvents:
+  - <source>k__BackingField: 2
+    isColapse: 0
+    idSpeeker: 0
+    autoPass: 1
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+    choiceConfig:
+      allChoices:
+      - sentence:
+          ID: 
+          FR: choix 1
+          EN: 
+        OnClick:
+          m_PersistentCalls:
+            m_Calls: []
+      - sentence:
+          ID: 
+          FR: choix 2
+          EN: 
+        OnClick:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1912147039}
+              m_TargetAssemblyTypeName: DialogueConfig, Assembly-CSharp
+              m_MethodName: StartDialogue
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
   - <source>k__BackingField: 1
     isColapse: 1
     idSpeeker: 2
@@ -1264,17 +1313,6 @@ MonoBehaviour:
       screenPos: 0
     choiceConfig:
       allChoices: []
-  - <source>k__BackingField: 2
-    isColapse: 1
-    idSpeeker: 0
-    autoPass: 1
-    sentenceConfig:
-      talking: []
-    eventConfig:
-      actionType: 0
-      screenPos: 0
-    choiceConfig:
-      allChoices: []
   - <source>k__BackingField: 0
     isColapse: 1
     idSpeeker: 0
@@ -1286,38 +1324,6 @@ MonoBehaviour:
       screenPos: 0
     choiceConfig:
       allChoices: []
-  - <source>k__BackingField: 2
-    isColapse: 0
-    idSpeeker: 0
-    autoPass: 0
-    sentenceConfig:
-      talking: []
-    eventConfig:
-      actionType: 0
-      screenPos: 0
-    choiceConfig:
-      allChoices:
-      - sentence:
-          ID: 
-          FR: 
-          EN: 
-        OnClick:
-          m_PersistentCalls:
-            m_Calls: []
-      - sentence:
-          ID: 
-          FR: 
-          EN: 
-        OnClick:
-          m_PersistentCalls:
-            m_Calls: []
-      - sentence:
-          ID: 
-          FR: 
-          EN: 
-        OnClick:
-          m_PersistentCalls:
-            m_Calls: []
   delaiAutoPass: 1
 --- !u!4 &848481279
 Transform:
@@ -1665,7 +1671,7 @@ GameObject:
   - component: {fileID: 1225437050}
   - component: {fileID: 1225437049}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: BUTTON_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1735,7 +1741,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1225437050}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1410915068}
+        m_TargetAssemblyTypeName: DialogueControler, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1225437047}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1225437050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,7 +1884,7 @@ GameObject:
   - component: {fileID: 1401004344}
   - component: {fileID: 1401004343}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: BUTTON_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1936,7 +1954,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1401004344}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1410915068}
+        m_TargetAssemblyTypeName: DialogueControler, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1401004341}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1401004344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2036,7 +2066,7 @@ MonoBehaviour:
   rightSpace: {fileID: 247194552}
   middleSpace: {fileID: 0}
   characterPrefab: {fileID: 6769246621376394222, guid: a28485f349644eb4c82ae6fad204433e, type: 3}
-  choice: {fileID: 1669604134}
+  choiceGameObject: {fileID: 1669604134}
   choiceButtonParent: {fileID: 1529963597}
 --- !u!82 &1410915069
 AudioSource:
@@ -2214,7 +2244,7 @@ GameObject:
   - component: {fileID: 1638797583}
   - component: {fileID: 1638797582}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BUTTON_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2284,7 +2314,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1638797583}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1410915068}
+        m_TargetAssemblyTypeName: DialogueControler, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1638797580}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1638797583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2598,6 +2640,153 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1912147038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1912147040}
+  - component: {fileID: 1912147039}
+  m_Layer: 0
+  m_Name: DialogueConfig 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1912147039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912147038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35aa8768253fd9344aea3e002a3cbab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speekerConfig: {fileID: 11400000, guid: 0c3547c2b2a5c4c4b966c3ee78508364, type: 2}
+  csvFile:
+  - {fileID: 4900000, guid: 6521b6b1c9e28bb46847bb5f09292cca, type: 3}
+  - {fileID: 4900000, guid: 4abbebc3bf6a77c4f9abc1b5155960bc, type: 3}
+  allDialogueEvents:
+  - <source>k__BackingField: 1
+    isColapse: 1
+    idSpeeker: 1
+    autoPass: 0
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 1
+    autoPass: 1
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: custom
+          FR: 1234679
+          EN: 
+        csvIndex: -1
+        animEnter: 0
+        emotion: 0
+      - sentence:
+          ID: 1
+          FR: Bonjour
+          EN: Hello
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 1
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 1
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 2
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: 10
+          FR: Feu
+          EN: Fire
+        csvIndex: 0
+        animEnter: 1
+        emotion: 0
+      - sentence:
+          ID: 10
+          FR: "Je suis \xE0 sec"
+          EN: I'm dry
+        csvIndex: 0
+        animEnter: 1
+        emotion: 0
+      - sentence:
+          ID: 5
+          FR: "David essaie de se rappeler si dans la lanc\xE9e de sa jeunesse fougueuse,
+            il n\u2019aurait pas install\xE9 une bombe logique sur les ordinateurs
+            de l\u2019arm\xE9e, mais il ne se rappelait pas avoir fait une telle
+            b\xEAtise. Planter tout le syst\xE8me informatique de la base aurait
+            \xE9t\xE9 trop grave de cons\xE9quences."
+          EN: David tried to remember if in the heat of his youth he would have installed
+            a logic bomb on the army computers, but he didn't remember doing anything
+            stupid like that. Crashing the entire base computer system would have
+            been too serious a consequence.
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 1
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 1
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 1
+      screenPos: 1
+    choiceConfig:
+      allChoices: []
+  delaiAutoPass: 1
+--- !u!4 &1912147040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912147038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1948314404
 GameObject:
   m_ObjectHideFlags: 0

@@ -49,7 +49,8 @@ public class DialogueConfigCustomEditor : Editor
     private void OnDisable()
     {
         //searchResult.Clear();
-        EditorUtility.SetDirty(_source);
+        if(!EditorApplication.isPlaying)
+            EditorUtility.SetDirty(_source);
     }
 
     public override void OnInspectorGUI()
@@ -358,12 +359,22 @@ public class DialogueConfigCustomEditor : Editor
                         string a = GUILayout.TextArea(currentDialogueEvent.choiceConfig.allChoices[it].sentence.FR);
                         string b = GUILayout.TextArea(currentDialogueEvent.choiceConfig.allChoices[it].sentence.EN);
 
-
                         currentDialogueEvent.choiceConfig.allChoices[it] = new ChoiceConfig.Choice(new DialogueTable.Row(a,b), currentDialogueEvent.choiceConfig.allChoices[it].OnClick);
 
-                        SerializedProperty m_event = serializedObject.FindProperty("allDialogueEvents").GetArrayElementAtIndex(currentIndex).FindPropertyRelative("choiceConfig").FindPropertyRelative("allChoices").GetArrayElementAtIndex(it).FindPropertyRelative("OnClick");
+                        if (currentDialogueEvent.choiceConfig.allChoices[it].OnClick == null)
+                        {
+                            DialogueConfig newDialogue = null;
+                            newDialogue = (DialogueConfig)EditorGUILayout.ObjectField(newDialogue, typeof(DialogueConfig), true);
+
+                            if (newDialogue != null)
+                                currentDialogueEvent.choiceConfig.allChoices[it] = new ChoiceConfig.Choice(new DialogueTable.Row(a, b), newDialogue.StartDialogue);
+                        }
+                        else
+                            GUILayout.Label("Have a StartDialogue");
+
+                        /*SerializedProperty m_event = serializedObject.FindProperty("allDialogueEvents").GetArrayElementAtIndex(currentIndex).FindPropertyRelative("choiceConfig").FindPropertyRelative("allChoices").GetArrayElementAtIndex(it).FindPropertyRelative("OnClick");
                         EditorGUILayout.PropertyField(m_event);
-                        serializedObject.ApplyModifiedProperties();
+                        serializedObject.ApplyModifiedProperties();*/
 
                         if (GUILayout.Button("Delete", "buttoncenter"))
                             currentDialogueEvent.choiceConfig.allChoices.RemoveAt(it);
