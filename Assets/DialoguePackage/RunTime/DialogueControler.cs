@@ -216,8 +216,6 @@ public class DialogueControler : MonoBehaviour
     {
         GameObject character = null;
 
-
-
         switch (dialogueEvent.eventConfig.actionType)
         {
             case EventConfig.ACTION_TYPE.SPEAKER_IN:
@@ -260,14 +258,17 @@ public class DialogueControler : MonoBehaviour
                     }
                 }
                 break;
+
+            case EventConfig.ACTION_TYPE.CUSTOM_EVENT:
+                dialogueEvent.eventConfig.OnCustomEvent?.Invoke();
+                break;
         }
 
         character.name = _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name;
         speakerInScene.Add(character);
         UpdateCharacterProfile(character);
 
-        if (dialogueEvent.autoPass)
-            StartCoroutine(AutomaticPass());
+        NextDialogueEvent();
     }
 
     private void UpdateCharacterProfile(GameObject prefab, Speaker.EMOTION _emotion = Speaker.EMOTION.NEUTRAL)

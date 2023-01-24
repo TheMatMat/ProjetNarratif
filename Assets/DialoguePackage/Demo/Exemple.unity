@@ -511,6 +511,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 0
@@ -529,6 +532,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 2
@@ -540,6 +546,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices:
       - sentence:
@@ -609,6 +618,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 0
@@ -648,6 +660,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   delaiAutoPass: 0
@@ -715,6 +730,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices:
       - sentence:
@@ -752,6 +770,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 1
@@ -763,6 +784,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 0
@@ -788,6 +812,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 0
@@ -813,10 +840,13 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 1
-    isColapse: 1
+    isColapse: 0
     idSpeeker: 0
     autoPass: 1
     sentenceConfig:
@@ -824,6 +854,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 2
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 0
@@ -863,6 +896,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 1
@@ -874,6 +910,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 1
       screenPos: 1
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 0
@@ -885,6 +924,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 0
@@ -896,6 +938,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   delaiAutoPass: 1
@@ -1248,6 +1293,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 0
@@ -1273,6 +1321,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 1
@@ -1284,6 +1335,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 2
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 0
@@ -1323,6 +1377,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 0
       screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 1
@@ -1334,6 +1391,9 @@ MonoBehaviour:
     eventConfig:
       actionType: 1
       screenPos: 1
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
     choiceConfig:
       allChoices: []
   delaiAutoPass: 1

@@ -348,6 +348,12 @@ public class DialogueConfigCustomEditor : Editor
 
                     if(currentDialogueEvent.eventConfig.actionType == EventConfig.ACTION_TYPE.SPEAKER_IN)
                         currentDialogueEvent.eventConfig.screenPos = (EventConfig.POSITION)EditorGUILayout.EnumPopup(currentDialogueEvent.eventConfig.screenPos);
+                    else if(currentDialogueEvent.eventConfig.actionType == EventConfig.ACTION_TYPE.CUSTOM_EVENT)
+                    {
+                        SerializedProperty m_event = serializedObject.FindProperty("allDialogueEvents").GetArrayElementAtIndex(currentIndex).FindPropertyRelative("eventConfig").FindPropertyRelative("OnCustomEvent");
+                        EditorGUILayout.PropertyField(m_event);
+                        serializedObject.ApplyModifiedProperties();
+                    }
                 }
                 #endregion
                 #region CHOICE
