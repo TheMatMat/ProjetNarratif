@@ -6,10 +6,16 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
 
-    public int language { get; private set; }
+    public LANGUAGE language { get; private set; }
 
     public delegate void LanguageListner();
     public LanguageListner OnLanguageChange;
+
+    public enum LANGUAGE
+    {
+        FR,
+        EN
+    }
 
     private void Awake()
     {
@@ -22,15 +28,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        language = 0;
-        OnLanguageChange?.Invoke();
-    }
-
     public void ChangeLanguage()
     {
-        language = (language + 1) % 1;
+        language = (LANGUAGE)((language.GetHashCode() + 1) % 2);
         OnLanguageChange?.Invoke();
     }
 }

@@ -14,6 +14,7 @@ public class TxtButtonMenu : MonoBehaviour
     {
         txtButton = gameObject.GetComponent<TextMeshProUGUI>();
         GameManager.instance.OnLanguageChange += ChangeTxt;
+        ChangeTxt();
     }
 
     private void OnDisable()
@@ -25,10 +26,10 @@ public class TxtButtonMenu : MonoBehaviour
     {
         switch (GameManager.instance.language)
         {
-            case 0:
+            case GameManager.LANGUAGE.FR:
                 txtButton.text = FrTraduction;
                 break;
-            case 1:
+            case GameManager.LANGUAGE.EN:
                 txtButton.text = EnTraduction;
                 break;
         }

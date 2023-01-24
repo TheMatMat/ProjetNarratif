@@ -8,9 +8,6 @@ using DG.Tweening;
 public class DialogueControler : MonoBehaviour
 {
     public static DialogueControler instance { get; private set; }
-
-    private static int gameLanguage;
-    public static int GetSetGameLanguage { get { return gameLanguage; } set { gameLanguage = value; } }
     public bool DialoguePanelOpen { get; private set; }
 
     public TextMeshProUGUI nameSpeeker;
@@ -64,9 +61,6 @@ public class DialogueControler : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         instance = this;
         gameObject.SetActive(false);
-
-        // -------------------------------------------------------- TO REMOVE -------------------------------------------------------- //
-        gameLanguage = 0;
     }
 
     private void Update()
@@ -190,12 +184,12 @@ public class DialogueControler : MonoBehaviour
 
         // TRADUCTION
         string traductSentence = "...";
-        switch (gameLanguage)
+        switch (GameManager.instance.language)
         {
-            case 0:
+            case GameManager.LANGUAGE.FR:
                 traductSentence = sentence.sentence.FR;
                 break;
-            case 1:
+            case GameManager.LANGUAGE.EN:
                 traductSentence = sentence.sentence.EN;
                 break;
         }
@@ -316,12 +310,12 @@ public class DialogueControler : MonoBehaviour
 
             // Traduction
             string traductSentence = "...";
-            switch (gameLanguage)
+            switch (GameManager.instance.language)
             {
-                case 0:
+                case GameManager.LANGUAGE.FR:
                     traductSentence = dialogueEvent.choiceConfig.allChoices[i].sentence.FR;
                     break;
-                case 1:
+                case GameManager.LANGUAGE.EN:
                     traductSentence = dialogueEvent.choiceConfig.allChoices[i].sentence.EN;
                     break;
             }
