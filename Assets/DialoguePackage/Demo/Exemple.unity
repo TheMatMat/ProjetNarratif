@@ -2064,7 +2064,7 @@ MonoBehaviour:
   txtSentence: {fileID: 1688126319}
   leftSpace: {fileID: 254668997}
   rightSpace: {fileID: 247194552}
-  middleSpace: {fileID: 0}
+  middleSpace: {fileID: 184099374}
   characterPrefab: {fileID: 6769246621376394222, guid: a28485f349644eb4c82ae6fad204433e, type: 3}
   choiceGameObject: {fileID: 1669604134}
   choiceButtonParent: {fileID: 1529963597}

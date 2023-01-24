@@ -217,27 +217,29 @@ public class DialogueControler : MonoBehaviour
 
     private void NewEventConfiguration(DialogueEvent dialogueEvent)
     {
-        GameObject character = new GameObject();
+        GameObject character = null;
 
         switch (dialogueEvent.eventConfig.actionType)
         {
             case EventConfig.ACTION_TYPE.SPEAKER_IN:
-
                 //Debug.Log("SPEEKER IN");
+                Transform pos = leftSpace;
                 switch (dialogueEvent.eventConfig.screenPos)
                 {
                     case EventConfig.POSITION.LEFT:
-                        character = Instantiate(characterPrefab, leftSpace);
+                        pos = leftSpace;
                         break;
 
                     case EventConfig.POSITION.RIGHT:
-                        character = Instantiate(characterPrefab, rightSpace);
+                        pos = rightSpace;
                         break;
 
                     case EventConfig.POSITION.MIDDLE:
-                        character = Instantiate(characterPrefab, middleSpace);
+                        pos = middleSpace;
                         break;
                 }
+
+                character = Instantiate(characterPrefab, pos);
                 break;
 
             case EventConfig.ACTION_TYPE.SPEAKER_OUT:
