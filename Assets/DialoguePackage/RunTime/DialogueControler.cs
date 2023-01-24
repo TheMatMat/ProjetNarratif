@@ -223,28 +223,26 @@ public class DialogueControler : MonoBehaviour
         {
             case EventConfig.ACTION_TYPE.SPEAKER_IN:
 
-                Debug.Log("SPEEKER IN");
+                //Debug.Log("SPEEKER IN");
                 switch (dialogueEvent.eventConfig.screenPos)
                 {
                     case EventConfig.POSITION.LEFT:
-                        character = Instantiate<GameObject>(characterPrefab, leftSpace);
+                        character = Instantiate(characterPrefab, leftSpace);
                         break;
 
                     case EventConfig.POSITION.RIGHT:
-                        character = Instantiate<GameObject>(characterPrefab, rightSpace);
+                        character = Instantiate(characterPrefab, rightSpace);
                         break;
 
                     case EventConfig.POSITION.MIDDLE:
-                        character = Instantiate<GameObject>(characterPrefab, middleSpace);
+                        character = Instantiate(characterPrefab, middleSpace);
                         break;
                 }
                 break;
 
-                //character = Instantiate<GameObject>(characterPrefab,
-
             case EventConfig.ACTION_TYPE.SPEAKER_OUT:
 
-                Debug.Log("SPEEKER OUT");
+                //Debug.Log("SPEEKER OUT");
                 foreach(GameObject speaker in speakerInScene)
                 {
                     if (speaker.name == _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name)
@@ -324,6 +322,8 @@ public class DialogueControler : MonoBehaviour
 
     public void OnClickButton(GameObject button)
     {
+        Debug.Log("TU ME PRESSE");
+
         choiceGameObject.SetActive(false);
         alowInput = true;
 
@@ -331,11 +331,13 @@ public class DialogueControler : MonoBehaviour
         for (; index < choiceButtonParent.childCount; index++)
         {
             if (choiceButtonParent.GetChild(index).name == button.name)
-                return;
+                break;
         }
 
         if (_dialog.allDialogueEvents[eventCount].choiceConfig.allChoices[index].OnClick != null)
-            Debug.Log("bite");
+            Debug.Log("non null " + choiceButtonParent.GetChild(index).name);
+        else
+            Debug.Log("NULL " + choiceButtonParent.GetChild(index).name);
 
         _dialog.allDialogueEvents[eventCount].choiceConfig.allChoices[index].OnClick?.Invoke();
 

@@ -361,20 +361,20 @@ public class DialogueConfigCustomEditor : Editor
 
                         currentDialogueEvent.choiceConfig.allChoices[it] = new ChoiceConfig.Choice(new DialogueTable.Row(a,b), currentDialogueEvent.choiceConfig.allChoices[it].OnClick);
 
-                        if (currentDialogueEvent.choiceConfig.allChoices[it].OnClick == null)
+                        /*if (currentDialogueEvent.choiceConfig.allChoices[it].OnClick == null)
                         {
                             DialogueConfig newDialogue = null;
                             newDialogue = (DialogueConfig)EditorGUILayout.ObjectField(newDialogue, typeof(DialogueConfig), true);
 
                             if (newDialogue != null)
-                                currentDialogueEvent.choiceConfig.allChoices[it] = new ChoiceConfig.Choice(new DialogueTable.Row(a, b), newDialogue.StartDialogue);
+                                currentDialogueEvent.choiceConfig.allChoices[it] = new ChoiceConfig.Choice(new DialogueTable.Row(a, b), newDialogue.gameObject);
                         }
                         else
-                            GUILayout.Label("Have a StartDialogue");
+                            GUILayout.Label("Have a StartDialogue");*/
 
-                        /*SerializedProperty m_event = serializedObject.FindProperty("allDialogueEvents").GetArrayElementAtIndex(currentIndex).FindPropertyRelative("choiceConfig").FindPropertyRelative("allChoices").GetArrayElementAtIndex(it).FindPropertyRelative("OnClick");
+                        SerializedProperty m_event = serializedObject.FindProperty("allDialogueEvents").GetArrayElementAtIndex(currentIndex).FindPropertyRelative("choiceConfig").FindPropertyRelative("allChoices").GetArrayElementAtIndex(it).FindPropertyRelative("OnClick");
                         EditorGUILayout.PropertyField(m_event);
-                        serializedObject.ApplyModifiedProperties();*/
+                        serializedObject.ApplyModifiedProperties();
 
                         if (GUILayout.Button("Delete", "buttoncenter"))
                             currentDialogueEvent.choiceConfig.allChoices.RemoveAt(it);
