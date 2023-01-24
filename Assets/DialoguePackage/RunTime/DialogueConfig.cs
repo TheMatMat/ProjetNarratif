@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [System.Serializable]
 public class DialogueConfig : MonoBehaviour
@@ -62,10 +63,8 @@ public class DialogueConfig : MonoBehaviour
 
     public void StartDialogue()
     {
-        Debug.Log("INIT");
         if (DialogueControler.instance)
         {
-            Debug.Log("INSTANCE");
             DialogueControler.instance.StartDialogue(this, this.speekerConfig);
         }
     }

@@ -19,6 +19,13 @@ public class DialogueTable
 			FR = _first;
 			EN = "";
 		}
+
+		public Row(string _fr, string _en)
+        {
+			ID = "custom";
+			FR = _fr;
+			EN = _en;
+		}
 	}
 
 	

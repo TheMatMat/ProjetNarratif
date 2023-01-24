@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Speeker
+public class Speaker
 {
     [System.Serializable]
     public struct SpeekerStatu
     {
         public EMOTION emotion;
-        public Animation animation;
+        public AnimationClip animation;
     }
 
     [System.Serializable]
