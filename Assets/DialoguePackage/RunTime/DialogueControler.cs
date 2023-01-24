@@ -65,9 +65,6 @@ public class DialogueControler : MonoBehaviour
         instance = this;
         gameObject.SetActive(false);
 
-        nameSpeeker.text = "";
-        txtSentence.text = "";
-
         // -------------------------------------------------------- TO REMOVE -------------------------------------------------------- //
         gameLanguage = 0;
     }
@@ -85,6 +82,12 @@ public class DialogueControler : MonoBehaviour
     public void StartDialogue(DialogueConfig dialogue, SpeekerConfig speekers)
     {
         if (dialogue.allDialogueEvents.Count == 0) return;
+
+        for (int i = 0; i < choiceButtonParent.childCount; i++)
+            choiceButtonParent.GetChild(i).GetComponent<Button>().interactable = true;
+
+        nameSpeeker.text = "";
+        txtSentence.text = "";
 
         // Start a dialogue with an other DialogueConfig
         if (_dialog != null)
@@ -219,10 +222,18 @@ public class DialogueControler : MonoBehaviour
     {
         GameObject character = null;
 
+
+
         switch (dialogueEvent.eventConfig.actionType)
         {
             case EventConfig.ACTION_TYPE.SPEAKER_IN:
                 //Debug.Log("SPEEKER IN");
+                foreach (GameObject speaker in speakerInScene)
+                {
+                    if (speaker.name == _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name)
+                        break;
+                }
+
                 Transform pos = leftSpace;
                 switch (dialogueEvent.eventConfig.screenPos)
                 {
@@ -245,7 +256,7 @@ public class DialogueControler : MonoBehaviour
             case EventConfig.ACTION_TYPE.SPEAKER_OUT:
 
                 //Debug.Log("SPEEKER OUT");
-                foreach(GameObject speaker in speakerInScene)
+                foreach (GameObject speaker in speakerInScene)
                 {
                     if (speaker.name == _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name)
                     {
@@ -353,6 +364,23 @@ public class DialogueControler : MonoBehaviour
         _dialog = null;
         _speekerConfig = null;
         DialoguePanelOpen = false;
+
+        for (int i = 0; i < leftSpace.childCount; i++)
+        {
+            Destroy(leftSpace.GetChild(i).gameObject);
+        }
+
+        for (int i = 0; i < middleSpace.childCount; i++)
+        {
+            Destroy(middleSpace.GetChild(i).gameObject);
+        }
+
+        for (int i = 0; i < rightSpace.childCount; i++)
+        {
+            Destroy(rightSpace.GetChild(i).gameObject);
+        }
+
+        speakerInScene.Clear();
 
         gameObject.SetActive(false);
     }
