@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 532502017}
   - component: {fileID: 532502016}
   m_Layer: 0
-  m_Name: '[    TO DELETE    ]'
+  m_Name: GameManager [    TO DELETE    ]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1967,7 +1967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2655295700701011191, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2655295700875679488, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5238,6 +5238,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2007182981}
     m_Modifications:
+    - target: {fileID: 3052953591151025645, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3052953592021406864, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
