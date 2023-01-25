@@ -420,317 +420,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564311723}
   m_CullTransparentMesh: 1
---- !u!1 &707525754
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 707525755}
-  - component: {fileID: 707525758}
-  - component: {fileID: 707525757}
-  - component: {fileID: 707525756}
-  - component: {fileID: 707525761}
-  - component: {fileID: 707525760}
-  - component: {fileID: 707525759}
-  m_Layer: 5
-  m_Name: PNG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &707525755
+--- !u!224 &707525755 stripped
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+  m_PrefabInstance: {fileID: 2455391376264734365}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707525754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1753761069}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &707525756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707525754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 707525761}
-          m_TargetAssemblyTypeName: PNJConfigue, Assembly-CSharp
-          m_MethodName: SpeakToPNJ
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &707525757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707525754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &707525758
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707525754}
-  m_CullTransparentMesh: 1
---- !u!114 &707525759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707525754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35aa8768253fd9344aea3e002a3cbab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speekerConfig: {fileID: 11400000, guid: 0c3547c2b2a5c4c4b966c3ee78508364, type: 2}
-  csvFile:
-  - {fileID: 4900000, guid: 4abbebc3bf6a77c4f9abc1b5155960bc, type: 3}
-  - {fileID: 4900000, guid: 6521b6b1c9e28bb46847bb5f09292cca, type: 3}
-  allDialogueEvents:
-  - <source>k__BackingField: 1
-    isColapse: 1
-    idSpeeker: 0
-    autoPass: 0
-    sentenceConfig:
-      talking: []
-    eventConfig:
-      actionType: 0
-      screenPos: 0
-      OnCustomEvent:
-        m_PersistentCalls:
-          m_Calls: []
-    choiceConfig:
-      allChoices: []
-  - <source>k__BackingField: 0
-    isColapse: 1
-    idSpeeker: 0
-    autoPass: 0
-    sentenceConfig:
-      talking:
-      - sentence:
-          ID: 1
-          FR: Bonjour
-          EN: Hello
-        csvIndex: 1
-        animEnter: 0
-        emotion: 0
-    eventConfig:
-      actionType: 0
-      screenPos: 0
-      OnCustomEvent:
-        m_PersistentCalls:
-          m_Calls: []
-    choiceConfig:
-      allChoices: []
-  - <source>k__BackingField: 2
-    isColapse: 0
-    idSpeeker: 0
-    autoPass: 0
-    sentenceConfig:
-      talking: []
-    eventConfig:
-      actionType: 0
-      screenPos: 0
-      OnCustomEvent:
-        m_PersistentCalls:
-          m_Calls: []
-    choiceConfig:
-      allChoices:
-      - sentence:
-          ID: 
-          FR: Dialogue
-          EN: 
-        OnClick:
-          m_PersistentCalls:
-            m_Calls:
-            - m_Target: {fileID: 707525760}
-              m_TargetAssemblyTypeName: DialogueConfig, Assembly-CSharp
-              m_MethodName: StartDialogue
-              m_Mode: 1
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 0
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
-      - sentence:
-          ID: 
-          FR: Item 1
-          EN: 
-        OnClick:
-          m_PersistentCalls:
-            m_Calls: []
-      - sentence:
-          ID: 
-          FR: Item 2
-          EN: 
-        OnClick:
-          m_PersistentCalls:
-            m_Calls: []
-      - sentence:
-          ID: 
-          FR: Item 3
-          EN: 
-        OnClick:
-          m_PersistentCalls:
-            m_Calls: []
-  delaiAutoPass: 0
---- !u!114 &707525760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707525754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35aa8768253fd9344aea3e002a3cbab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speekerConfig: {fileID: 11400000, guid: 0c3547c2b2a5c4c4b966c3ee78508364, type: 2}
-  csvFile:
-  - {fileID: 4900000, guid: 6521b6b1c9e28bb46847bb5f09292cca, type: 3}
-  - {fileID: 4900000, guid: 4abbebc3bf6a77c4f9abc1b5155960bc, type: 3}
-  allDialogueEvents:
-  - <source>k__BackingField: 1
-    isColapse: 1
-    idSpeeker: 0
-    autoPass: 0
-    sentenceConfig:
-      talking: []
-    eventConfig:
-      actionType: 0
-      screenPos: 0
-      OnCustomEvent:
-        m_PersistentCalls:
-          m_Calls: []
-    choiceConfig:
-      allChoices: []
-  - <source>k__BackingField: 0
-    isColapse: 1
-    idSpeeker: 0
-    autoPass: 0
-    sentenceConfig:
-      talking:
-      - sentence:
-          ID: 1
-          FR: Bonjour
-          EN: Hello
-        csvIndex: 0
-        animEnter: 0
-        emotion: 0
-      - sentence:
-          ID: 5
-          FR: "David essaie de se rappeler si dans la lanc\xE9e de sa jeunesse fougueuse,
-            il n\u2019aurait pas install\xE9 une bombe logique sur les ordinateurs
-            de l\u2019arm\xE9e, mais il ne se rappelait pas avoir fait une telle
-            b\xEAtise. Planter tout le syst\xE8me informatique de la base aurait
-            \xE9t\xE9 trop grave de cons\xE9quences."
-          EN: David tried to remember if in the heat of his youth he would have installed
-            a logic bomb on the army computers, but he didn't remember doing anything
-            stupid like that. Crashing the entire base computer system would have
-            been too serious a consequence.
-        csvIndex: 0
-        animEnter: 0
-        emotion: 0
-      - sentence:
-          ID: 3
-          FR: Je suis inocent
-          EN: I'm innocent
-        csvIndex: 0
-        animEnter: 0
-        emotion: 0
-    eventConfig:
-      actionType: 0
-      screenPos: 0
-      OnCustomEvent:
-        m_PersistentCalls:
-          m_Calls: []
-    choiceConfig:
-      allChoices: []
-  delaiAutoPass: 0
---- !u!114 &707525761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707525754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3708ccebb0e64bc4ebc9dabfe55ec94f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deafaultDialogue: {fileID: 707525760}
-  choiceDialogue: {fileID: 707525759}
-  allSubDialogs:
-  - active: 0
-    id: ITEM_1
-  - active: 1
-    id: ITEM_2
-  - active: 0
-    id: ITEM_3
 --- !u!1 &848481277
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +692,8 @@ MonoBehaviour:
           m_Calls: []
     choiceConfig:
       allChoices: []
+  startDialogue: 0
+  delaiStart: 0
   delaiAutoPass: 1
 --- !u!4 &848481279
 Transform:
@@ -1451,6 +1147,8 @@ MonoBehaviour:
           m_Calls: []
     choiceConfig:
       allChoices: []
+  startDialogue: 0
+  delaiStart: 0
   delaiAutoPass: 1
 --- !u!4 &1912147040
 Transform:
@@ -1601,6 +1299,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083712278}
   m_CullTransparentMesh: 1
+--- !u!1001 &2455391376264734365
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1753761069}
+    m_Modifications:
+    - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: choiceDialogue
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566247, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_Name
+      value: PNG
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
 --- !u!1001 &2655295701440726541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1695,54 +1494,6 @@ PrefabInstance:
     - target: {fileID: 2655295700701011191, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
       propertyPath: m_Name
       value: DialogueManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2655295700960658786, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_text
-      value: WHAT HE SAY ...
-      objectReference: {fileID: 0}
-    - target: {fileID: 2655295700960658786, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_fontSize
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 2655295700960658786, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: b4552ab09a773344bb6b27d5c9801a3b, type: 2}
-    - target: {fileID: 2655295700960658786, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 2655295700960658786, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5484823123630972753, guid: b4552ab09a773344bb6b27d5c9801a3b, type: 2}
-    - target: {fileID: 2655295700960658787, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -97.15999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2655295700960658787, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -32.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 2655295702032301586, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_fontSize
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 2655295702032301586, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: b4552ab09a773344bb6b27d5c9801a3b, type: 2}
-    - target: {fileID: 2655295702032301586, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 2655295702032301586, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5484823123630972753, guid: b4552ab09a773344bb6b27d5c9801a3b, type: 2}
-    - target: {fileID: 2655295702032301587, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -42
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}

@@ -29,17 +29,14 @@ public class IndiceController : MonoBehaviour
     public EvidenceData evidenceData;
     private Image _sprite;
 
+    private DialogueConfig _dialogueConfig;
+
     // Start is called before the first frame update
     void Start()
     {
         _sprite = this.GetComponent<Image>();
+        _dialogueConfig = gameObject.GetComponent<DialogueConfig>();
         InitSprite(0);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void InitSprite(int mode = 0)
@@ -70,6 +67,7 @@ public class IndiceController : MonoBehaviour
         disapearSequence.Play();
 
         PointAndClickManager.Instance.NewEvidenceFound(this);
+        _dialogueConfig?.StartDialogue();
     }
 
     public void OnPointerDownInventory()

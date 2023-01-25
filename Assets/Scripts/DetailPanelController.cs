@@ -40,7 +40,7 @@ public class DetailPanelController : MonoBehaviour
 
     public void FadeOut(bool isFirstTime = true)
     {
-        if (isFading)
+        if (isFading || DialogueControler.instance.DialoguePanelOpen)
             return;
 
         isFading = true;

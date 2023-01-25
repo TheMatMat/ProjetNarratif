@@ -34,6 +34,12 @@ public class PNJConfigue : MonoBehaviour
         }
         else
         {
+            if(allSubDialogs.Count <= 0)
+            {
+                deafaultDialogue.StartDialogue();
+                return;
+            }
+
             choiceDialogue.StartDialogue();
 
             for (int i = 1; i < DialogueControler.instance.choiceButtonParent.childCount; i++)

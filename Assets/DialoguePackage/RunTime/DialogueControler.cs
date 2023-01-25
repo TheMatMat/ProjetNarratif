@@ -102,7 +102,7 @@ public class DialogueControler : MonoBehaviour
 
             DialoguePanelOpen = true;
 
-            NextDialogueEvent();
+            Invoke("NextDialogueEvent", 0.8f);
         }
     }
 
@@ -261,7 +261,8 @@ public class DialogueControler : MonoBehaviour
 
             case EventConfig.ACTION_TYPE.CUSTOM_EVENT:
                 dialogueEvent.eventConfig.OnCustomEvent?.Invoke();
-                break;
+                NextDialogueEvent();
+                return;
         }
 
         character.name = _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name;

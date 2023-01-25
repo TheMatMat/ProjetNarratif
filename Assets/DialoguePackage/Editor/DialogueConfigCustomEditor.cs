@@ -110,81 +110,85 @@ public class DialogueConfigCustomEditor : Editor
         _source.delaiAutoPass = EditorGUILayout.FloatField(_source.delaiAutoPass, GUILayout.Width(200));
         GUILayout.EndHorizontal();
 
+        _source.startDialogue = EditorGUILayout.Toggle("Start at begin", _source.startDialogue);
+        if (_source.startDialogue)
+            _source.delaiStart = EditorGUILayout.FloatField(_source.delaiStart);
+
         #endregion
 
-        // ---------------------------------- Search Fonction ---------------------------------- //
+            // ---------------------------------- Search Fonction ---------------------------------- //
 
-        #region SEARCH_FONCTION
+            #region SEARCH_FONCTION
 
-        /*GUILayout.Space(5);
+            /*GUILayout.Space(5);
 
-        GUILayout.BeginVertical("window");
-        GUILayout.BeginHorizontal();
+            GUILayout.BeginVertical("window");
+            GUILayout.BeginHorizontal();
 
-        GUILayout.Label("Select ID", GUILayout.ExpandWidth(true));
-        IDInput = EditorGUILayout.TextField(IDInput, GUILayout.Width(100));
-        enumIdCsv = EditorGUILayout.Popup(enumIdCsv, csvName.ToArray(), GUILayout.Width(100));
+            GUILayout.Label("Select ID", GUILayout.ExpandWidth(true));
+            IDInput = EditorGUILayout.TextField(IDInput, GUILayout.Width(100));
+            enumIdCsv = EditorGUILayout.Popup(enumIdCsv, csvName.ToArray(), GUILayout.Width(100));
 
-        *//*if (GUILayout.Button(new GUIContent("Avanced", "Look for a specific key"), GUILayout.Width(70f)))
-        {
-            // Ouverture Box
-        }*//*
-
-        GUILayout.EndHorizontal();
-
-        if(IDInput != lastInput)
-        {
-            lastInput = IDInput;
-
-            if (IDInput == "")
-                isInCustomDialogue = true;
-            else
+            *//*if (GUILayout.Button(new GUIContent("Avanced", "Look for a specific key"), GUILayout.Width(70f)))
             {
-                SearchForSentence();
-                isInCustomDialogue = false;
-            }
-        }
+                // Ouverture Box
+            }*//*
 
-        if (isInCustomDialogue)
-            customDialogue = GUILayout.TextArea(customDialogue, GUILayout.Height(60));
-        else
-        {
-            if (searchResult.Count > 0)
+            GUILayout.EndHorizontal();
+
+            if(IDInput != lastInput)
             {
-                scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Height(120));
-                for (int k = 0; k < searchResult.Count; k++)
+                lastInput = IDInput;
+
+                if (IDInput == "")
+                    isInCustomDialogue = true;
+                else
                 {
-                    if (GUILayout.Button("[ " + searchResult[k].resultRow.ID + " ]    " + searchResult[k].resultRow.FR, k == idResultSelected ? "boxselected" : "box"))
-                        idResultSelected = k;
+                    SearchForSentence();
+                    isInCustomDialogue = false;
                 }
-                GUILayout.EndScrollView();
             }
+
+            if (isInCustomDialogue)
+                customDialogue = GUILayout.TextArea(customDialogue, GUILayout.Height(60));
             else
-                GUILayout.Label("Not Found", "box", GUILayout.Height(60));
-        }
-
-        if (GUILayout.Button(new GUIContent("Add Sentence To Active", "Add to Sentence list of the active character below")) && _source.allDialogueEvents[idSpeekerSelected].source == DialogueEvent.TYPE_EVENT.SENTENCE)
-        {
-            if (!isInCustomDialogue)
             {
-                if (idSpeekerSelected != -1 && searchResult.Count > 0)
-                    _source.allDialogueEvents[idSpeekerSelected].sentenceConfig.talking.Add(new SentenceConfig.Sentence(searchResult[idResultSelected].resultRow, DialogueControler.TEXT_ANIMATION.CHAR_ONSET, Speaker.EMOTION.NEUTRAL, searchResult[idResultSelected].resultIdCsv));
+                if (searchResult.Count > 0)
+                {
+                    scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Height(120));
+                    for (int k = 0; k < searchResult.Count; k++)
+                    {
+                        if (GUILayout.Button("[ " + searchResult[k].resultRow.ID + " ]    " + searchResult[k].resultRow.FR, k == idResultSelected ? "boxselected" : "box"))
+                            idResultSelected = k;
+                    }
+                    GUILayout.EndScrollView();
+                }
+                else
+                    GUILayout.Label("Not Found", "box", GUILayout.Height(60));
             }
-            else if (idSpeekerSelected != -1 && customDialogue.Length > 0)
+
+            if (GUILayout.Button(new GUIContent("Add Sentence To Active", "Add to Sentence list of the active character below")) && _source.allDialogueEvents[idSpeekerSelected].source == DialogueEvent.TYPE_EVENT.SENTENCE)
             {
-                _source.allDialogueEvents[idSpeekerSelected].sentenceConfig.talking.Add(new SentenceConfig.Sentence(new DialogueTable.Row(customDialogue), DialogueControler.TEXT_ANIMATION.CHAR_ONSET, Speaker.EMOTION.NEUTRAL, -1));
+                if (!isInCustomDialogue)
+                {
+                    if (idSpeekerSelected != -1 && searchResult.Count > 0)
+                        _source.allDialogueEvents[idSpeekerSelected].sentenceConfig.talking.Add(new SentenceConfig.Sentence(searchResult[idResultSelected].resultRow, DialogueControler.TEXT_ANIMATION.CHAR_ONSET, Speaker.EMOTION.NEUTRAL, searchResult[idResultSelected].resultIdCsv));
+                }
+                else if (idSpeekerSelected != -1 && customDialogue.Length > 0)
+                {
+                    _source.allDialogueEvents[idSpeekerSelected].sentenceConfig.talking.Add(new SentenceConfig.Sentence(new DialogueTable.Row(customDialogue), DialogueControler.TEXT_ANIMATION.CHAR_ONSET, Speaker.EMOTION.NEUTRAL, -1));
+                }
             }
-        }
 
-        GUILayout.EndVertical();
+            GUILayout.EndVertical();
 
-        GUILayout.Space(10);*/
+            GUILayout.Space(10);*/
 
-        #endregion
+            #endregion
 
-        // --------------------------------------- Body --------------------------------------- //
+            // --------------------------------------- Body --------------------------------------- //
 
-        #region BODY
+            #region BODY
 
         int currentIndex = 0;
         foreach (DialogueEvent currentDialogueEvent in _source.allDialogueEvents)

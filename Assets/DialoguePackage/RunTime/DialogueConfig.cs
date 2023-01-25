@@ -59,7 +59,15 @@ public class DialogueConfig : MonoBehaviour
 
     public List<DialogueEvent> allDialogueEvents;
 
+    public bool startDialogue;
+    public float delaiStart;
     public float delaiAutoPass;
+
+    private void Start()
+    {
+        if (startDialogue)
+            Invoke("StartDialogue", delaiStart);
+    }
 
     public void StartDialogue()
     {

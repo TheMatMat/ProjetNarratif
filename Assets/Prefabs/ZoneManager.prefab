@@ -26,7 +26,7 @@ RectTransform:
   m_GameObject: {fileID: 6500188772275152902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.013333334, y: 0.013333334, z: 0.013333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -49,6 +49,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e752ac10a0b6d458d8628ef7f9687d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zones: []
+  zones:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  firstZone: {fileID: 0}
+  currentZone: {fileID: 0}
   arrowLeft: {fileID: 0}
   arrowRight: {fileID: 0}
+  transitionBlackScreen: {fileID: 0}
+  transitionZoneName: {fileID: 0}
