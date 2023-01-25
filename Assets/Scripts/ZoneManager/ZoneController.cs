@@ -5,16 +5,18 @@ using UnityEngine.UI;
 
 public class ZoneController : MonoBehaviour
 {
-    [Header("zone details")]
+    [Header("ZONE DETAILS")]
     public int zoneId;
     public string zoneName;
     public Image zoneSprite;
-    public bool isManuallyChangeable;
 
-    [Header("surronding zones")]
+    [Header("NAVIGATION")]
+    public bool canGoPrevious;
+    public bool canGoNext;
+
     public ZoneController previousZone;
     public ZoneController nextZone;
 
-    [Header("all zone evidences")]
+    [Header("ZONE EVIDENCES")]
     public List<IndiceController> indices = new List<IndiceController>();
 }

@@ -44,6 +44,7 @@ public class ZoneManager : MonoBehaviour
             zone.gameObject.SetActive(false);
 
         currentZone.gameObject.SetActive(true);
+        HideShowArrows(currentZone);
     }
 
     private void TransitionScreen(string nameToDisplay, TRANSITION_WAY transitionWay)
@@ -81,6 +82,22 @@ public class ZoneManager : MonoBehaviour
                 currentZone = currentZone.nextZone;
                 break;
         }
+
+        HideShowArrows(currentZone);
+    }
+
+    public void HideShowArrows(ZoneController _zone)
+    {
+        //hide or show arrows
+        if (_zone.canGoNext)
+            arrowRight.gameObject.SetActive(true);
+        else
+            arrowRight.gameObject.SetActive(false);
+
+        if (_zone.canGoPrevious)
+            arrowLeft.gameObject.SetActive(true);
+        else
+            arrowLeft.gameObject.SetActive(false);
     }
 
     public void LoadPreviousZone()
