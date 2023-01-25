@@ -27,7 +27,6 @@ public class PointAndClickManager : MonoBehaviour
         {
             instance = this;
         }
-        DontDestroyOnLoad(this.gameObject);
     }
 
 
