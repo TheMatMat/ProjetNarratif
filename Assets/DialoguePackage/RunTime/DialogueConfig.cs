@@ -3,77 +3,81 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable]
-public class DialogueConfig : MonoBehaviour
+namespace TeamSeven
 {
-    /*[System.Serializable]
-    public struct SentenceConfig
+
+    [System.Serializable]
+    public class DialogueConfig : MonoBehaviour
     {
-        public bool isColapse;
-
-        public int idSpeeker;
-        public bool autoPass;
-        public List<SentenceConfig> dialogueEvents;
-
-        public SentenceConfig(SentenceConfig copy)
+        /*[System.Serializable]
+        public struct SentenceConfig
         {
-            idSpeeker = copy.idSpeeker;
-            autoPass = copy.autoPass;
-            dialogueEvents = copy.dialogueEvents;
+            public bool isColapse;
 
-            isColapse = copy.isColapse;
-        }
+            public int idSpeeker;
+            public bool autoPass;
+            public List<SentenceConfig> dialogueEvents;
 
-        public SentenceConfig(int _id, bool _autoPass, bool colapse, List<DialogueEvent> _dialogues)
-        {
-            idSpeeker = _id;
-            autoPass = _autoPass;
-            isColapse = colapse;
-
-            if (_dialogues != null)
-                dialogueEvents = new List<DialogueEvent>(_dialogues);
-            else
-                dialogueEvents = new List<DialogueEvent>();
-        }
-
-        [System.Serializable]
-        public struct Sentence
-        {
-            public DialogueTable.Row sentence;
-            public int csvIndex;
-            public DialogueControler.TEXT_ANIMATION animEnter;
-            public Speeker.EMOTION emotion;
-
-            public Sentence(DialogueTable.Row _sentence, DialogueControler.TEXT_ANIMATION _animation, Speeker.EMOTION _emotion, int _csvIndex)
+            public SentenceConfig(SentenceConfig copy)
             {
-                sentence = _sentence;
-                animEnter = _animation;
-                emotion = _emotion;
-                csvIndex = _csvIndex;
+                idSpeeker = copy.idSpeeker;
+                autoPass = copy.autoPass;
+                dialogueEvents = copy.dialogueEvents;
+
+                isColapse = copy.isColapse;
             }
-        }
-    }*/
 
-    public SpeekerConfig speekerConfig;
-    public List<TextAsset> csvFile = new List<TextAsset>();
+            public SentenceConfig(int _id, bool _autoPass, bool colapse, List<DialogueEvent> _dialogues)
+            {
+                idSpeeker = _id;
+                autoPass = _autoPass;
+                isColapse = colapse;
 
-    public List<DialogueEvent> allDialogueEvents;
+                if (_dialogues != null)
+                    dialogueEvents = new List<DialogueEvent>(_dialogues);
+                else
+                    dialogueEvents = new List<DialogueEvent>();
+            }
 
-    public bool startDialogue;
-    public float delaiStart;
-    public float delaiAutoPass;
+            [System.Serializable]
+            public struct Sentence
+            {
+                public DialogueTable.Row sentence;
+                public int csvIndex;
+                public DialogueControler.TEXT_ANIMATION animEnter;
+                public Speeker.EMOTION emotion;
 
-    private void Start()
-    {
-        if (startDialogue)
-            Invoke("StartDialogue", delaiStart);
-    }
+                public Sentence(DialogueTable.Row _sentence, DialogueControler.TEXT_ANIMATION _animation, Speeker.EMOTION _emotion, int _csvIndex)
+                {
+                    sentence = _sentence;
+                    animEnter = _animation;
+                    emotion = _emotion;
+                    csvIndex = _csvIndex;
+                }
+            }
+        }*/
 
-    public void StartDialogue()
-    {
-        if (DialogueControler.instance)
+        public SpeekerConfig speekerConfig;
+        public List<TextAsset> csvFile = new List<TextAsset>();
+
+        public List<DialogueEvent> allDialogueEvents;
+
+        public bool startDialogue;
+        public float delaiStart;
+        public float delaiAutoPass;
+
+        private void Start()
         {
-            DialogueControler.instance.StartDialogue(this, this.speekerConfig);
+            if (startDialogue)
+                Invoke("StartDialogue", delaiStart);
+        }
+
+        public void StartDialogue()
+        {
+            if (DialogueControler.instance)
+            {
+                DialogueControler.instance.StartDialogue(this, this.speekerConfig);
+            }
         }
     }
 }

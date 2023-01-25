@@ -3,45 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelLoader : MonoBehaviour
+namespace TeamSeven
 {
-    public static LevelLoader instance { get; private set; }
-
-    [SerializeField] private float transitionTime;
-    [SerializeField] private Animator animator;
-
-    private void Awake()
+    public class LevelLoader : MonoBehaviour
     {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(this.gameObject);
-    }
+        public static LevelLoader instance { get; private set; }
 
-    public void LoadNextScene()
-    {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-    }
+        [SerializeField] private float transitionTime;
+        [SerializeField] private Animator animator;
 
-    public void LoadMenuScene()
-    {
-        StartCoroutine(LoadLevel(0));
-    }
+        private void Awake()
+        {
+            if (instance == null)
+                instance = this;
+            else
+                Destroy(this.gameObject);
+        }
 
-    public void LoadSceneAnIndex(int index)
-    {
-        StartCoroutine(LoadLevel(index));
-    }
+        public void LoadNextScene()
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        }
 
-    public void ExitApplication()
-    {
-        Application.Quit();
-    }
+        public void LoadMenuScene()
+        {
+            StartCoroutine(LoadLevel(0));
+        }
 
-    private IEnumerator LoadLevel(int index)
-    {
-        animator.SetTrigger("Transition");
-        yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene(index);
+        public void LoadSceneAnIndex(int index)
+        {
+            StartCoroutine(LoadLevel(index));
+        }
+
+        public void ExitApplication()
+        {
+            Application.Quit();
+        }
+
+        private IEnumerator LoadLevel(int index)
+        {
+            animator.SetTrigger("Transition");
+            yield return new WaitForSeconds(transitionTime);
+            SceneManager.LoadScene(index);
+        }
     }
 }

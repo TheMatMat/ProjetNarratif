@@ -2,119 +2,120 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using System.Linq;
-using System.Reflection;
 
-[CustomEditor(typeof(DialogueConfig))]
-[CanEditMultipleObjects]
-public class DialogueConfigCustomEditor : Editor
+namespace TeamSeven
 {
-    public GUISkin customSkin;
-    private DialogueConfig _source;
 
-    /*private string IDInput;
-    private string lastInput;
-    private int enumIdCsv;
-
-    private Vector2 scrollPosition;
-    private List<Result> searchResult = new List<Result>();
-
-    private int idResultSelected;*/
-    //private int idSpeekerSelected;
-
-    /*private bool isInCustomDialogue;
-    private string customDialogue;*/
-
-    private List<string> speekerName = new List<string>();
-    //private List<string> csvName = new List<string>();
-
-    /*public struct Result
+    [CustomEditor(typeof(DialogueConfig))]
+    [CanEditMultipleObjects]
+    public class DialogueConfigCustomEditor : Editor
     {
-        public DialogueTable.Row resultRow;
-        public int resultIdCsv;
+        public GUISkin customSkin;
+        private DialogueConfig _source;
 
-        public Result (DialogueTable.Row _row, int _idCsv)
+        /*private string IDInput;
+        private string lastInput;
+        private int enumIdCsv;
+
+        private Vector2 scrollPosition;
+        private List<Result> searchResult = new List<Result>();
+
+        private int idResultSelected;*/
+        //private int idSpeekerSelected;
+
+        /*private bool isInCustomDialogue;
+        private string customDialogue;*/
+
+        private List<string> speekerName = new List<string>();
+        //private List<string> csvName = new List<string>();
+
+        /*public struct Result
         {
-            resultRow = _row;
-            resultIdCsv = _idCsv;
-        }
-    }*/
+            public DialogueTable.Row resultRow;
+            public int resultIdCsv;
 
-    private void OnEnable()
-    {
-        _source = (DialogueConfig)this.target;
-        Refresh();
-    }
+            public Result (DialogueTable.Row _row, int _idCsv)
+            {
+                resultRow = _row;
+                resultIdCsv = _idCsv;
+            }
+        }*/
 
-    private void OnDisable()
-    {
-        //searchResult.Clear();
-        if(!EditorApplication.isPlaying)
-            EditorUtility.SetDirty(_source);
-    }
-
-    public override void OnInspectorGUI()
-    {
-        GUI.skin = customSkin;
-
-        // -------------------------------------- Header -------------------------------------- //
-
-        #region HEADER
-
-        GUILayout.Space(10);
-
-        if (GUILayout.Button(new GUIContent("Refresh", "Recharge all dialogue, speekers and csv files")))
+        private void OnEnable()
         {
+            _source = (DialogueConfig)this.target;
             Refresh();
         }
 
-        GUILayout.Space(10);
-        GUILayout.BeginHorizontal();
-        GUILayout.Label("SpeekerConfig");
-        _source.speekerConfig = (SpeekerConfig)EditorGUILayout.ObjectField(_source.speekerConfig, typeof(SpeekerConfig), true, GUILayout.Width(200));
-        GUILayout.EndHorizontal();
-
-        GUILayout.BeginHorizontal();
-        GUILayout.Label("CSV File");
-        TextAsset newCSVFile = null;
-        newCSVFile = (TextAsset)EditorGUILayout.ObjectField(newCSVFile, typeof(TextAsset), true, GUILayout.Width(200));
-        GUILayout.EndHorizontal();
-
-        if (newCSVFile)
+        private void OnDisable()
         {
-            if (!_source.csvFile.Contains(newCSVFile))
-            {
-                _source.csvFile.Add(newCSVFile);
-                //csvName.Add(newCSVFile.name);
-            }
+            //searchResult.Clear();
+            if (!EditorApplication.isPlaying)
+                EditorUtility.SetDirty(_source);
         }
 
-        foreach (TextAsset file in _source.csvFile)
+        public override void OnInspectorGUI()
         {
+            GUI.skin = customSkin;
+
+            // -------------------------------------- Header -------------------------------------- //
+
+            #region HEADER
+
+            GUILayout.Space(10);
+
+            if (GUILayout.Button(new GUIContent("Refresh", "Recharge all dialogue, speekers and csv files")))
+            {
+                Refresh();
+            }
+
+            GUILayout.Space(10);
             GUILayout.BeginHorizontal();
-            GUILayout.FlexibleSpace();
-            GUILayout.Label(file.name, GUILayout.Width(175));
-            if (GUILayout.Button(new GUIContent("", "Remove csv file"), "bin", GUILayout.Width(20)))
-            {
-                _source.csvFile.Remove(file);
-                //csvName.Remove(file.name);
-                return;
-            }
+            GUILayout.Label("SpeekerConfig");
+            _source.speekerConfig = (SpeekerConfig)EditorGUILayout.ObjectField(_source.speekerConfig, typeof(SpeekerConfig), true, GUILayout.Width(200));
             GUILayout.EndHorizontal();
-        }
 
-        GUILayout.Space(20);
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("CSV File");
+            TextAsset newCSVFile = null;
+            newCSVFile = (TextAsset)EditorGUILayout.ObjectField(newCSVFile, typeof(TextAsset), true, GUILayout.Width(200));
+            GUILayout.EndHorizontal();
 
-        GUILayout.BeginHorizontal();
-        GUILayout.Label("Delai Auto-Pass");
-        _source.delaiAutoPass = EditorGUILayout.FloatField(_source.delaiAutoPass, GUILayout.Width(200));
-        GUILayout.EndHorizontal();
+            if (newCSVFile)
+            {
+                if (!_source.csvFile.Contains(newCSVFile))
+                {
+                    _source.csvFile.Add(newCSVFile);
+                    //csvName.Add(newCSVFile.name);
+                }
+            }
 
-        _source.startDialogue = EditorGUILayout.Toggle("Start at begin", _source.startDialogue);
-        if (_source.startDialogue)
-            _source.delaiStart = EditorGUILayout.FloatField(_source.delaiStart);
+            foreach (TextAsset file in _source.csvFile)
+            {
+                GUILayout.BeginHorizontal();
+                GUILayout.FlexibleSpace();
+                GUILayout.Label(file.name, GUILayout.Width(175));
+                if (GUILayout.Button(new GUIContent("", "Remove csv file"), "bin", GUILayout.Width(20)))
+                {
+                    _source.csvFile.Remove(file);
+                    //csvName.Remove(file.name);
+                    return;
+                }
+                GUILayout.EndHorizontal();
+            }
 
-        #endregion
+            GUILayout.Space(20);
+
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("Delai Auto-Pass");
+            _source.delaiAutoPass = EditorGUILayout.FloatField(_source.delaiAutoPass, GUILayout.Width(200));
+            GUILayout.EndHorizontal();
+
+            _source.startDialogue = EditorGUILayout.Toggle("Start at begin", _source.startDialogue);
+            if (_source.startDialogue)
+                _source.delaiStart = EditorGUILayout.FloatField(_source.delaiStart);
+
+            #endregion
 
             // ---------------------------------- Search Fonction ---------------------------------- //
 
@@ -190,293 +191,295 @@ public class DialogueConfigCustomEditor : Editor
 
             #region BODY
 
-        int currentIndex = 0;
-        foreach (DialogueEvent currentDialogueEvent in _source.allDialogueEvents)
-        {
+            int currentIndex = 0;
+            foreach (DialogueEvent currentDialogueEvent in _source.allDialogueEvents)
+            {
 
-            if (currentDialogueEvent == null)
-                continue;
+                if (currentDialogueEvent == null)
+                    continue;
+
+                GUILayout.Space(5);
+
+                string style = "box";
+                /*if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.SENTENCE && idSpeekerSelected == currentIndex)
+                    style = "boxselected";
+                else */
+                if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.EVENT)
+                {
+                    if (currentDialogueEvent.eventConfig.actionType == EventConfig.ACTION_TYPE.SPEAKER_IN)
+                        style = "actionin";
+                    else
+                        style = "actionout";
+                }
+                else if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.CHOICE)
+                    style = "choice";
+
+
+                GUILayout.BeginVertical(style);
+
+                GUILayout.BeginHorizontal();
+
+                if (GUILayout.Button(new GUIContent("", "Collapse/Show Details"), currentDialogueEvent.isColapse ? "colapse" : "detail", GUILayout.Width(20)))
+                {
+                    currentDialogueEvent.isColapse = !currentDialogueEvent.isColapse;
+                }
+
+                GUILayout.Space(10);
+                currentDialogueEvent.idSpeeker = EditorGUILayout.Popup(currentDialogueEvent.idSpeeker, speekerName.ToArray(), GUILayout.Width(150));
+
+                GUILayout.FlexibleSpace();
+
+                if (GUILayout.Button(new GUIContent("", "Move the speeker up"), "up", GUILayout.Width(20f)))
+                {
+                    if (currentIndex != 0)
+                    {
+                        Swap<DialogueEvent>(_source.allDialogueEvents, currentIndex, currentIndex - 1);
+
+                        /*if (idSpeekerSelected == currentIndex)
+                            idSpeekerSelected--;*/
+                        return;
+                    }
+                }
+
+                if (GUILayout.Button(new GUIContent("", "Move the speeker down"), "down", GUILayout.Width(20f)))
+                {
+                    if (currentIndex != _source.allDialogueEvents.Count - 1)
+                    {
+                        Swap<DialogueEvent>(_source.allDialogueEvents, currentIndex, currentIndex + 1);
+
+                        /*if (idSpeekerSelected == currentIndex)
+                            idSpeekerSelected++;*/
+                        return;
+                    }
+                }
+
+                if (GUILayout.Button(new GUIContent("", "Delete this conversation"), "bin", GUILayout.Width(20f)) && EditorUtility.DisplayDialog("Caution", "Your are about to delete the entire section of this dialogue.\nAre you sure ?", "Yes, I am certain"))
+                {
+                    _source.allDialogueEvents.Remove(currentDialogueEvent);
+
+                    /*if (idSpeekerSelected == currentIndex)
+                        idSpeekerSelected = -1;*/
+                    return;
+                }
+
+
+                GUILayout.EndHorizontal();
+
+                if (!currentDialogueEvent.isColapse)
+                {
+                    currentDialogueEvent.autoPass = GUILayout.Toggle(currentDialogueEvent.autoPass, "Auto-Pass");
+
+                    #region SENTENCE
+                    if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.SENTENCE)
+                    {
+                        SentenceConfig currentSentenceConfig = currentDialogueEvent.sentenceConfig;
+
+                        /*if (currentIndex != idSpeekerSelected)
+                            if (GUILayout.Button(new GUIContent("Active", "Select this speeker to recive sentences"), "buttoncenter")) idSpeekerSelected = currentIndex;*/
+
+                        GUILayout.Space(10);
+
+                        GUILayout.BeginVertical("Box");
+                        GUILayout.Label("Sentence");
+
+                        for (int y = 0; y < currentSentenceConfig.talking.Count; y++)
+                        {
+                            GUILayout.BeginVertical(currentSentenceConfig.talking[y].csvIndex == -1 ? "customsentence" : "sentence");
+                            GUILayout.BeginHorizontal();
+
+                            GUILayout.Label(currentSentenceConfig.talking[y].sentence.FR.Length > 100 ? currentSentenceConfig.talking[y].sentence.FR.Substring(0, 100) + " [...]" : currentSentenceConfig.talking[y].sentence.FR, "txt");
+                            GUILayout.FlexibleSpace();
+
+                            if (GUILayout.Button(new GUIContent("", "Move the sentence up"), "up", GUILayout.Width(20f)))
+                            {
+                                if (y != 0)
+                                {
+                                    Swap<SentenceConfig.Sentence>(currentSentenceConfig.talking, y, y - 1);
+                                    return;
+                                }
+                            }
+                            if (GUILayout.Button(new GUIContent("", "Move the sentence down"), "down", GUILayout.Width(20f)))
+                            {
+                                if (y != currentSentenceConfig.talking.Count - 1)
+                                {
+                                    Swap<SentenceConfig.Sentence>(currentSentenceConfig.talking, y, y + 1);
+                                    return;
+                                }
+                            }
+
+                            if (GUILayout.Button(new GUIContent("", "Delete the current sentence"), "bin", GUILayout.Width(20f)))
+                            {
+                                currentSentenceConfig.talking.Remove(currentSentenceConfig.talking[y]);
+                                return;
+                            }
+
+                            GUILayout.EndHorizontal();
+
+                            GUILayout.BeginHorizontal();
+                            GUILayout.Label("Text Anim", GUILayout.Width(70));
+                            DialogueControler.TEXT_ANIMATION txtAnimation = (DialogueControler.TEXT_ANIMATION)EditorGUILayout.EnumPopup(currentSentenceConfig.talking[y].animEnter, GUILayout.Width(100f));
+                            GUILayout.EndHorizontal();
+
+
+                            GUILayout.BeginHorizontal();
+                            GUILayout.Label("Emotion", GUILayout.Width(70));
+                            Speaker.EMOTION spEmotion = (Speaker.EMOTION)EditorGUILayout.EnumPopup(currentSentenceConfig.talking[y].emotion, GUILayout.Width(100f));
+                            GUILayout.EndHorizontal();
+
+                            currentSentenceConfig.talking[y] = new SentenceConfig.Sentence(currentSentenceConfig.talking[y].sentence, txtAnimation, spEmotion, currentSentenceConfig.talking[y].csvIndex);
+
+                            GUILayout.BeginHorizontal();
+                            if (currentSentenceConfig.talking[y].csvIndex == -1)
+                                GUILayout.Label("* Custom, may not be complet !", "warning");
+                            GUILayout.FlexibleSpace();
+                            if (GUILayout.Button(new GUIContent("Modify", "Edit the current sentence. Will be pass in custome sentence."), GUILayout.Width(100)))
+                                ModifierWindow.ShowWindow(_source.csvFile, currentSentenceConfig, y);
+                            GUILayout.EndHorizontal();
+
+                            GUILayout.EndVertical();
+                        }
+
+                        if (GUILayout.Button(new GUIContent("Add Sentence", "Select this speeker to recive sentences"), "buttoncenter"))
+                        {
+                            ModifierWindow.ShowWindow(_source.csvFile, currentSentenceConfig);
+                        }
+
+                        GUILayout.EndVertical();
+                    }
+                    #endregion
+                    #region EVENT
+                    else if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.EVENT)
+                    {
+                        currentDialogueEvent.eventConfig.actionType = (EventConfig.ACTION_TYPE)EditorGUILayout.EnumPopup(currentDialogueEvent.eventConfig.actionType);
+
+                        if (currentDialogueEvent.eventConfig.actionType == EventConfig.ACTION_TYPE.SPEAKER_IN)
+                            currentDialogueEvent.eventConfig.screenPos = (EventConfig.POSITION)EditorGUILayout.EnumPopup(currentDialogueEvent.eventConfig.screenPos);
+                        else if (currentDialogueEvent.eventConfig.actionType == EventConfig.ACTION_TYPE.CUSTOM_EVENT)
+                        {
+                            SerializedProperty m_event = serializedObject.FindProperty("allDialogueEvents").GetArrayElementAtIndex(currentIndex).FindPropertyRelative("eventConfig").FindPropertyRelative("OnCustomEvent");
+                            EditorGUILayout.PropertyField(m_event);
+                            serializedObject.ApplyModifiedProperties();
+                        }
+                    }
+                    #endregion
+                    #region CHOICE
+                    else if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.CHOICE)
+                    {
+                        for (int it = 0; it < currentDialogueEvent.choiceConfig.allChoices.Count; it++)
+                        {
+                            GUILayout.BeginVertical("actionin");
+                            string a = GUILayout.TextArea(currentDialogueEvent.choiceConfig.allChoices[it].sentence.FR);
+                            string b = GUILayout.TextArea(currentDialogueEvent.choiceConfig.allChoices[it].sentence.EN);
+
+                            currentDialogueEvent.choiceConfig.allChoices[it] = new ChoiceConfig.Choice(new DialogueTable.Row(a, b), currentDialogueEvent.choiceConfig.allChoices[it].OnClick);
+
+                            /*if (currentDialogueEvent.choiceConfig.allChoices[it].OnClick == null)
+                            {
+                                DialogueConfig newDialogue = null;
+                                newDialogue = (DialogueConfig)EditorGUILayout.ObjectField(newDialogue, typeof(DialogueConfig), true);
+
+                                if (newDialogue != null)
+                                    currentDialogueEvent.choiceConfig.allChoices[it] = new ChoiceConfig.Choice(new DialogueTable.Row(a, b), newDialogue.gameObject);
+                            }
+                            else
+                                GUILayout.Label("Have a StartDialogue");*/
+
+                            SerializedProperty m_event = serializedObject.FindProperty("allDialogueEvents").GetArrayElementAtIndex(currentIndex).FindPropertyRelative("choiceConfig").FindPropertyRelative("allChoices").GetArrayElementAtIndex(it).FindPropertyRelative("OnClick");
+                            EditorGUILayout.PropertyField(m_event);
+                            serializedObject.ApplyModifiedProperties();
+
+                            if (GUILayout.Button("Delete", "buttoncenter"))
+                                currentDialogueEvent.choiceConfig.allChoices.RemoveAt(it);
+
+                            GUILayout.EndVertical();
+                        }
+
+
+                        if (currentDialogueEvent.choiceConfig.allChoices.Count < 4)
+                            if (GUILayout.Button(new GUIContent("Add Answer", "Add a new answer")))
+                                currentDialogueEvent.choiceConfig.allChoices.Add(new ChoiceConfig.Choice());
+                    }
+                    #endregion
+                }
+
+                GUILayout.EndVertical();
+                currentIndex++;
+            }
+
+            #endregion
+
+            // -------------------------------------- Footer -------------------------------------- //
+
+            GUILayout.Space(20);
+            if (GUILayout.Button(new GUIContent("Add Speeker", "Add a new speeker")))
+                _source.allDialogueEvents.Add(new DialogueEvent(new SentenceConfig()));
 
             GUILayout.Space(5);
 
-            string style = "box";
-            /*if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.SENTENCE && idSpeekerSelected == currentIndex)
-                style = "boxselected";
-            else */if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.EVENT)
-            {
-                if (currentDialogueEvent.eventConfig.actionType == EventConfig.ACTION_TYPE.SPEAKER_IN)
-                    style = "actionin";
-                else
-                    style = "actionout";
-            }
-            else if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.CHOICE)
-                style = "choice";
+            if (GUILayout.Button(new GUIContent("Add Event", "Add a new event")))
+                _source.allDialogueEvents.Add(new DialogueEvent(new EventConfig()));
 
+            GUILayout.Space(5);
 
-            GUILayout.BeginVertical(style);
+            if (GUILayout.Button(new GUIContent("Add Choice", "Add a new choice")))
+                _source.allDialogueEvents.Add(new DialogueEvent(new ChoiceConfig()));
 
-            GUILayout.BeginHorizontal();
-
-            if(GUILayout.Button(new GUIContent("", "Collapse/Show Details"), currentDialogueEvent.isColapse ? "colapse" : "detail", GUILayout.Width(20)))
-            {
-                currentDialogueEvent.isColapse = !currentDialogueEvent.isColapse;
-            }
-
-            GUILayout.Space(10);
-            currentDialogueEvent.idSpeeker = EditorGUILayout.Popup(currentDialogueEvent.idSpeeker, speekerName.ToArray(), GUILayout.Width(150));
-
-            GUILayout.FlexibleSpace();
-
-            if (GUILayout.Button(new GUIContent("", "Move the speeker up"), "up", GUILayout.Width(20f)))
-            {
-                if (currentIndex != 0)
-                {
-                    Swap<DialogueEvent>(_source.allDialogueEvents, currentIndex, currentIndex - 1);
-
-                    /*if (idSpeekerSelected == currentIndex)
-                        idSpeekerSelected--;*/
-                    return;
-                }
-            }
-
-            if (GUILayout.Button(new GUIContent("", "Move the speeker down"), "down", GUILayout.Width(20f)))
-            {
-                if (currentIndex != _source.allDialogueEvents.Count - 1)
-                {
-                    Swap<DialogueEvent>(_source.allDialogueEvents, currentIndex, currentIndex + 1);
-
-                    /*if (idSpeekerSelected == currentIndex)
-                        idSpeekerSelected++;*/
-                    return;
-                }
-            }
-
-            if (GUILayout.Button(new GUIContent("", "Delete this conversation"), "bin", GUILayout.Width(20f)) && EditorUtility.DisplayDialog("Caution", "Your are about to delete the entire section of this dialogue.\nAre you sure ?", "Yes, I am certain"))
-            {
-                _source.allDialogueEvents.Remove(currentDialogueEvent);
-
-                /*if (idSpeekerSelected == currentIndex)
-                    idSpeekerSelected = -1;*/
-                return;
-            }
-
-
-            GUILayout.EndHorizontal();
-
-            if (!currentDialogueEvent.isColapse)
-            {
-                currentDialogueEvent.autoPass = GUILayout.Toggle(currentDialogueEvent.autoPass, "Auto-Pass");
-
-                #region SENTENCE
-                if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.SENTENCE)
-                {
-                    SentenceConfig currentSentenceConfig = currentDialogueEvent.sentenceConfig;
-
-                    /*if (currentIndex != idSpeekerSelected)
-                        if (GUILayout.Button(new GUIContent("Active", "Select this speeker to recive sentences"), "buttoncenter")) idSpeekerSelected = currentIndex;*/
-
-                    GUILayout.Space(10);
-
-                    GUILayout.BeginVertical("Box");
-                    GUILayout.Label("Sentence");
-
-                    for (int y = 0; y < currentSentenceConfig.talking.Count; y++)
-                    {
-                        GUILayout.BeginVertical(currentSentenceConfig.talking[y].csvIndex == -1 ? "customsentence" : "sentence");
-                        GUILayout.BeginHorizontal();
-
-                        GUILayout.Label(currentSentenceConfig.talking[y].sentence.FR.Length > 100 ? currentSentenceConfig.talking[y].sentence.FR.Substring(0, 100) + " [...]" : currentSentenceConfig.talking[y].sentence.FR, "txt");
-                        GUILayout.FlexibleSpace();
-
-                        if (GUILayout.Button(new GUIContent("", "Move the sentence up"), "up", GUILayout.Width(20f)))
-                        {
-                            if (y != 0)
-                            {
-                                Swap<SentenceConfig.Sentence>(currentSentenceConfig.talking, y, y - 1);
-                                return;
-                            }
-                        }
-                        if (GUILayout.Button(new GUIContent("", "Move the sentence down"), "down", GUILayout.Width(20f)))
-                        {
-                            if (y != currentSentenceConfig.talking.Count - 1)
-                            {
-                                Swap<SentenceConfig.Sentence>(currentSentenceConfig.talking, y, y + 1);
-                                return;
-                            }
-                        }
-
-                        if (GUILayout.Button(new GUIContent("", "Delete the current sentence"), "bin", GUILayout.Width(20f)))
-                        {
-                            currentSentenceConfig.talking.Remove(currentSentenceConfig.talking[y]);
-                            return;
-                        }
-
-                        GUILayout.EndHorizontal();
-
-                        GUILayout.BeginHorizontal();
-                        GUILayout.Label("Text Anim", GUILayout.Width(70));
-                        DialogueControler.TEXT_ANIMATION txtAnimation = (DialogueControler.TEXT_ANIMATION)EditorGUILayout.EnumPopup(currentSentenceConfig.talking[y].animEnter, GUILayout.Width(100f));
-                        GUILayout.EndHorizontal();
-
-
-                        GUILayout.BeginHorizontal();
-                        GUILayout.Label("Emotion", GUILayout.Width(70));
-                        Speaker.EMOTION spEmotion = (Speaker.EMOTION)EditorGUILayout.EnumPopup(currentSentenceConfig.talking[y].emotion, GUILayout.Width(100f));
-                        GUILayout.EndHorizontal();
-
-                        currentSentenceConfig.talking[y] = new SentenceConfig.Sentence(currentSentenceConfig.talking[y].sentence, txtAnimation, spEmotion, currentSentenceConfig.talking[y].csvIndex);
-
-                        GUILayout.BeginHorizontal();
-                        if (currentSentenceConfig.talking[y].csvIndex == -1)
-                            GUILayout.Label("* Custom, may not be complet !", "warning");
-                        GUILayout.FlexibleSpace();
-                        if (GUILayout.Button(new GUIContent("Modify", "Edit the current sentence. Will be pass in custome sentence."), GUILayout.Width(100)))
-                            ModifierWindow.ShowWindow(_source.csvFile, currentSentenceConfig, y);
-                        GUILayout.EndHorizontal();
-
-                        GUILayout.EndVertical();
-                    }
-
-                    if (GUILayout.Button(new GUIContent("Add Sentence", "Select this speeker to recive sentences"), "buttoncenter"))
-                    {
-                        ModifierWindow.ShowWindow(_source.csvFile, currentSentenceConfig);
-                    }
-
-                    GUILayout.EndVertical();
-                }
-                #endregion
-                #region EVENT
-                else if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.EVENT)
-                {
-                    currentDialogueEvent.eventConfig.actionType = (EventConfig.ACTION_TYPE)EditorGUILayout.EnumPopup(currentDialogueEvent.eventConfig.actionType);
-
-                    if(currentDialogueEvent.eventConfig.actionType == EventConfig.ACTION_TYPE.SPEAKER_IN)
-                        currentDialogueEvent.eventConfig.screenPos = (EventConfig.POSITION)EditorGUILayout.EnumPopup(currentDialogueEvent.eventConfig.screenPos);
-                    else if(currentDialogueEvent.eventConfig.actionType == EventConfig.ACTION_TYPE.CUSTOM_EVENT)
-                    {
-                        SerializedProperty m_event = serializedObject.FindProperty("allDialogueEvents").GetArrayElementAtIndex(currentIndex).FindPropertyRelative("eventConfig").FindPropertyRelative("OnCustomEvent");
-                        EditorGUILayout.PropertyField(m_event);
-                        serializedObject.ApplyModifiedProperties();
-                    }
-                }
-                #endregion
-                #region CHOICE
-                else if (currentDialogueEvent.source == DialogueEvent.TYPE_EVENT.CHOICE)
-                {
-                    for (int it = 0; it < currentDialogueEvent.choiceConfig.allChoices.Count; it++)
-                    {
-                        GUILayout.BeginVertical("actionin");
-                        string a = GUILayout.TextArea(currentDialogueEvent.choiceConfig.allChoices[it].sentence.FR);
-                        string b = GUILayout.TextArea(currentDialogueEvent.choiceConfig.allChoices[it].sentence.EN);
-
-                        currentDialogueEvent.choiceConfig.allChoices[it] = new ChoiceConfig.Choice(new DialogueTable.Row(a,b), currentDialogueEvent.choiceConfig.allChoices[it].OnClick);
-
-                        /*if (currentDialogueEvent.choiceConfig.allChoices[it].OnClick == null)
-                        {
-                            DialogueConfig newDialogue = null;
-                            newDialogue = (DialogueConfig)EditorGUILayout.ObjectField(newDialogue, typeof(DialogueConfig), true);
-
-                            if (newDialogue != null)
-                                currentDialogueEvent.choiceConfig.allChoices[it] = new ChoiceConfig.Choice(new DialogueTable.Row(a, b), newDialogue.gameObject);
-                        }
-                        else
-                            GUILayout.Label("Have a StartDialogue");*/
-
-                        SerializedProperty m_event = serializedObject.FindProperty("allDialogueEvents").GetArrayElementAtIndex(currentIndex).FindPropertyRelative("choiceConfig").FindPropertyRelative("allChoices").GetArrayElementAtIndex(it).FindPropertyRelative("OnClick");
-                        EditorGUILayout.PropertyField(m_event);
-                        serializedObject.ApplyModifiedProperties();
-
-                        if (GUILayout.Button("Delete", "buttoncenter"))
-                            currentDialogueEvent.choiceConfig.allChoices.RemoveAt(it);
-
-                        GUILayout.EndVertical();
-                    }
-
-
-                    if(currentDialogueEvent.choiceConfig.allChoices.Count < 4)
-                        if(GUILayout.Button(new GUIContent("Add Answer", "Add a new answer")))
-                            currentDialogueEvent.choiceConfig.allChoices.Add(new ChoiceConfig.Choice());
-                }
-                #endregion
-            }
-
-            GUILayout.EndVertical();
-            currentIndex++;
+            GUILayout.Space(20);
         }
 
-        #endregion
-
-        // -------------------------------------- Footer -------------------------------------- //
-
-        GUILayout.Space(20);
-        if (GUILayout.Button(new GUIContent("Add Speeker", "Add a new speeker")))
-            _source.allDialogueEvents.Add(new DialogueEvent(new SentenceConfig()));
-        
-        GUILayout.Space(5);
-
-        if (GUILayout.Button(new GUIContent("Add Event", "Add a new event")))
-            _source.allDialogueEvents.Add(new DialogueEvent(new EventConfig()));
-
-        GUILayout.Space(5);
-
-        if (GUILayout.Button(new GUIContent("Add Choice", "Add a new choice")))
-            _source.allDialogueEvents.Add(new DialogueEvent(new ChoiceConfig()));
-
-        GUILayout.Space(20);
-    }
-
-    private void Refresh()
-    {
-        /*scrollPosition = Vector2.zero;
-
-        searchResult.Clear();
-        IDInput = "";
-        isInCustomDialogue = true;
-
-        idResultSelected = 0;
-        idSpeekerSelected = -1;
-
-        csvName.Clear();
-        csvName.Add("In all CSV");
-        foreach (TextAsset other in _source.csvFile)
-            csvName.Add(other.name);*/
-
-        speekerName.Clear();
-        if (_source.speekerConfig)
-            foreach (Speaker other in _source.speekerConfig.allSpeekers)
-                speekerName.Add(other.name);
-    }
-
-    public void Swap<T>(IList<T> list, int indexA, int indexB)
-    {
-        T tmp = list[indexA];
-        list[indexA] = list[indexB];
-        list[indexB] = tmp;
-    }
-
-    /*private void SearchForSentence()
-    {
-        if (_source.csvFile.Count == 0) return;
-        searchResult.Clear();
-        idResultSelected = 0;
-
-        if(enumIdCsv == 0)
+        private void Refresh()
         {
-            for (int j = 0; j < csvName.Count - 1; j++)
-            {
-                LoadCSVFile(j);
-            }
-        }
-        else
-            LoadCSVFile(enumIdCsv - 1);
-    }
+            /*scrollPosition = Vector2.zero;
 
-    private void LoadCSVFile(int _idCSV)
-    {
-        DialogueTable table = new DialogueTable();
-        table.Load(_source.csvFile[_idCSV]);
-        if(table.IsLoaded())
-            foreach (DialogueTable.Row row in table.FindAll_ID(IDInput))
-                searchResult.Add(new Result(row, _idCSV));
-    }*/
+            searchResult.Clear();
+            IDInput = "";
+            isInCustomDialogue = true;
+
+            idResultSelected = 0;
+            idSpeekerSelected = -1;
+
+            csvName.Clear();
+            csvName.Add("In all CSV");
+            foreach (TextAsset other in _source.csvFile)
+                csvName.Add(other.name);*/
+
+            speekerName.Clear();
+            if (_source.speekerConfig)
+                foreach (Speaker other in _source.speekerConfig.allSpeekers)
+                    speekerName.Add(other.name);
+        }
+
+        public void Swap<T>(IList<T> list, int indexA, int indexB)
+        {
+            T tmp = list[indexA];
+            list[indexA] = list[indexB];
+            list[indexB] = tmp;
+        }
+
+        /*private void SearchForSentence()
+        {
+            if (_source.csvFile.Count == 0) return;
+            searchResult.Clear();
+            idResultSelected = 0;
+
+            if(enumIdCsv == 0)
+            {
+                for (int j = 0; j < csvName.Count - 1; j++)
+                {
+                    LoadCSVFile(j);
+                }
+            }
+            else
+                LoadCSVFile(enumIdCsv - 1);
+        }
+
+        private void LoadCSVFile(int _idCSV)
+        {
+            DialogueTable table = new DialogueTable();
+            table.Load(_source.csvFile[_idCSV]);
+            if(table.IsLoaded())
+                foreach (DialogueTable.Row row in table.FindAll_ID(IDInput))
+                    searchResult.Add(new Result(row, _idCSV));
+        }*/
+    }
 }

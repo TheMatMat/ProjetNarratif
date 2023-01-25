@@ -4,43 +4,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PointAndClickManager : MonoBehaviour
+namespace TeamSeven
 {
-    public GameObject inventoryElements;
-    public GameObject detailElement;
-    public GameObject detailPanel;
-    public GameObject EvidenceIconPrefab;
 
-    public InventoryController inventoryController;
-
-    private static PointAndClickManager instance = null;
-    public static PointAndClickManager Instance => instance;
-
-    private void Awake()
+    public class PointAndClickManager : MonoBehaviour
     {
-        if (instance != null && instance != this)
+        public GameObject inventoryElements;
+        public GameObject detailElement;
+        public GameObject detailPanel;
+        public GameObject EvidenceIconPrefab;
+
+        public InventoryController inventoryController;
+
+        private static PointAndClickManager instance = null;
+        public static PointAndClickManager Instance => instance;
+
+        private void Awake()
         {
-            Destroy(this.gameObject);
-            return;
+            if (instance != null && instance != this)
+            {
+                Destroy(this.gameObject);
+                return;
+            }
+            else
+            {
+                instance = this;
+            }
         }
-        else
+
+
+        public void NewEvidenceFound(IndiceController indiceController)
         {
-            instance = this;
+            GameObject newIcon = Instantiate(EvidenceIconPrefab, inventoryController.inventoryElements.transform);
+            newIcon.GetComponent<IndiceController>().evidenceData = indiceController.evidenceData;
+            newIcon.GetComponent<IndiceController>().InitSprite(1);
+
+            detailPanel.GetComponent<DetailPanelController>().FadeIn(indiceController.evidenceData.detailSprite);
         }
-    }
 
-
-    public void NewEvidenceFound(IndiceController indiceController)
-    {
-        GameObject newIcon = Instantiate(EvidenceIconPrefab, inventoryController.inventoryElements.transform);
-        newIcon.GetComponent<IndiceController>().evidenceData = indiceController.evidenceData;
-        newIcon.GetComponent<IndiceController>().InitSprite(1);
-
-        detailPanel.GetComponent<DetailPanelController>().FadeIn(indiceController.evidenceData.detailSprite);
-    }
-
-    public void ShowOneEvidenceInfos(IndiceController indiceController)
-    {
-        inventoryController.DetailElementInOut(indiceController);
+        public void ShowOneEvidenceInfos(IndiceController indiceController)
+        {
+            inventoryController.DetailElementInOut(indiceController);
+        }
     }
 }

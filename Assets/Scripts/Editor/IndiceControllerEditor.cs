@@ -3,98 +3,102 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(IndiceController))]
-[CanEditMultipleObjects]
-public class IndiceControllerEditor : Editor
+namespace TeamSeven
 {
-    public GUIStyle _titles;
-    public GUIStyle _redText;
 
-    private IndiceController _source;
-
-    private int _indiceIndex;
-
-    public void OnEnable()
+    [CustomEditor(typeof(IndiceController))]
+    [CanEditMultipleObjects]
+    public class IndiceControllerEditor : Editor
     {
-        _source = (IndiceController)target;
-    }
+        public GUIStyle _titles;
+        public GUIStyle _redText;
 
-    /*public override void OnInspectorGUI()
-    {
-        InitStyle();
+        private IndiceController _source;
 
-        // database selection
-        _source.indiceDB = EditorGUILayout.ObjectField(_source.indiceDB, typeof(IndiceDataBase), true) as IndiceDataBase;
+        private int _indiceIndex;
 
-        if(_source.indiceDB == null)
+        public void OnEnable()
         {
-            EditorGUILayout.LabelField("no evidence data base selected yet");
-        }
-        else
-        {
-            //evidence selection
-            DrawEvidenceSelection();
-
-            //evidence details
-            DrawEvidencePreview();
-        }
-        
-        void DrawEvidenceSelection()
-        {
-            if (_source.indiceDB == null || _source.indiceDB.indiceDatas.Count == 0)
-                return;
-
-            List<string> indiceNames = new List<string>();
-            foreach (IndiceData oneData in _source.indiceDB.indiceDatas)
-                indiceNames.Add(oneData.name);
-
-            GUILayout.Space(15);
-            EditorGUILayout.BeginHorizontal("box");
-            GUILayout.Label("Select the evidence you want:", _titles);
-            GUILayout.Space(10);
-            _indiceIndex = EditorGUILayout.Popup(_indiceIndex == 0 ? 0 : _indiceIndex, indiceNames.ToArray());
-            _source.data = _source.indiceDB.indiceDatas[_indiceIndex];
-
-            Debug.Log(_indiceIndex);
-            EditorGUILayout.EndHorizontal();
+            _source = (IndiceController)target;
         }
 
-        void DrawEvidencePreview()
+        /*public override void OnInspectorGUI()
         {
-            EditorGUILayout.BeginVertical("box");
+            InitStyle();
 
-            GUILayout.Label("Evidence data preview", _titles);
-            GUILayout.Space(10);
+            // database selection
+            _source.indiceDB = EditorGUILayout.ObjectField(_source.indiceDB, typeof(IndiceDataBase), true) as IndiceDataBase;
 
-            EditorGUILayout.BeginHorizontal();
-            _source.data.name = EditorGUILayout.TextField("Evidence Name", _source.data.name);
-            EditorGUILayout.EndHorizontal();
+            if(_source.indiceDB == null)
+            {
+                EditorGUILayout.LabelField("no evidence data base selected yet");
+            }
+            else
+            {
+                //evidence selection
+                DrawEvidenceSelection();
 
-            EditorGUILayout.BeginHorizontal();
-            _source.data.sceneID = EditorGUILayout.IntField("Scene Index", _source.data.sceneID);
-            EditorGUILayout.EndHorizontal();
+                //evidence details
+                DrawEvidencePreview();
+            }
 
-            EditorGUILayout.BeginHorizontal();
-            _source.data.sceneSprite = EditorGUILayout.ObjectField("Scene Sprite", _source.data.sceneSprite, typeof(Sprite), true) as Sprite;
-            EditorGUILayout.EndHorizontal();
-            
-            EditorGUILayout.BeginHorizontal();
-            _source.data.detailSprite = EditorGUILayout.ObjectField("Detailed Sprite", _source.data.detailSprite, typeof(Sprite), true) as Sprite;
-            EditorGUILayout.EndHorizontal();
-            
-            EditorGUILayout.BeginHorizontal();
-            _source.data.inventorySprite = EditorGUILayout.ObjectField("Inventory Sprite", _source.data.inventorySprite, typeof(Sprite), true) as Sprite;
-            EditorGUILayout.EndHorizontal();
+            void DrawEvidenceSelection()
+            {
+                if (_source.indiceDB == null || _source.indiceDB.indiceDatas.Count == 0)
+                    return;
+
+                List<string> indiceNames = new List<string>();
+                foreach (IndiceData oneData in _source.indiceDB.indiceDatas)
+                    indiceNames.Add(oneData.name);
+
+                GUILayout.Space(15);
+                EditorGUILayout.BeginHorizontal("box");
+                GUILayout.Label("Select the evidence you want:", _titles);
+                GUILayout.Space(10);
+                _indiceIndex = EditorGUILayout.Popup(_indiceIndex == 0 ? 0 : _indiceIndex, indiceNames.ToArray());
+                _source.data = _source.indiceDB.indiceDatas[_indiceIndex];
+
+                Debug.Log(_indiceIndex);
+                EditorGUILayout.EndHorizontal();
+            }
+
+            void DrawEvidencePreview()
+            {
+                EditorGUILayout.BeginVertical("box");
+
+                GUILayout.Label("Evidence data preview", _titles);
+                GUILayout.Space(10);
+
+                EditorGUILayout.BeginHorizontal();
+                _source.data.name = EditorGUILayout.TextField("Evidence Name", _source.data.name);
+                EditorGUILayout.EndHorizontal();
+
+                EditorGUILayout.BeginHorizontal();
+                _source.data.sceneID = EditorGUILayout.IntField("Scene Index", _source.data.sceneID);
+                EditorGUILayout.EndHorizontal();
+
+                EditorGUILayout.BeginHorizontal();
+                _source.data.sceneSprite = EditorGUILayout.ObjectField("Scene Sprite", _source.data.sceneSprite, typeof(Sprite), true) as Sprite;
+                EditorGUILayout.EndHorizontal();
+
+                EditorGUILayout.BeginHorizontal();
+                _source.data.detailSprite = EditorGUILayout.ObjectField("Detailed Sprite", _source.data.detailSprite, typeof(Sprite), true) as Sprite;
+                EditorGUILayout.EndHorizontal();
+
+                EditorGUILayout.BeginHorizontal();
+                _source.data.inventorySprite = EditorGUILayout.ObjectField("Inventory Sprite", _source.data.inventorySprite, typeof(Sprite), true) as Sprite;
+                EditorGUILayout.EndHorizontal();
 
 
-            EditorGUILayout.EndVertical();
+                EditorGUILayout.EndVertical();
+            }
+        }*/
+
+        public void InitStyle()
+        {
+            _titles = GUI.skin.label;
+            _titles.alignment = TextAnchor.MiddleCenter;
+            _titles.fontStyle = FontStyle.Bold;
         }
-    }*/
-
-    public void InitStyle()
-    {
-        _titles = GUI.skin.label;
-        _titles.alignment = TextAnchor.MiddleCenter;
-        _titles.fontStyle = FontStyle.Bold;
     }
 }

@@ -2,35 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace TeamSeven
 {
-    public static GameManager instance { get; private set; }
 
-    public LANGUAGE language { get; private set; }
-
-    public delegate void LanguageListner();
-    public LanguageListner OnLanguageChange;
-
-    public enum LANGUAGE
+    public class GameManager : MonoBehaviour
     {
-        FR,
-        EN
-    }
+        public static GameManager instance { get; private set; }
 
-    private void Awake()
-    {
-        if (instance != null)
-            Destroy(gameObject);
-        else
+        public LANGUAGE language { get; private set; }
+
+        public delegate void LanguageListner();
+        public LanguageListner OnLanguageChange;
+
+        public enum LANGUAGE
         {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            FR,
+            EN
         }
-    }
 
-    public void ChangeLanguage()
-    {
-        language = (LANGUAGE)((language.GetHashCode() + 1) % 2);
-        OnLanguageChange?.Invoke();
+        private void Awake()
+        {
+            if (instance != null)
+                Destroy(gameObject);
+            else
+            {
+                instance = this;
+                DontDestroyOnLoad(this.gameObject);
+            }
+        }
+
+        public void ChangeLanguage()
+        {
+            language = (LANGUAGE)((language.GetHashCode() + 1) % 2);
+            OnLanguageChange?.Invoke();
+        }
     }
 }

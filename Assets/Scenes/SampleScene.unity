@@ -1226,6 +1226,38 @@ PrefabInstance:
       propertyPath: evidenceData.evidenceName
       value: Scraper
       objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: speekerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: csvFile.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: csvFile.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: This scraper has certainly seen better days, it has been broken in 2
+        as if someone had smashed it against a hard wall. You can also see a lot
+        of small nicks on it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Cette raclette a certainement vu de meilleurs jours, elle a \xE9t\xE9
+        bris\xE9 en 2 comme si quelqu\u2019un l'avait fracass\xE9 contre une paroi
+        dure. On peut aussi apercevoir plein de petites entailles dessus."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Desc_MNB
+      objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
       value: Evidence (1)
@@ -2231,6 +2263,27 @@ PrefabInstance:
       propertyPath: csvFile.Array.data[0]
       value: 
       objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: '"Scattered on the floor are a number of bills with the words ""UNPAID""
+        on them, some of them stained and reeking of alcohol. They are dated several
+        months ago and are addressed to ""Ryker Howell""."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Plein de factures sur lesquelles on per\xE7oit l\u2019inscription \u201CNON
+        PAY\xC9\u201D sont \xE9parpill\xE9es au sol, certaines sont tach\xE9es et
+        elle empeste l'alcool. Elles datent d\u2019il y a plusieurs mois, adress\xE9
+        au nom de \u201CRyker Howell\u201D."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Desc_FTA
+      objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
       value: Evidence
@@ -2463,6 +2516,50 @@ PrefabInstance:
     - target: {fileID: 5692217297725007402, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: evidenceData.evidenceName
       value: EDT
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: speekerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: csvFile.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: csvFile.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Here is the schedule of the store. We can see that Wade and Ryker have
+        very busy days, sometimes working 10 hours in a row.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Voici l\u2019emploi du temps du magasin. On peut voir que Wade et Ryker
+        ont des journ\xE9es bien occup\xE9es, encha\xEEnant parfois 10h de travail
+        cons\xE9cutif."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Desc_EDT_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[1].sentence.EN
+      value: But why is it written that you have to be quiet between 3 and 4 pm?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[1].sentence.FR
+      value: "Mais pourquoi est-il \xE9crit qu\u2019il faut \xEAtre silencieux entre
+        15h et 16h?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[1].sentence.ID
+      value: Desc_EDT_2
       objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
@@ -2978,6 +3075,39 @@ PrefabInstance:
     - target: {fileID: 5692217297725007402, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: evidenceData.evidenceName
       value: Photo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: speekerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: csvFile.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: csvFile.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: '"You can make out the face of a little girl. It is written on the back
+        ""Hang in there my darling I will do anything to make you better."" Strange
+        I though it was his mother who was sick and not his daughter..."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "On peut apercevoir le visage d\u2019une petite fille. Il est \xE9crit
+        au dos \u201CTiens bon ma ch\xE9rie je ferais tout pour que tu aille mieux\u2019.\u201D
+        Bizarre je croyais que c\u2019\xE9tait sa m\xE8re qui \xE9tait malade et
+        non sa fille\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Desc_Photo
       objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
@@ -3659,7 +3789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7622340663573531119, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
@@ -3762,6 +3892,37 @@ PrefabInstance:
     - target: {fileID: 5692217297725007402, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: evidenceData.evidenceName
       value: Pay Slip
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: speekerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: csvFile.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: csvFile.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: "This is the pay slip of one of Mr.Pr\xE9cieu's employees. The salaries
+        look excessively low compared to the average I'm used to."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "C\u2019est la fiche de paie d\u2019un des employ\xE9s de Mr.Pr\xE9cieu.
+        Les salaires ont l\u2019air excessivement bas compar\xE9 \xE0 la moyenne
+        auxquels je suis habitu\xE9."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Desc_FDP
       objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
@@ -4340,6 +4501,26 @@ PrefabInstance:
       propertyPath: csvFile.Array.data[0]
       value: 
       objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: One can notice a large quantity of used cartridges at the foot of the
+        broken windows of the jewelry store...Who would shoot so much to stop a simple
+        thief?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "On peut remarquer une grande quantit\xE9 de cartouches usag\xE9es au
+        pied des vitres bris\xE9es de la joaillerie\u2026Qui tirerait autant pour
+        arr\xEAter un simple voleur ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Desc_CU
+      objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
       value: Evidence (1)
@@ -4455,7 +4636,7 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].isColapse
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size

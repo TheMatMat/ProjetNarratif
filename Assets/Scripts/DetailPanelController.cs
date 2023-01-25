@@ -4,63 +4,67 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DetailPanelController : MonoBehaviour
+namespace TeamSeven
 {
 
-    public Image blackBG;
-    public Image detailSprite;
-
-    public Transform endPos, startPosUp, startPosRight;
-
-    public bool isFading = false;
-
-    // Start is called before the first frame update
-    void Start()
+    public class DetailPanelController : MonoBehaviour
     {
-        this.gameObject.SetActive(false);
-        detailSprite.transform.position = startPosUp.transform.position;
-    }
 
-    public void FadeIn(Sprite spriteToDisplay)
-    {
-        if(isFading)
-            return;
+        public Image blackBG;
+        public Image detailSprite;
 
-        isFading = true;
+        public Transform endPos, startPosUp, startPosRight;
 
-        detailSprite.sprite = spriteToDisplay;
+        public bool isFading = false;
 
-        this.gameObject.SetActive(true);
+        // Start is called before the first frame update
+        void Start()
+        {
+            this.gameObject.SetActive(false);
+            detailSprite.transform.position = startPosUp.transform.position;
+        }
 
-        blackBG.DOFade(0.8f, 0.2f);
+        public void FadeIn(Sprite spriteToDisplay)
+        {
+            if (isFading)
+                return;
 
-        detailSprite.DOFade(1.0f, 0.8f);
-        detailSprite.gameObject.transform.DOMove(endPos.transform.position, 0.8f).OnComplete(() => SetState(true));
-    }
+            isFading = true;
 
-    public void FadeOut(bool isFirstTime = true)
-    {
-        if (isFading || DialogueControler.instance.DialoguePanelOpen)
-            return;
+            detailSprite.sprite = spriteToDisplay;
 
-        isFading = true;
+            this.gameObject.SetActive(true);
 
-        blackBG.DOFade(0f, 0.2f);
+            blackBG.DOFade(0.8f, 0.2f);
 
-        detailSprite.DOFade(0f, 0.4f);
+            detailSprite.DOFade(1.0f, 0.8f);
+            detailSprite.gameObject.transform.DOMove(endPos.transform.position, 0.8f).OnComplete(() => SetState(true));
+        }
 
-        detailSprite.gameObject.transform.DOMove(startPosUp.transform.position, 0.8f).OnComplete(() => SetState(false));
-    }
+        public void FadeOut(bool isFirstTime = true)
+        {
+            if (isFading || DialogueControler.instance.DialoguePanelOpen)
+                return;
 
-    public void SetState(bool newState)
-    {
-        isFading = false;
-        this.gameObject.SetActive(newState);
-    }
+            isFading = true;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            blackBG.DOFade(0f, 0.2f);
+
+            detailSprite.DOFade(0f, 0.4f);
+
+            detailSprite.gameObject.transform.DOMove(startPosUp.transform.position, 0.8f).OnComplete(() => SetState(false));
+        }
+
+        public void SetState(bool newState)
+        {
+            isFading = false;
+            this.gameObject.SetActive(newState);
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }

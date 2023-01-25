@@ -3,42 +3,46 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using UnityEngine;
 
-[System.Serializable]
-public class DialogueEvent
+namespace TeamSeven
 {
-    [field : SerializeField] public TYPE_EVENT source { get; private set; }
 
-    public bool isColapse;
-    public int idSpeeker;
-    public bool autoPass;
-
-    public SentenceConfig sentenceConfig = null;
-    public EventConfig eventConfig = null;
-    public ChoiceConfig choiceConfig = null;
-
-    public DialogueEvent(SentenceConfig _Sc)
+    [System.Serializable]
+    public class DialogueEvent
     {
-        source = TYPE_EVENT.SENTENCE;
-        sentenceConfig = _Sc;
-    }
+        [field: SerializeField] public TYPE_EVENT source { get; private set; }
 
-    public DialogueEvent(EventConfig _Ec)
-    {
-        source = TYPE_EVENT.EVENT;
-        eventConfig = _Ec;
-    }
+        public bool isColapse;
+        public int idSpeeker;
+        public bool autoPass;
 
-    public DialogueEvent(ChoiceConfig Cc)
-    {
-        source = TYPE_EVENT.CHOICE;
-        choiceConfig = Cc;
-    }
+        public SentenceConfig sentenceConfig = null;
+        public EventConfig eventConfig = null;
+        public ChoiceConfig choiceConfig = null;
 
-    public enum TYPE_EVENT
-    {
-        SENTENCE,
-        EVENT,
-        CHOICE
+        public DialogueEvent(SentenceConfig _Sc)
+        {
+            source = TYPE_EVENT.SENTENCE;
+            sentenceConfig = _Sc;
+        }
+
+        public DialogueEvent(EventConfig _Ec)
+        {
+            source = TYPE_EVENT.EVENT;
+            eventConfig = _Ec;
+        }
+
+        public DialogueEvent(ChoiceConfig Cc)
+        {
+            source = TYPE_EVENT.CHOICE;
+            choiceConfig = Cc;
+        }
+
+        public enum TYPE_EVENT
+        {
+            SENTENCE,
+            EVENT,
+            CHOICE
+        }
     }
 }
 

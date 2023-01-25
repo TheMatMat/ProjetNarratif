@@ -3,43 +3,47 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
-public class CSVView : EditorWindow 
+namespace TeamSeven
 {
-	TextAsset csv = null;
-	string[][] arr = null;
 
-	[MenuItem("Window/CSV View")]
-	public static void ShowWindow()
+	public class CSVView : EditorWindow
 	{
-		//Show existing window instance. If one doesn't exist, make one.
-		EditorWindow.GetWindow(typeof(CSVView));
-	}
+		TextAsset csv = null;
+		string[][] arr = null;
 
-	void OnGUI()
-	{
-		TextAsset newCsv = EditorGUILayout.ObjectField("CSV", csv, typeof(TextAsset), false) as TextAsset;
-		if(newCsv != csv)
+		[MenuItem("Window/CSV View")]
+		public static void ShowWindow()
 		{
-			csv = newCsv;
-			arr = CsvParser2.Parse(csv.text);
+			//Show existing window instance. If one doesn't exist, make one.
+			EditorWindow.GetWindow(typeof(CSVView));
 		}
-		if(GUILayout.Button("Refresh") && csv != null)
-			arr = CsvParser2.Parse(csv.text);
 
-		if(csv == null)
-			return;
-
-		if(arr == null)
-			arr = CsvParser2.Parse(csv.text);
-
-		for(int i = 0 ; i < arr.Length ; i++)
+		void OnGUI()
 		{
-			EditorGUILayout.BeginHorizontal();
-			for(int j = 0 ; j < arr[i].Length ; j++)
+			TextAsset newCsv = EditorGUILayout.ObjectField("CSV", csv, typeof(TextAsset), false) as TextAsset;
+			if (newCsv != csv)
 			{
-				EditorGUILayout.TextField(arr[i][j]);
+				csv = newCsv;
+				arr = CsvParser2.Parse(csv.text);
 			}
-			EditorGUILayout.EndHorizontal();
+			if (GUILayout.Button("Refresh") && csv != null)
+				arr = CsvParser2.Parse(csv.text);
+
+			if (csv == null)
+				return;
+
+			if (arr == null)
+				arr = CsvParser2.Parse(csv.text);
+
+			for (int i = 0; i < arr.Length; i++)
+			{
+				EditorGUILayout.BeginHorizontal();
+				for (int j = 0; j < arr[i].Length; j++)
+				{
+					EditorGUILayout.TextField(arr[i][j]);
+				}
+				EditorGUILayout.EndHorizontal();
+			}
 		}
 	}
 }
