@@ -43,6 +43,7 @@ namespace TeamSeven
         private IEnumerator LoadLevel(int index)
         {
             animator.SetTrigger("Transition");
+            GameManager.instance.GoToSnapshot("NoMusic", transitionTime);
             yield return new WaitForSeconds(transitionTime);
             SceneManager.LoadScene(index);
         }

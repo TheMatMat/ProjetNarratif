@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace TeamSeven
 {
@@ -11,9 +12,13 @@ namespace TeamSeven
 
         public LANGUAGE language { get; private set; }
 
+        [Header("Audio Settings")]
+        public AudioMixer audioMixer;
+
         public delegate void LanguageListner();
         public LanguageListner OnLanguageChange;
 
+        [System.Serializable]
         public enum LANGUAGE
         {
             FR,
@@ -31,10 +36,20 @@ namespace TeamSeven
             }
         }
 
+        private void Start()
+        {
+            GoToSnapshot("MenuSnapshot", 0.8f);
+        }
+
         public void ChangeLanguage()
         {
             language = (LANGUAGE)((language.GetHashCode() + 1) % 2);
             OnLanguageChange?.Invoke();
+        }
+
+        public void GoToSnapshot(string name, float time = 2)
+        {
+            audioMixer.FindSnapshot(name)?.TransitionTo(time);
         }
     }
 }
