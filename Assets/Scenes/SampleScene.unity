@@ -6200,10 +6200,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2007182981}
     m_Modifications:
-    - target: {fileID: 3052953591151025645, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3052953592021406864, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6296,21 +6292,5 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 3138514789542008723, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3138514789542008723, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3138514789542008723, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 888
-      objectReference: {fileID: 0}
-    - target: {fileID: 8235132299315408194, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 628
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
