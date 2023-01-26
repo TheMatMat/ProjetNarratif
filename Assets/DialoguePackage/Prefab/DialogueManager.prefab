@@ -530,6 +530,7 @@ MonoBehaviour:
   textBGVisiblePos: {fileID: 1475194379}
   textBGInvisiblePos: {fileID: 2092012344}
   characterBottomPosOut: {fileID: 1897981813591881434}
+  allchoiceButtons: []
 --- !u!82 &2655295700701011184
 AudioSource:
   m_ObjectHideFlags: 0
@@ -900,8 +901,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 112.5, y: -12}
-  m_SizeDelta: {x: -275, y: -55.999996}
+  m_AnchoredPosition: {x: 112.5, y: -4}
+  m_SizeDelta: {x: -275, y: -36.999878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2655295700960658813
 CanvasRenderer:

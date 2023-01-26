@@ -93,12 +93,6 @@ namespace TeamSeven
             nameSpeeker.text = "";
             txtSentence.text = "";
 
-            // animation position
-            Sequence textBoxEntrance = DOTween.Sequence();
-
-            textBG.transform.position = textBGInvisiblePos.position;
-            speakerNameBG.transform.localScale = new Vector3(1, 0, 1);
-
             // Start a dialogue with an other DialogueConfig
             if (_dialog != null)
             {
@@ -117,6 +111,10 @@ namespace TeamSeven
                 lastSpeaker = null;
 
                 DialoguePanelOpen = true;
+                
+                Sequence textBoxEntrance = DOTween.Sequence();
+                textBG.transform.position = textBGInvisiblePos.position;
+                speakerNameBG.transform.localScale = new Vector3(1, 0, 1);
 
                 textBoxEntrance.Append(textBG.transform.DOMove(textBGVisiblePos.position, 0.7f));
                 textBoxEntrance.Append(speakerNameBG.transform.DOScaleY(1.0f, 0.4f));
@@ -422,15 +420,19 @@ namespace TeamSeven
             else
                 Debug.Log("NULL " + choiceButtonParent.GetChild(index).name);
 
-            _dialog.allDialogueEvents[eventCount].choiceConfig.allChoices[index].OnClick?.Invoke();
+            if(_dialog.allDialogueEvents[eventCount].choiceConfig.allChoices[index].OnClick != null)
+                _dialog.allDialogueEvents[eventCount].choiceConfig.allChoices[index].OnClick?.Invoke();
+            else
+                NextDialogueEvent();
 
             HideButtons(button);
-            NextDialogueEvent();
         }
 
         private void DialogueEnd()
         {
             eventCount = -1;
+
+            Debug.Log("FIN DU DIALOGUE");
 
             _dialog = null;
             _speekerConfig = null;

@@ -45,9 +45,9 @@ namespace TeamSeven
 
                 choiceDialogue.StartDialogue();
 
-                for (int i = 1; i < DialogueControler.instance.choiceButtonParent.childCount; i++)
+                for (int i = 0; i < DialogueControler.instance.choiceButtonParent.childCount; i++)
                 {
-                    if (!allSubDialogs[i - 1].active)
+                    if (allSubDialogs.Count > i && !allSubDialogs[i].active)
                         DialogueControler.instance.choiceButtonParent.GetChild(i).GetComponent<Button>().interactable = false;
                 }
             }

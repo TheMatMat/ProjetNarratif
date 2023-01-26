@@ -726,6 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b7b10c83268af498786ba649789be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 3fde75d32dd3f0046a00f0899d5e52e9, type: 2}
 --- !u!4 &532502017
 Transform:
   m_ObjectHideFlags: 0
@@ -2101,6 +2102,491 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+--- !u!1 &943695272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 943695273}
+  - component: {fileID: 943695275}
+  - component: {fileID: 943695274}
+  m_Layer: 5
+  m_Name: SubDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &943695273
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943695272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2003806192}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &943695274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943695272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35aa8768253fd9344aea3e002a3cbab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speekerConfig: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+  csvFile:
+  - {fileID: 4900000, guid: 8ebd7f84f384d2b438d792e49cc8a08f, type: 3}
+  allDialogueEvents:
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Det_DEBT_1
+          FR: "Mr.Wade j\u2019aurais quelque question \xE0 vous posez vis \xE0 vis
+            de vos heures de travail."
+          EN: Mr.Wade I have a question for you about your working hours.
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 3
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Wade_DEDT_1
+          FR: Qu'y a-t-il Mr.Atkins ?
+          EN: What's up Mr. Atkins?
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Det_DEBT_2
+          FR: " Pouvez vous m\u2019expliquez comment ce passe une journ\xE9e banale
+            au sein de la joaillerie."
+          EN: Can you explain to me how a normal day at the jewelry store goes?
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 3
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Wade_DEDT_2
+          FR: "Et bien, rien de bien passionnant. Nous travaillons d\xE8s 9h du matin
+            et terminons vers 19h ou 20h. Mr Pr\xE9cieu nous accorde des pauses d\xE9jeuner
+            d\u2019une trentaine de minutes, s\u2019il est de bonne humeur."
+          EN: "Well, nothing very exciting, we work from 9am and finish around 7
+            or 8pm. Mr. Pr\xE9cieu gives us lunch breaks of about thirty minutes,
+            if he's in a good mood."
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Det_DEBT_3
+          FR: "Cela semble excessif, aucun employ\xE9 ne doit avoir \xE0 travailler
+            autant d\u2019heure d'affil\xE9e sans m\xEAme la garantie d\u2019une
+            pause pour d\xE9jeuner. Les employ\xE9es ne se sont jamais plaint ?"
+          EN: This seems excessive, no employee should have to work so many hours
+            in a row without even the guarantee of a lunch break. Have the employees
+            never complained.
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 3
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Wade_DEDT_3
+          FR: "Ah quoi bon? Pour la plupart, ce travail est la seule chose qu'ils
+            connaissent. Nous sommes tr\xE8s peu \xE0 avoir fait des \xE9tudes ici.
+            Nous ne pouvons donc nous permettre d'\xE9nerver le patron, sous risque
+            de perdre notre seule source de revenu. "
+          EN: 'Ah what''s the point Mr? For most of us, this job is the only thing
+            we know. Very few of us are educated here and we can''t afford to upset
+            our boss at the risk of losing our only source of income. '
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Det_DEBT_4
+          FR: "Je comprends. Pouvez vous aussi me dire pourquoi il est marqu\xE9
+            qu\u2019il est imp\xE9ratif d\u2019\xEAtre silencieux entre 15h et 16h
+            ?"
+          EN: I understand. Can you also tell me why it says that it's imperative
+            to be quiet between 3 and 4 pm?
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 3
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Wade_DEDT_4
+          FR: "Car c\u2019est le moment o\xF9 Mr.Pr\xE9cieu fait sa sieste journali\xE8re,
+            nous avons interdiction de le d\xE9ranger. Maintenant que j\u2019y pense,
+            le vol a eu lieu plus ou moins \xE0 ce moment l\xE0."
+          EN: "Because this is the time when Mr.Pr\xE9cieu takes his daily nap, we
+            are not allowed to disturb him. Now that I think about it, the robbery
+            took place more or less at that time."
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Det_DEBT_5
+          FR: "Je vois. Merci pour votre aide pr\xE9cieuse, je reviendrai vers vous
+            si j\u2019ai besoin de plus d\u2019explication"
+          EN: I see. Thank you for your precious help, I will come back to you if
+            I need more explanation.
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 3
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Wade_DEDT_5
+          FR: Tout le plaisir et pour moi Mr.Atkins.
+          EN: My pleasure Mr. Atkins.
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  startDialogue: 0
+  delaiStart: 0
+  delaiAutoPass: 0
+--- !u!114 &943695275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943695272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35aa8768253fd9344aea3e002a3cbab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speekerConfig: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+  csvFile:
+  - {fileID: 4900000, guid: 8ebd7f84f384d2b438d792e49cc8a08f, type: 3}
+  allDialogueEvents:
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Det_DMN_1
+          FR: "J\u2019ai trouv\xE9 cette raclette pr\xE8s d\u2019une des vitrines
+            du magasin, savez vous pourquoi elle est dans cet \xE9tat ?"
+          EN: ' I found this scraper near one of the display cases, do you know why
+            it''s in this condition?'
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 3
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Wade_DMN_1
+          FR: "Ah c\u2019est l\u2019\xE9quipement de nettoyage de Ryker. Il a vu
+            des meilleurs jours je vous l\u2019accorde. C\u2019est probablement ce
+            qu\u2019il a utilis\xE9 pour briser la vitrine o\xF9 \xE9taient expos\xE9s
+            les colliers."
+          EN: '"Ah this is Ryker''s cleaning equipment, it has seen better days I
+            must admit. This is probably what he used to break the display case in
+            which the necklaces were displayed.'
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Det_DMN_2
+          FR: "Je remarque aussi la pr\xE9sence d\u2019un grand nombre de petites
+            entailles dessus, savez vous d'o\xF9 elles viennent ?"
+          EN: I also notice a lot of small nicks on it, do you know where they came
+            from?
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 3
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Wade_DMN_2
+          FR: "J'apercevais parfois Ryker taper sa raclette contre le mur de la joaillerie.
+            Je croyais que c\u2019\xE9tait son moyen de se d\xE9fouler\u2026.mais
+            peut \xEAtre cherchait-il \xE0 tester la solidit\xE9 de son outil."
+          EN: I sometimes saw Ryker banging his scraper against the walls of the
+            jewelry store. I thought it was his way of letting off steam....but maybe
+            he was just testing the durability of his scrap
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Det_DMN_3
+          FR: "Vous croyez que son vol aurait \xE9t\xE9 pr\xE9m\xE9dit\xE9 ?"
+          EN: '"Do you think the robbery was premeditated?'
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 3
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Wade_DMN_3
+          FR: "Il est passer \xE0 l'acte pendant la sieste de Mr.Pr\xE9cieu, le jour
+            o\xF9 il \xE9tait charg\xE9 de nettoyer les vitrines. Certaines des alarmes
+            \xE9taient donc d\xE9sactiv\xE9es."
+          EN: "He struck during Mr. Pr\xE9cieu's nap, the day he was in charge of
+            cleaning the windows, so some alarms were deactivated."
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+      - sentence:
+          ID: Wade_DMN_4
+          FR: "Il avait aussi test\xE9 la durabilit\xE9 de son arme avant de passer
+            \xE0 l\u2019acte. J\u2019ai l\u2019impression que ce vol n\u2019est pas
+            d\xFB au hasard\u2026je pense qu\u2019il pr\xE9voyait son coup. Mais
+            peut \xEAtre que tout \xE7a n\u2019est qu\u2019une co\xEFncidence."
+          EN: '"He had also probably tested the durability of his weapon before he
+            did it. I have the impression that this robbery is not due to chance...
+            I think he was planning it, but maybe it''s all just a coincidence.'
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 0
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking:
+      - sentence:
+          ID: Det_DMN_4
+          FR: "Je vois, merci pour votre t\xE9moignage."
+          EN: I see, thank you for your testimony.
+        csvIndex: 0
+        animEnter: 0
+        emotion: 0
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  startDialogue: 0
+  delaiStart: 0
+  delaiAutoPass: 0
 --- !u!114 &987345322 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -8900073568393696728, guid: 27b1c2aba90742145805ebe27282f234, type: 3}
@@ -3805,7 +4291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7622340663573531119, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
@@ -4735,6 +5221,267 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1479216075}
     m_Modifications:
+    - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: choiceDialogue
+      value: 
+      objectReference: {fileID: 2003806191}
+    - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allSubDialogs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allSubDialogs.Array.data[0].id
+      value: DIALOGUE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allSubDialogs.Array.data[1].id
+      value: EDT
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allSubDialogs.Array.data[2].id
+      value: MDN
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allSubDialogs.Array.data[0].active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allSubDialogs.Array.data[1].active
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: speekerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: csvFile.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: csvFile.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 8ebd7f84f384d2b438d792e49cc8a08f, type: 3}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].idSpeeker
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].idSpeeker
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].idSpeeker
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].idSpeeker
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].idSpeeker
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].eventConfig.screenPos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].<source>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].<source>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Hello, I'm Detective Keith Atkins. To whom do I have the pleasure of
+        speaking ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Bonjour, je me pr\xE9sente je suis le d\xE9tective Keith Atkins. A
+        qui ai-je l'honneur ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DWADE_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Hello Mr. Atkins, my name is Wade and I'm one of the salesmen of the
+        Precieu jewelry store
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Bonjour Mr Atkins, je m'appelle Wade et je suis l'un des vendeur de
+        la joaillerie Pr\xE9cieu."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Wade_DB_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: "Pleased to meet you, since you are one of his employees you must know
+        Mr. Gerard Pr\xE9cieu well, right? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Enchant\xE9. Etant donn\xE9 que vous \xEAtes l'un de ses employ\xE9s
+        vous devez bien conna\xEEtre Mr. G\xE9rard Pr\xE9cieu?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DWADE_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: "Indeed, I know him well, he seems nice at first sight but he is also
+        someone quite intransigent. Once I had misordered the new necklaces on display
+        and Mr. Pr\xE9cieu took away my lunch break."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "En effet, je le connais bien. Il parait sympathique au premier abord
+        mais c\u2019est aussi quelqu\u2019un d\u2019assez intransigeant. Je me souviens
+        d'une fois, j\u2019avais mal ordonn\xE9 les nouveaux colliers \xE0 exposer
+        et Mr.Pr\xE9cieu m\u2019a supprim\xE9 ma pause d\xE9jeuner."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Wade_DB_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: "Really? I didn't imagine Mr.Pr\xE9cieu was like that. How did he behave
+        with Mr.Ryker Howell? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Ah bon ? Je n'imaginais pas Mr.Pr\xE9cieu comme \xE7a. Comment se comportait-il
+        avec Mr.Ryker Howell ? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DWADE_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: He had a hard life too and was regularly reprimanded by Mr.Precieu in
+        spite of his quite good work.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Il avait lui aussi la vie dure et se faisait r\xE9gulierement r\xE9primander
+        par Mr.Pr\xE9cieu malgr\xE9s son travail d\u2019assez bonne qualit\xE9."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Wade_DB_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: I see, thank you very much for your testimony.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Je vois, merci beaucoup pour votre t\xE9moignage."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DWADE_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: No problem Mr.Atkins, don't hesitate to come back and talk to me if
+        you need more explanations
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Pas de probl\xE8me Mr.Atkins. N'hesitez pas \xE0 revenir me parler
+        si vous avez besoin de plus d'explications"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Wade_DB_4
+      objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4825,6 +5572,145 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+--- !u!1 &2003806189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2455391376636566247, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+  m_PrefabInstance: {fileID: 2003806188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2003806190 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+  m_PrefabInstance: {fileID: 2003806188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003806189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35aa8768253fd9344aea3e002a3cbab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2003806191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003806189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35aa8768253fd9344aea3e002a3cbab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speekerConfig: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+  csvFile:
+  - {fileID: 4900000, guid: 8ebd7f84f384d2b438d792e49cc8a08f, type: 3}
+  allDialogueEvents:
+  - <source>k__BackingField: 1
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 1
+    isColapse: 1
+    idSpeeker: 3
+    autoPass: 0
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 1
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices: []
+  - <source>k__BackingField: 2
+    isColapse: 1
+    idSpeeker: 0
+    autoPass: 0
+    sentenceConfig:
+      talking: []
+    eventConfig:
+      actionType: 0
+      screenPos: 0
+      OnCustomEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    choiceConfig:
+      allChoices:
+      - sentence:
+          ID: 
+          FR: Parler
+          EN: Speak
+        OnClick:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 2003806190}
+              m_TargetAssemblyTypeName: TeamSeven.DialogueConfig, Assembly-CSharp
+              m_MethodName: StartDialogue
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      - sentence:
+          ID: 
+          FR: "Mat\xE9riel de nettoyage"
+          EN: Cleaning equipment
+        OnClick:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 943695274}
+              m_TargetAssemblyTypeName: TeamSeven.DialogueConfig, Assembly-CSharp
+              m_MethodName: StartDialogue
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      - sentence:
+          ID: 
+          FR: Emploi du temp
+          EN: Schedule
+        OnClick:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 943695275}
+              m_TargetAssemblyTypeName: TeamSeven.DialogueConfig, Assembly-CSharp
+              m_MethodName: StartDialogue
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+  startDialogue: 0
+  delaiStart: 0
+  delaiAutoPass: 0
+--- !u!224 &2003806192 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+  m_PrefabInstance: {fileID: 2003806188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2007182977
 GameObject:
   m_ObjectHideFlags: 0
