@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5692217297725007402}
   - component: {fileID: 7810514830486147055}
   - component: {fileID: 7665107097244496974}
+  - component: {fileID: 5228785008797667380}
   m_Layer: 5
   m_Name: Evidence
   m_TagString: Untagged
@@ -169,3 +170,17 @@ MonoBehaviour:
   startDialogue: 0
   delaiStart: 0
   delaiAutoPass: 0
+--- !u!114 &5228785008797667380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8478163598545499336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2451192fceee53f49b7669ebcf27b4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pnjConfigues: []
+  itemId: 

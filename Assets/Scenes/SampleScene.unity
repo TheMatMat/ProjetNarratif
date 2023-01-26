@@ -1235,6 +1235,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5228785008797667380, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: itemId
+      value: MDN
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228785008797667380, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: pnjConfigues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228785008797667380, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: pnjConfigues.Array.data[0]
+      value: 
+      objectReference: {fileID: 2003806193}
     - target: {fileID: 5692217297725007402, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: nameID
       value: Name_MNB
@@ -1264,6 +1276,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1282,6 +1298,34 @@ PrefabInstance:
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.ID
       value: Desc_MNB
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 759534131}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: EnableItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TeamSeven.IndiceHandle, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
@@ -1435,6 +1479,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+--- !u!114 &759534131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5228785008797667380, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+  m_PrefabInstance: {fileID: 737500711}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2451192fceee53f49b7669ebcf27b4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &760475227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,6 +2773,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -2979,6 +3038,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5228785008797667380, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: itemId
+      value: EDT
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228785008797667380, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: pnjConfigues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228785008797667380, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: pnjConfigues.Array.data[0]
+      value: 
+      objectReference: {fileID: 2003806193}
     - target: {fileID: 5692217297725007402, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: nameID
       value: Name_EDT
@@ -3007,6 +3078,10 @@ PrefabInstance:
       propertyPath: csvFile.Array.data[0]
       value: 
       objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
       value: 2
@@ -3038,6 +3113,34 @@ PrefabInstance:
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[1].sentence.ID
       value: Desc_EDT_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1734268890}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: EnableItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TeamSeven.IndiceHandle, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
@@ -3836,6 +3939,285 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 370411577}
     m_Modifications:
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: speekerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: csvFile.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: csvFile.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 8ebd7f84f384d2b438d792e49cc8a08f, type: 3}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].idSpeeker
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].idSpeeker
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].idSpeeker
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].idSpeeker
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].idSpeeker
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[10].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].eventConfig.screenPos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].<source>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].<source>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[10].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Hello, Detective Keith Atkins, here. To whom do I have the pleasure
+        of speaking ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Bonjour, ici le d\xE9tective Keith Atkins. A qui ai-je l'honneur ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DEMMA_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Hi Mr. Atkins, my name is Emma, I'm a friend of Ryker's.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: Bonjour Mr Atkins, je m'appelle Emma, je suis une amie de Ryker.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Emma_DB_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Ah, so you know Ryker well. Can you tell me more about him?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: Ah, vous connaissez donc bien Ryker. Pouvez vous m'en dire plus sur
+        lui ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DEMMA_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Well, I've known Ryker all my life and he's a great friend. That's why
+        I find it so hard to believe that he tried to rob a defenseless old man.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Et bien je connais Ryker depuis toujours. C'est un tr\xE8s grand ami.
+        C'est pour cela que j'ai du mal \xE0 croire qu'il a essay\xE9 de voler un
+        petit vieux \xE0 priori sans d\xE9fense."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Emma_DB_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[1].sentence.EN
+      value: I know that he's been struggling with alcoholism for many years and
+        that he lost everything because of it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[1].sentence.FR
+      value: " Je sais bien que cela fait plusieurs ann\xE9es qu'il a des probl\xE8mes
+        d'alcoolisme et qu'il a tout perdu \xE0 cause de cela."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[1].sentence.ID
+      value: Emma_DB_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: I see. Do you know what he would have done with the money obtained from
+        selling the necklaces?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Je vois. Savez vous ce qu'il aurait fait avec l'argent obtenu grace
+        \xE0 la revente des colliers ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DEMMA_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: I honestly don't know what he was going to do with it, I just know that
+        he was in desperate need of money.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Tr\xE8s honn\xEAtement je ne sais pas ce qu'il comptait faire avec.
+        Je sais juste qu'il avait grandement besoin d'argent."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Emma_DB_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Did he often talk about his work ? Do you think he had been planning
+        this robbery for a long time ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Parlait-il souvent de son travail ? Croyez-vous qu'il ai planifi\xE9
+        ce vol depuis longtemps ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DEMMA_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: I know that when he was drunk he would scream about being trapped in
+        this job where he was constantly being abused by his employer because no
+        one else wanted him since he never went to school
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Parfois lorsqu'il \xE9tait bourr\xE9, il lui arrivait d'hurler qu\u2019il
+        \xE9tait prisonnier de ce travail. Qu'il se faisait constamment maltraiter
+        par son employeur et que personne d\u2019autre ne voulait de lui car il n\u2019avait
+        pas fait d'\xE9tude. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Emma_DB_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[1].sentence.EN
+      value: But I feel like the robbery was a desperate, unpremeditated attempt.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[1].sentence.FR
+      value: " Mais j'ai l'impression que le vol \xE9tait une tentative d\xE9sesp\xE9r\xE9e
+        non pr\xE9m\xE9dit\xE9e."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[1].sentence.ID
+      value: Emma_DB_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[10].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Thank you very much for your testimony.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[10].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Merci beaucoup pour votre t\xE9moignage."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[10].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DEMMA_5
+      objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3933,6 +4315,252 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1479216075}
     m_Modifications:
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: speekerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: csvFile.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: csvFile.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 8ebd7f84f384d2b438d792e49cc8a08f, type: 3}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].idSpeeker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].idSpeeker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].idSpeeker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].idSpeeker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].idSpeeker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].eventConfig.screenPos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].<source>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].<source>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Hello again Mr. Precieu, may I borrow a few minutes of your time?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Mr.Pr\xE9cieu, c'est encore moi, puis-je emprunter quelques minutes
+        de votre temps ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DPRCEU1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Why of course, my dear Mr. Atkins. How can I help you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Mais bien s\xFBr mon cher Mr Atkins. En quoi puis-je vous aider ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Prcieu_DB_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Can you tell me a little bit more about your employee Mr. Ryker Howell?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Pouvez-vous me parler un peu de votre employ\xE9, Mr. Ryker Howell
+        ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DPRCEU2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Ah, that young rascal, like all youngsters these days. I offered him
+        a job when he had nothing and how does he thank me? BY STEALING FROM ME?
+        What is the world coming to?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Ah, ce jeune malfrat. Il est comme tous les jeunes de nos jours. Je
+        lui ai offert un travail quand il n'avait rien et c'est ainsi qu'il me remercie!
+        EN ME VOLANT ? Mais o\xF9 va le monde ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Prcieu_DB_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: I also heard that you defended yourself with a Thompson. Was such a
+        countermeasure really necessary?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "J'ai aussi ou\xEFe dire que vous vous \xEAtes d\xE9fendu avec une Thompson.
+        Une telle r\xE9action \xE9tait-elle vraiment n\xE9cessaire ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DPRCEU3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Of course!! These bandits are desperate!! Without my Thomson I could
+        have been killed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Bien s\xFBr ! Ces bandits sont pr\xEAts \xE0 tout ! Sans ma Thompson
+        j'aurais pu y passer."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Prcieu_DB_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[1].sentence.EN
+      value: After this it must be my brain playing tricks on me since I don't remember
+        what happened next...just that I woke up with the windows of my store shattered
+        and lying in the middle of 2 injured bodies.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[1].sentence.FR
+      value: "Mais ma m\xE9moire me joue des tours et je ne me rappelle pas de ce
+        qui s'est pass\xE9 apr\xE8s... Ce doit \xEAtre la vieillesse"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[1].sentence.ID
+      value: Prcieu_DB_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: You really don't remember anything? It's quite strange, it must have
+        been a significant event though?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Vous ne vous souvenez vraiment de rien ? C'est assez \xE9trange tout
+        de m\xEAme, cela \xE0 d\xFB \xEAtre un \xE9v\xE9nement marquant pourtant
+        ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DPRCEU4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: '"It''s an absolute void, as if a fog was hanging over my memory. However,
+        I remain at your disposal if you have any other questions.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "C'est le vide absolu, comme si un brouillard planait sur ma m\xE9moire.
+        Par contre je reste \xE0 votre disposition si vous avez d'autres questions."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Prcieu_DB_5
+      objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4291,7 +4919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7622340663573531119, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
@@ -4663,6 +5291,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1734268890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5228785008797667380, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+  m_PrefabInstance: {fileID: 1072842069}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2451192fceee53f49b7669ebcf27b4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1737084912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,6 +5453,377 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 370411577}
     m_Modifications:
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: speekerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: csvFile.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: csvFile.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 8ebd7f84f384d2b438d792e49cc8a08f, type: 3}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].idSpeeker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].idSpeeker
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].idSpeeker
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].idSpeeker
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].idSpeeker
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].idSpeeker
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[10].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[11].idSpeeker
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[11].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].eventConfig.screenPos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].<source>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].<source>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[10].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[11].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Hello, Detective Keith Atkins here. To whom do I have the pleasure of
+        speaking ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Bonjour, d\xE9tective Keith Atkins. A qui ai-je l'honneur ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DELIZA_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Hello, Detective Keith Atkins here. To whom do I have the pleasure of
+        speaking ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Bonjour, d\xE9tective Keith Atkins. A qui ai-je l'honneur ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DELIZA_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: "I heard that you were a regular at the Pr\xE9cieu jewelry store...
+        and I..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "J'ai ou\xEFe dire que vous \xE9tiez une habitu\xE9e de la bijouterie
+        Pr\xE9cieu\u2026 et j'ai..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DELIZA_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: You didn't recognize me? Me ? Eliza the great diva of the opera. I'm
+        disappointed Mr. Atkins...but nevermind that, why are you here pestering
+        me today?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Vous ne me reconnaissez pas ? Moi ? Eliza la grande diva de l'op\xE9ra.
+        Je suis d\xE9\xE7u Mr.Atkins...mais qu'importe! Pour quelle raison venez
+        vous m'importuner aujourd'hui ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Eliza_DB_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: "I heard that you were a regular at the Pr\xE9cieu jewelry store...
+        and I..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "J'ai ou\xEFe dire que vous \xE9tiez une habitu\xE9e de la bijouterie
+        Pr\xE9cieu\u2026 et j'ai..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DELIZA_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: " A regular? Me? I am easily their best customer. Poor Mr. Pr\xE9cieu
+        needs a loyal clientele."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Une habitu\xE9 ? Moi ? Je suis sans aucun doute leur meilleure cliente
+        voyons! Le pauvre Mr.Pr\xE9cieu a bien besoin d\u2019une client\xE8le fid\xE8le."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Eliza_DB_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[1].sentence.EN
+      value: These criminals infiltrate our society and prey on the weakest, and
+        only show remorse when they are caught.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[1].sentence.FR
+      value: "Ces bandits s'infiltrent au sein de notre soci\xE9t\xE9 et s'attaquent
+        aux plus faibles. Ils n\u2019expriment des remords seulement lorsqu'ils se
+        font prendre. \xC7a me d\xE9becte!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[1].sentence.ID
+      value: Eliza_DB_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: ' Sure..you must know all of the staff in the store pretty well since
+        you go there frequently. Can you tell me more about them ?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: " Certes..vous devez donc bien conna\xEEtre tout le personnel de la
+        boutique, \xE9tant donn\xE9 que vous vous y rendez fr\xE9quemment. Pouvez
+        vous m'en dire plus sur eux ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DELIZA_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: 'Clearly I didn''t know them well enough...because stealing from senior
+        citizens is simply unacceptable! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Clairement je ne les connaissais pas assez bien...car voler ainsi Mr.
+        Pr\xE9cieu est tout simplment inacceptable !! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Eliza_DB_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[1].sentence.EN
+      value: These criminals infiltrate our society and prey on the weakest, and
+        only show remorse when they are caught.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[1].sentence.FR
+      value: "Ces bandits s'infiltrent au sein de notre soci\xE9t\xE9 et s'attaquent
+        aux plus faibles. Ils n\u2019expriment des remords seulement lorsqu'ils se
+        font prendre. \xC7a me d\xE9becte!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[1].sentence.ID
+      value: Eliza_DB_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: I understand your point of view, but don't you think he would have had
+        a motive for this robbery?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: Je comprends votre point de vue, mais ne croyez vous pas qu'il aurait
+        eu une motivation plus profonde pour effectuer ce vol ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[8].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DELIZA_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: 'He was simply tempted by the lure of money. He tried to steal some
+        necklaces this time but if it turns out that he will soon attack our banks. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Il a simplement \xE9t\xE9 tent\xE9 par l'app\xE2t du gain. Il a essay\xE9
+        de voler quelques colliers cette fois mais si \xE7a se trouve bient\xF4t
+        il s'attaquera \xE0 nos banques."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Eliza_DB_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[1].sentence.EN
+      value: 'Poor Mr. Precieu is innocent, he was only defending himself from this
+        thug who deserves to be behind bars. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[1].sentence.FR
+      value: "Le pauvre Mr.Pr\xE9cieu est innocent, il ne faissait que se d\xE9fendre
+        de ce malfrat qui m\xE9rite d\u2019\xEAtre derri\xE8re les barreaux."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[1].sentence.ID
+      value: Eliza_DB_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[10].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: "Miss Eliza, I still strongly doubt that Mr.Pr\xE9cieu is entirely innocent
+        in this case."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[10].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: " Mademoiselle Eliza, je doute quand m\xEAme fortement que Mr.Pr\xE9cieu
+        soit enti\xE8rement innocent dans cette affaire. Il a tout de m\xEAme ouvert
+        le feu et bless\xE9 des passants."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[10].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DELIZA_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[11].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: " I reiterate that there is no nicer and more innocent than this brave
+        G\xE9rard Pr\xE9cieu. Instead of lashing out at this poor man, you should
+        consider asking yourself how many more persons did this crook Howell steal
+        from?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[11].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Moi je vous r\xE9p\xE8te qu'il n'y a pas plus gentil et innocent que
+        ce brave G\xE9rard Pr\xE9cieu. Au lieu de vous acharner sur ce pauvre monsieur,
+        demandez vous plut\xF4t combien d'autres personnes ce petit voyou d'Howell
+        a-t-il vol\xE9 ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[11].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Eliza_DB_7
+      objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5039,6 +6049,10 @@ PrefabInstance:
       propertyPath: csvFile.Array.data[0]
       value: 
       objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
       value: 1
@@ -5633,7 +6647,7 @@ MonoBehaviour:
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 2
-    isColapse: 1
+    isColapse: 0
     idSpeeker: 0
     autoPass: 0
     sentenceConfig:
@@ -5667,8 +6681,8 @@ MonoBehaviour:
               m_CallState: 2
       - sentence:
           ID: 
-          FR: "Mat\xE9riel de nettoyage"
-          EN: Cleaning equipment
+          FR: Emploi du temps
+          EN: Schedule
         OnClick:
           m_PersistentCalls:
             m_Calls:
@@ -5686,8 +6700,8 @@ MonoBehaviour:
               m_CallState: 2
       - sentence:
           ID: 
-          FR: Emploi du temp
-          EN: Schedule
+          FR: "Mat\xE9riel de nettoyage"
+          EN: Cleaning equipment
         OnClick:
           m_PersistentCalls:
             m_Calls:
@@ -5711,6 +6725,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
   m_PrefabInstance: {fileID: 2003806188}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2003806193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+  m_PrefabInstance: {fileID: 2003806188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003806189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3708ccebb0e64bc4ebc9dabfe55ec94f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2007182977
 GameObject:
   m_ObjectHideFlags: 0
@@ -5961,6 +6986,190 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 370411577}
     m_Modifications:
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: speekerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bca04d8c296e27408fdcac11e45425d, type: 2}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: csvFile.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: csvFile.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 8ebd7f84f384d2b438d792e49cc8a08f, type: 3}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].idSpeeker
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].idSpeeker
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].idSpeeker
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].idSpeeker
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].eventConfig.screenPos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].<source>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[1].<source>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: Mr. Howell I presume ? I'm Detective Keith Atkins and I have some questions
+        for you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Mr Howell je pr\xE9sume ? je suis le d\xE9tective Keith Atkins et j'aurai
+        quelque question \xE0 vous poser."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[2].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DRYKER_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: ' Mr. Atkins, I am ashamed of my actions, I should have never stolen
+        those necklaces...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Mr Atkins, j'ai honte de mes actes je n'aurais jamais d\xFB voler ces
+        colliers..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[3].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Ryker_DB_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: So, why did you steal them?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Pourquoi les avez-vous donc vol\xE9 ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[4].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DRYKER_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: I had no other choice! My mother had recently fallen ill and I needed
+        money to treat her. I knew it was wrong, but it was the only solution I could
+        see....I should have found another way.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Je n'avais pas d'autre choix ! Ma m\xE8re est r\xE9cemment tomb\xE9e
+        malade, j'avais besoin d'argent pour la soigner. Je savais que c'\xE9tait
+        mal mais c'\xE9tait ma seule solution.... J'aurai d\xFB trouver un autre
+        moyen."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[5].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Ryker_DB_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: I see, thank you for your testimony.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Je vois, merci de votre t\xE9moignage."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[6].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Det_DRYKER_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.EN
+      value: I am willing to answer more of your questions if you have any...but
+        I am also willing to accept my punishment for my actions.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.FR
+      value: "Je suis pr\xEAt \xE0 r\xE9pondre \xE0 d'autres de vos questions si
+        vous en avez...mais je suis aussi pr\xEAt \xE0 accepter les cons\xE9quences
+        de mes actes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566045, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.ID
+      value: Ryker_DB_3
+      objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6200,6 +7409,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2007182981}
     m_Modifications:
+    - target: {fileID: 3052953591151025645, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3052953592021406864, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

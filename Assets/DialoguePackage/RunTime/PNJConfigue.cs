@@ -37,7 +37,7 @@ namespace TeamSeven
             }
             else
             {
-                if (allSubDialogs.Count <= 0)
+                if (allSubDialogs.Count <= 0 || choiceDialogue == null)
                 {
                     deafaultDialogue.StartDialogue();
                     return;
