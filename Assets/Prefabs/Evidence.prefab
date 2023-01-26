@@ -165,6 +165,8 @@ MonoBehaviour:
       OnCustomEvent:
         m_PersistentCalls:
           m_Calls: []
+      idSnapshot: 
+      snapShotTime: 0
     choiceConfig:
       allChoices: []
   startDialogue: 0

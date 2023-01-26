@@ -22,7 +22,7 @@ MonoBehaviour:
     audioClip: []
     status: []
   - name: "Mr. Pr\xE9cieu"
-    sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+    sprite: {fileID: 21300000, guid: 992823351a1b5884e92efc351d0db84e, type: 3}
     audioClip: []
     status: []
   - name: Wade
@@ -38,6 +38,6 @@ MonoBehaviour:
     audioClip: []
     status: []
   - name: Ryker
-    sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+    sprite: {fileID: 21300000, guid: a19e004fa7f66bf44a568973df276eda, type: 3}
     audioClip: []
     status: []

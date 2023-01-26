@@ -1036,7 +1036,7 @@ PrefabInstance:
       objectReference: {fileID: 1607264417}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: zoneName
-      value: '    BUREAU DU DETECTIVE'
+      value: BUREAU DU DETECTIVE
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: canGoNext
@@ -2097,7 +2097,7 @@ PrefabInstance:
       objectReference: {fileID: 1674362265}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: zoneName
-      value: 2 YEARS AGO  . . .
+      value: "2 ANS PLUS T\xD4T  . . ."
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: canGoNext
@@ -3247,11 +3247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: zoneName
-      value: JOILLERIE - CHAMBRE
+      value: JOAILLERIE - CHAMBRE
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: canGoNext
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: previousZone
@@ -4767,7 +4767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: zoneName
-      value: JOILLERIE - ???
+      value: JOAILLERIE - ???
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: previousZone
@@ -4910,7 +4910,7 @@ PrefabInstance:
       objectReference: {fileID: 304889836}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: zoneName
-      value: "JOILLERIE - INT\xC9RIEUR"
+      value: "JOAILLERIE - INT\xC9RIEUR"
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: canGoNext
@@ -6972,7 +6972,7 @@ PrefabInstance:
       objectReference: {fileID: 1928626533}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: zoneName
-      value: "RUE EXT\xC9RIEUR"
+      value: JOAILLERIE - DEVANTURE
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: canGoNext
