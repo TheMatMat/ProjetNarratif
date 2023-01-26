@@ -360,6 +360,11 @@ namespace TeamSeven
                             EditorGUILayout.PropertyField(m_event);
                             serializedObject.ApplyModifiedProperties();
                         }
+                        else if(currentDialogueEvent.eventConfig.actionType == EventConfig.ACTION_TYPE.CHANGE_MUSIC)
+                        {
+                            currentDialogueEvent.eventConfig.idSnapshot = GUILayout.TextField(currentDialogueEvent.eventConfig.idSnapshot);
+                            currentDialogueEvent.eventConfig.snapShotTime = EditorGUILayout.FloatField(currentDialogueEvent.eventConfig.snapShotTime);
+                        }
                     }
                     #endregion
                     #region CHOICE

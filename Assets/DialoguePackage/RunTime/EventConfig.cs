@@ -13,13 +13,16 @@ namespace TeamSeven
         public POSITION screenPos;
 
         public UnityEvent OnCustomEvent;
+        public string idSnapshot;
+        public float snapShotTime;
 
         [System.Serializable]
         public enum ACTION_TYPE
         {
             SPEAKER_IN,
             SPEAKER_OUT,
-            CUSTOM_EVENT
+            CUSTOM_EVENT,
+            CHANGE_MUSIC
         }
 
         [System.Serializable]

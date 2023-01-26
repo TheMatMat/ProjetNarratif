@@ -289,6 +289,11 @@ namespace TeamSeven
                     dialogueEvent.eventConfig.OnCustomEvent?.Invoke();
                     NextDialogueEvent();
                     return;
+
+                case EventConfig.ACTION_TYPE.CHANGE_MUSIC:
+                    GameManager.instance?.GoToSnapshot(dialogueEvent.eventConfig.idSnapshot);
+                    NextDialogueEvent();
+                    return;
             }
 
             character.name = _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name;
