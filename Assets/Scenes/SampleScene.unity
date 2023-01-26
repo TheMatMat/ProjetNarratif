@@ -1606,8 +1606,8 @@ MonoBehaviour:
       - sentence:
           ID: 6
           FR: "Alors laissez-moi r\xE9capituler l\u2019enqu\xEAte. Il y a eu un vol
-            \xE0 la joaillerie Pr\xE9cieu, le coupable serait le pr\xE9nomm\xE9 Ryker
-            Howell, un jeune p\xE8re de famille qui doit avoir la vingtaine."
+            \xE0 la joaillerie Pr\xE9cieu. Le coupable serait un pr\xE9nomm\xE9 Ryker
+            Howell, un jeune p\xE8re de famille, employ\xE9 de Mr.Pr\xE9cieu."
           EN: Let me recap the case. There was a robbery at the Precieu jewelry store
             and the culprit would be Ryker Howell, a young family man who must be
             in his twenties.
@@ -1648,10 +1648,10 @@ MonoBehaviour:
       talking:
       - sentence:
           ID: 7
-          FR: "Mais ce n\u2019est pas tout mon cher Allen, plusieurs personnes ont
-            aussi t\xE9moign\xE9 avoir vu le g\xE9rant, Mr G\xE9rard Pr\xE9cieu,
-            canarder sa boutique \xE0 l\u2019aide d\u2019une Thomson dans l\u2019espoir
-            d'arr\xEAter le voleur. "
+          FR: "Merci mon cher Allen. Plusieurs personnes ont aussi t\xE9moign\xE9
+            avoir vu le g\xE9rant, Mr G\xE9rard Pr\xE9cieu, canarder sa boutique
+            \xE0 l\u2019aide d\u2019une Thompson. Il esperait surement arreter le
+            voleur."
           EN: "But that\u2019s not all my dear Allen, several people also testified
             to have seen the manager, Mr G\xE9rard Pr\xE9cieu, duck his shop using
             a Thomson in the hope of arresting the thief. "
@@ -1660,9 +1660,8 @@ MonoBehaviour:
         emotion: 0
       - sentence:
           ID: 8
-          FR: "Cette accident aurait apparemment fait quelques bless\xE9s, \xE0 cause
-            des vitres qui auraient explos\xE9 sous l\u2019impact r\xE9p\xE9t\xE9
-            des balles."
+          FR: "L'explosion des vitres suite aux tirs multiples aurait fait plusieurs
+            bless\xE9s."
           EN: This accident has apparently caused some casualties, because of the
             windows that have exploded under the repeated impact of the bullets.
         csvIndex: 0
@@ -1818,8 +1817,7 @@ MonoBehaviour:
       - sentence:
           ID: 13
           FR: "Bien le bonjour \xE0 vous Mr.Pr\xE9cieu ! Je vous remercie de votre
-            chaleureux accueil malgr\xE9 les circonstances dans lesquelles nous nous
-            trouvons actuellement."
+            chaleureux accueil malgr\xE9 la situation."
           EN: Good morning to you, Mr Precieu! Thank you for your warm welcome, despite
             the circumstances in which we find ourselves today.
         csvIndex: 0
@@ -1889,7 +1887,7 @@ MonoBehaviour:
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 1
-    isColapse: 0
+    isColapse: 1
     idSpeeker: 0
     autoPass: 0
     sentenceConfig:
@@ -3439,7 +3437,7 @@ MonoBehaviour:
       talking:
       - sentence:
           ID: 1
-          FR: "Cela fait plusieurs ann\xE9es que ma carri\xE8re de d\xE9tective \xE0
+          FR: "Cela fait plusieurs ann\xE9es que ma carri\xE8re de d\xE9tective a
             commenc\xE9 et les affaires s'encha\xEEnent."
           EN: It's been several years since I started my career as a detective and
             the cases follow one another.
@@ -3457,9 +3455,10 @@ MonoBehaviour:
         emotion: 0
       - sentence:
           ID: 3
-          FR: "Avec le temps j\u2019ai appris que mes choix pouvaient avoir des cons\xE9quences
-            d\xE9sastreuses, ce ne sont pas des choses \xE0 prendre \xE0 la l\xE9g\xE8re
-            et je dois veiller \xE0 rendre un verdict juste et impartial."
+          FR: "Avec le temps, j\u2019ai appris que mes choix pouvaient avoir des
+            cons\xE9quences d\xE9sastreuses. Ce ne sont pas des choses \xE0 prendre
+            \xE0 la l\xE9g\xE8re et je dois veiller \xE0 rendre un verdict juste
+            et impartial."
           EN: Over time I have learned that my choices can have disastrous consequences,
             they should not be treated lightly and It is my duty to make sure that
             I give a fair and impartial verdict.
@@ -3468,10 +3467,10 @@ MonoBehaviour:
         emotion: 0
       - sentence:
           ID: 4
-          FR: "Mais parfois, j\u2019ai un \xE9trange sentiment lorsque je m\xE8ne
-            une enqu\xEAte, comme si le coupable \xE9tait sous mes yeux mais que
-            je ne le voyais pas, comme un fant\xF4me\u2026et parfois d'\xE9tranges
-            \xE9v\xE9nements se produisent\u2026"
+          FR: "Mais parfois lors de mes enqu\xEAtes j'ai comme un \xE9trange pr\xE9sentiment.
+            Comme si le coupable \xE9tait sous mes yeux mais que je ne le voyais
+            pas. Comme un fant\xF4me\u2026et parfois d'\xE9tranges \xE9v\xE9nements
+            se produisent\u2026"
           EN: "But sometimes I have a strange feeling when I do an investigation,
             as if the culprit is right in front of me but I don\u2019t see him...just
             like a ghost\u2026 and sometimes strange things happen\u2026"
