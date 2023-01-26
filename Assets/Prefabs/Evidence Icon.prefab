@@ -119,9 +119,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2af7128638c41e4ca264729985db74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadSCVatStart: 0
+  csvFile: {fileID: 0}
+  nameID: 
+  descriptionID: 
+  sceneSp: {fileID: 0}
+  detailSp: {fileID: 0}
   evidenceData:
-    evidenceName: 
-    sceneID: 0
     sceneSprite: {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
     detailSprite: {fileID: 0}
-    inventorySprite: {fileID: 21300000, guid: d6a44ab95b0def041a7929981a2c23a1, type: 3}
+    name:
+      ID: 
+      FR: 
+      EN: 
+    description:
+      ID: 
+      FR: 
+      EN: 

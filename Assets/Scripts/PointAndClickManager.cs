@@ -36,6 +36,7 @@ namespace TeamSeven
         public void NewEvidenceFound(IndiceController indiceController)
         {
             GameObject newIcon = Instantiate(EvidenceIconPrefab, inventoryController.inventoryElements.transform);
+
             newIcon.GetComponent<IndiceController>().evidenceData = indiceController.evidenceData;
             newIcon.GetComponent<IndiceController>().InitSprite(1);
 

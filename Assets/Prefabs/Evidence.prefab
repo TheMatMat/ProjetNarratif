@@ -91,12 +91,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2af7128638c41e4ca264729985db74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadSCVatStart: 1
+  csvFile: {fileID: 0}
+  nameID: 
+  descriptionID: 
+  sceneSp: {fileID: 0}
+  detailSp: {fileID: 0}
   evidenceData:
-    evidenceName: 
-    sceneID: 0
     sceneSprite: {fileID: 0}
     detailSprite: {fileID: 0}
-    evidenceDescription: 
+    name:
+      ID: 
+      FR: 
+      EN: 
+    description:
+      ID: 
+      FR: 
+      EN: 
 --- !u!114 &7810514830486147055
 MonoBehaviour:
   m_ObjectHideFlags: 0

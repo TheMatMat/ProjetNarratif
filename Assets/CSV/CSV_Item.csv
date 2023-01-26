@@ -17,8 +17,8 @@ Name_CMP;Cadre de Mrs.Précieu;frame of  Mrs.Précieu
 Desc_CMP;C’est une photo de la défunte femme de Mr.Précieu. En bas de la photo il est écrit ‘Je serais toujours avec toi’.;This is a photo of Mr.Précieu's late wife. At the bottom of the picture it is written 'I will always be with you'.
 Name_CU;Cartouches usagées;Used cartridges
 Desc_CU;On peut remarquer une grande quantité de cartouches usagées au pied des vitres brisées de la joaillerie…Qui tirerait autant pour arrêter un simple voleur ?;One can notice a large quantity of used cartridges at the foot of the broken windows of the jewelry store...Who would shoot so much to stop a simple thief?
-Name_Thom;Vieille Thomson;Old Thomson
-Desc_Thom;Que fait une Thomson dans cette chambre, je ne croyais pas Mr.Précieu le genre d’homme à avoir une arme de si gros calibre chez lui. Le canon est encore tiède...;What is a Thomson doing in this room, I didn't think Mr.Precieu was the kind of man to have such a big gun in his house. The barrel is still warm...
+Name_Thom;Vieille Thompson;Old Thompson
+Desc_Thom;Que fait une Thompson dans cette chambre, je ne croyais pas Mr.Précieu le genre d’homme à avoir une arme de si gros calibre chez lui. Le canon est encore tiède...;What is a Thompson doing in this room, I didn't think Mr.Precieu was the kind of man to have such a big gun in his house. The barrel is still warm...
 Name_Cle;Une clé;A key
 Desc_Cle;Une clé dorée avec une forme particulière. Permet d'ouvrir la porte dans la chambre.;A golden key with a special shape. Allows to open the door in the room.
 Name_Penta;Pentagramme ;Pentagram 
@@ -38,7 +38,7 @@ Inv_FDP;Fiche de paie d’un des employés de Mr.Précieu, les salaires ont l’
 Inv_Lettre;Lettre écrite par la fille de Mr.Précieu.;Letter written by the daughter of Mr.Précieu.
 Inv_CMP;Photo de Mrs.Précieu. En bas de la photo il est écrit ‘Je serais toujours avec toi’.;Photo of Mrs.Précieu. At the bottom of the picture it is written 'I will always be with you'.
 Inv_CU;Cartouches usagées retrouvées aux pieds des vitres brisés de la joaillerie.;Used cartridges found at the feet of the broken windows of the jewelry store.
-Inv_Thom;La Thomson de Mr.Précieu, le canon est encore tiède.;The Thomson of Mr.Précieu, the barrel is still warm.
+Inv_Thom;La Thompson de Mr.Précieu, le canon est encore tiède.;The Thompson of Mr.Précieu, the barrel is still warm.
 Inv_Cle;Une clé dorée avec une forme particulière. Permet d'ouvrir la porte dans la chambre.;A golden key with a special shape. Allows to open the door in the room.
 Inv_Penta;Pentagramme trouvée dans la chambre à rituel des Précieu.;Pentagram found in the ritual room of Précieu.
 Inv_JMP;Journal de Mrs.Précieu. Il est écrit que les attrapes-rêves perdent leurs couleurs quand un esprit est proche.;Diary of Mrs.Précieu. It is written that dreamcatchers lose their colors when a spirit is near.

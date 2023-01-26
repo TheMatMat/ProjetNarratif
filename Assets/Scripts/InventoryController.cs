@@ -1,12 +1,9 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using TMPro;
-using UnityEditor.U2D.Animation;
 using UnityEngine;
 using UnityEngine.UI;
-//using static IndiceController;
 
 namespace TeamSeven
 {
@@ -14,7 +11,7 @@ namespace TeamSeven
     public class InventoryController : MonoBehaviour
     {
         public IndiceController correspondingIndiceController;
-        private DetailPanelController dPC;
+        //private DetailPanelController dPC;
 
         public Image blackBG;
 
@@ -31,16 +28,18 @@ namespace TeamSeven
 
         public Image evidenceDetailSprite;
         public TextMeshProUGUI evidenceDetailText;
+        public TextMeshProUGUI evidenceNameText;
 
 
-        // Start is called before the first frame update
-        void Start()
+        /*void Start()
         {
             dPC = PointAndClickManager.Instance.detailPanel.GetComponent<DetailPanelController>();
-        }
+        }*/
 
         public void InventoryInOut()
         {
+            if (DialogueControler.instance.DialoguePanelOpen) return;
+
             if (isInventoryVisible)
             {
                 inventoryContainer.transform.DOMove(inventoryInvisblePos.position, 0.5f);
@@ -82,7 +81,18 @@ namespace TeamSeven
         private void UpdateVisibleData(IndiceController indiceController)
         {
             evidenceDetailSprite.sprite = indiceController.evidenceData.detailSprite;
-            evidenceDetailText.text = indiceController.evidenceData.evidenceDescription;
+
+            switch (GameManager.instance.language)
+            {
+                case GameManager.LANGUAGE.FR:
+                    evidenceNameText.text = indiceController.evidenceData.name.FR;
+                    evidenceDetailText.text = indiceController.evidenceData.description.FR;
+                    break;
+                case GameManager.LANGUAGE.EN:
+                    evidenceNameText.text = indiceController.evidenceData.name.EN;
+                    evidenceDetailText.text = indiceController.evidenceData.description.EN;
+                    break;
+            }
         }
     }
 }
