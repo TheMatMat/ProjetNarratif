@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using System.Linq;
 
 namespace TeamSeven
 {
@@ -17,7 +18,9 @@ namespace TeamSeven
         public TextMeshProUGUI txtSentence;
 
         public Transform leftSpace;
+        public Transform leftSpaceOut;
         public Transform rightSpace;
+        public Transform rightSpaceOut;
         public Transform middleSpace;
         public GameObject characterPrefab;
         public GameObject choiceGameObject;
@@ -25,6 +28,10 @@ namespace TeamSeven
 
         private DialogueConfig _dialog;
         private SpeekerConfig _speekerConfig;
+
+        public GameObject textBG;
+        public GameObject speakerNameBG;
+        public Transform textBGVisiblePos, textBGInvisiblePos, characterBottomPosOut;
 
         private int eventCount = -1;
 
@@ -86,6 +93,12 @@ namespace TeamSeven
             nameSpeeker.text = "";
             txtSentence.text = "";
 
+            // animation position
+            Sequence textBoxEntrance = DOTween.Sequence();
+
+            textBG.transform.position = textBGInvisiblePos.position;
+            speakerNameBG.transform.localScale = new Vector3(1, 0, 1);
+
             // Start a dialogue with an other DialogueConfig
             if (_dialog != null)
             {
@@ -104,6 +117,9 @@ namespace TeamSeven
                 lastSpeaker = null;
 
                 DialoguePanelOpen = true;
+
+                textBoxEntrance.Append(textBG.transform.DOMove(textBGVisiblePos.position, 0.7f));
+                textBoxEntrance.Append(speakerNameBG.transform.DOScaleY(1.0f, 0.4f));
 
                 Invoke("NextDialogueEvent", 0.8f);
             }
@@ -222,30 +238,39 @@ namespace TeamSeven
             switch (dialogueEvent.eventConfig.actionType)
             {
                 case EventConfig.ACTION_TYPE.SPEAKER_IN:
-                    //Debug.Log("SPEEKER IN");
+                    //Debug.Log("SPEAKER IN");
                     foreach (GameObject speaker in speakerInScene)
                     {
                         if (speaker.name == _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name)
                             break;
                     }
 
-                    Transform pos = leftSpace;
+                    Transform posIN = leftSpace;
+                    Transform posOUT = leftSpaceOut;
+
                     switch (dialogueEvent.eventConfig.screenPos)
                     {
                         case EventConfig.POSITION.LEFT:
-                            pos = leftSpace;
+                            posIN = leftSpace;
+                            posOUT = leftSpaceOut;
                             break;
 
                         case EventConfig.POSITION.RIGHT:
-                            pos = rightSpace;
+                            posIN = rightSpace;
+                            posOUT = rightSpaceOut;
                             break;
 
                         case EventConfig.POSITION.MIDDLE:
-                            pos = middleSpace;
+                            posIN = middleSpace;
                             break;
                     }
 
-                    character = Instantiate(characterPrefab, pos);
+                    character = Instantiate(characterPrefab, posIN);
+                    character.transform.position = posOUT.position;
+
+                    // animation character entrance
+                    character.transform.DOMove(posIN.position, 0.5f);
+
                     break;
 
                 case EventConfig.ACTION_TYPE.SPEAKER_OUT:
@@ -256,7 +281,7 @@ namespace TeamSeven
                         if (speaker.name == _speekerConfig.allSpeekers[dialogueEvent.idSpeeker].name)
                         {
                             speakerInScene.Remove(speaker);
-                            Destroy(speaker);
+                            speaker.transform.DOMoveY(characterBottomPosOut.position.y, 0.7f);
                             return;
                         }
                     }
@@ -303,15 +328,24 @@ namespace TeamSeven
             NextDialogueEvent();
         }
 
+        public List<GameObject> allchoiceButtons = new List<GameObject>();
+        private List<GameObject> _visibleButtons = new List<GameObject>();
+
         private void NewChoiceConfiguration(DialogueEvent dialogueEvent)
         {
+            foreach (GameObject oneButton in allchoiceButtons)
+                oneButton.transform.localScale = new Vector3(0, 0, 0);
+            _visibleButtons.Clear();
+
             choiceGameObject.SetActive(true);
             alowInput = false;
 
             int i = 0;
+           
             for (; i < dialogueEvent.choiceConfig.allChoices.Count && i <= 4; i++)
             {
-                choiceButtonParent.GetChild(i).gameObject.SetActive(true);
+                GameObject newButton = choiceButtonParent.GetChild(i).gameObject;
+                _visibleButtons.Add(newButton);
 
                 // Traduction
                 string traductSentence = "...";
@@ -330,13 +364,50 @@ namespace TeamSeven
 
             for (; i < choiceButtonParent.childCount; i++)
                 choiceButtonParent.GetChild(i).gameObject.SetActive(false);
+
+            ShowButtons();
+        }
+
+        private void ShowButtons()
+        {
+            float delay = 0.5f;
+
+            foreach(GameObject button in _visibleButtons)
+            {
+                Debug.Log("appear button with delay: " + delay);
+                // activate button 
+                button.SetActive(true);
+
+                Sequence buttonAppear = DOTween.Sequence();
+
+                buttonAppear.AppendInterval(delay);
+                buttonAppear.Append(button.transform.DOScale(new Vector3(1, 1, 1), 0.5f).SetEase(Ease.OutBounce));
+
+                buttonAppear.Play();
+
+                delay += 0.3f;
+            }
+        }
+
+        private void HideButtons(GameObject buttonClicked)
+        {
+            foreach (GameObject button in _visibleButtons)
+            {
+                if (button != buttonClicked)
+                    button.transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+            }
+
+            Sequence buttonClickedAnim = DOTween.Sequence();
+
+            buttonClickedAnim.Append(buttonClicked.transform.DOScale(new Vector3(1.3f, 1.3f, 1.3f), 0.3f));
+            buttonClickedAnim.Append(buttonClicked.transform.DOScale(new Vector3(0, 0, 0), 0.5f)).OnComplete(() => choiceGameObject.SetActive(false));
+                
         }
 
         public void OnClickButton(GameObject button)
         {
             Debug.Log("TU ME PRESSE");
-
-            choiceGameObject.SetActive(false);
+            
             alowInput = true;
 
             int index = 0;
@@ -353,6 +424,7 @@ namespace TeamSeven
 
             _dialog.allDialogueEvents[eventCount].choiceConfig.allChoices[index].OnClick?.Invoke();
 
+            HideButtons(button);
             NextDialogueEvent();
         }
 
@@ -381,7 +453,7 @@ namespace TeamSeven
 
             speakerInScene.Clear();
 
-            gameObject.SetActive(false);
+            textBG.transform.DOMove(textBGInvisiblePos.position, 0.7f).OnComplete(() => gameObject.SetActive(false));
         }
 
         /*
