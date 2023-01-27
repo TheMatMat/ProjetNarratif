@@ -37,6 +37,14 @@ namespace TeamSeven
                 name = _name;
                 description = _description;
             }
+
+            public EvidenceData(Sprite _scene, Sprite _detail)
+            {
+                sceneSprite = _scene;
+                detailSprite = _detail;
+                name = new DialogueTable.Row();
+                description = new DialogueTable.Row();
+            }
         }
 
         public bool loadSCVatStart = true;
@@ -51,54 +59,61 @@ namespace TeamSeven
         public Sprite detailSp;
 
         [HideInInspector] public EvidenceData evidenceData;
-        private Image _sprite;
+        private Image _image;
 
         private DialogueConfig _dialogueConfig;
 
         // Start is called before the first frame update
         void Start()
         {
-            _sprite = gameObject.GetComponent<Image>();
+            _image = gameObject.GetComponent<Image>();
             _dialogueConfig = gameObject.GetComponent<DialogueConfig>();
-            InitSprite(0);
 
-            if (!loadSCVatStart) return;
-
-            try
+            if (loadSCVatStart)
             {
-                DialogueTable table = new DialogueTable();
-                table.Load(csvFile);
-                if (table.IsLoaded())
+                try
                 {
-                    DialogueTable.Row nameRow = table.Find_ID(nameID);
-                    DialogueTable.Row descRow = table.Find_ID(descriptionID);
+                    DialogueTable table = new DialogueTable();
+                    table.Load(csvFile);
+                    if (table.IsLoaded())
+                    {
+                        DialogueTable.Row nameRow = table.Find_ID(nameID);
+                        DialogueTable.Row descRow = table.Find_ID(descriptionID);
 
-                    if (nameRow.FR == "" || descRow.EN == "")
-                        Debug.LogWarning("Data evidence may not be good : " + gameObject.name);
+                        if (nameRow.FR == "" || descRow.EN == "")
+                            Debug.LogWarning("Data evidence may not be good : " + gameObject.name);
 
-                    evidenceData = new EvidenceData(sceneSp, detailSp, nameRow, descRow);
-                } else
-                    throw new System.ArgumentException("CSV file could not be loaded " + csvFile.name);
+                        evidenceData = new EvidenceData(sceneSp, detailSp, nameRow, descRow);
+                    }
+                    else
+                        throw new System.ArgumentException("CSV file could not be loaded " + csvFile.name);
+                }
+                catch
+                {
+                    Debug.LogWarning("A evidence data couldn't be loaded : " + gameObject.name);
+                    evidenceData = new EvidenceData(sceneSp, detailSp);
+                }
             }
-            catch
-            {
-                Debug.LogWarning("A evidence data couldn't be loaded : " + gameObject.name);
-                evidenceData = new EvidenceData();
-            }
+
+            InitSprite(0);
         }
 
         public void InitSprite(int mode = 0)
         {
-            if (_sprite == null)
+            Debug.Log("bite1");
+
+            if (_image == null)
                 return;
+
+            Debug.Log("bite2");
 
             switch (mode)
             {
                 case 0:
-                    gameObject.GetComponent<Image>().sprite = evidenceData.sceneSprite;
+                    _image.sprite = evidenceData.sceneSprite;
                     break;
                 case 1:
-                    gameObject.GetComponent<Image>().sprite = evidenceData.detailSprite;
+                    _image.sprite = evidenceData.detailSprite;
                     break;
             }
         }
