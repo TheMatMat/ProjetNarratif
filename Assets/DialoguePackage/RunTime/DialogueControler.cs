@@ -217,7 +217,7 @@ namespace TeamSeven
             foreach (char letter in traductSentence.ToCharArray())
             {
                 txtSentence.text += letter;
-                yield return new WaitForSeconds(0.02f);
+                yield return new WaitForSeconds(0.01f);
             }
 
             alowInput = true;

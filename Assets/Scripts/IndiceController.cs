@@ -58,7 +58,7 @@ namespace TeamSeven
         // Start is called before the first frame update
         void Start()
         {
-            _sprite = this.GetComponent<Image>();
+            _sprite = gameObject.GetComponent<Image>();
             _dialogueConfig = gameObject.GetComponent<DialogueConfig>();
             InitSprite(0);
 
@@ -95,10 +95,10 @@ namespace TeamSeven
             switch (mode)
             {
                 case 0:
-                    this.GetComponent<Image>().sprite = evidenceData.sceneSprite;
+                    gameObject.GetComponent<Image>().sprite = evidenceData.sceneSprite;
                     break;
                 case 1:
-                    this.GetComponent<Image>().sprite = evidenceData.detailSprite;
+                    gameObject.GetComponent<Image>().sprite = evidenceData.detailSprite;
                     break;
             }
         }
