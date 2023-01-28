@@ -101,11 +101,34 @@ namespace TeamSeven
                 arrowLeft.gameObject.SetActive(true);
             else
                 arrowLeft.gameObject.SetActive(false);
+
+            if (_zone.nextZone != null && _zone.nextZone.isLocked)
+                arrowRight.GetComponent<Image>().DOFade(0.3f, 0.2f);
+            else
+            {
+                arrowRight.GetComponent<Image>().DOFade(1f, 0.2f).OnComplete(
+                    () => arrowRight.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.3f).SetLoops(6, LoopType.Yoyo)
+                    );
+            }
+                
+
+            if (_zone.previousZone != null && _zone.previousZone.isLocked)
+                arrowLeft.GetComponent<Image>().DOFade(0.3f, 0.2f);
+            else
+            {
+                arrowLeft.GetComponent<Image>().DOFade(1f, 0.2f).OnComplete(
+                    () => arrowLeft.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.3f).SetLoops(6, LoopType.Yoyo)
+                    );
+            }
+                
         }
 
         public void LoadPreviousZone()
         {
             if (currentZone.previousZone == null)
+                return;
+
+            if (currentZone.previousZone.isLocked)
                 return;
 
             TransitionScreen(currentZone.previousZone.zoneName, TRANSITION_WAY.PREVIOUS);
@@ -114,6 +137,9 @@ namespace TeamSeven
         public void LoadNextZone()
         {
             if (currentZone.nextZone == null)
+                return;
+
+            if (currentZone.nextZone.isLocked)
                 return;
 
             TransitionScreen(currentZone.nextZone.zoneName, TRANSITION_WAY.NEXT);
