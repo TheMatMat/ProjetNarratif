@@ -530,6 +530,11 @@ MonoBehaviour:
   textBGVisiblePos: {fileID: 1475194379}
   textBGInvisiblePos: {fileID: 2092012344}
   characterBottomPosOut: {fileID: 1897981813591881434}
+  icons:
+  - {fileID: 0}
+  - {fileID: 0}
+  iconHide: {fileID: 0}
+  inconsVisible: {fileID: 0}
   allchoiceButtons: []
 --- !u!82 &2655295700701011184
 AudioSource:
