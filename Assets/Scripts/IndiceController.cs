@@ -53,6 +53,7 @@ namespace TeamSeven
         [SerializeField] private TextAsset csvFile;
         public string nameID;
         public string descriptionID;
+        public ZoneController unlockedZone;
 
         [Header("Evidence Sprites")]
         public Sprite sceneSp;
@@ -120,6 +121,9 @@ namespace TeamSeven
 
         public void OnPointerDownScene()
         {
+            if (unlockedZone != null)
+                unlockedZone.isLocked = false;
+
             Sequence disapearSequence = DOTween.Sequence();
 
             disapearSequence.Append(transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.2f));
@@ -128,6 +132,9 @@ namespace TeamSeven
             disapearSequence.Play();
 
             PointAndClickManager.Instance.NewEvidenceFound(this);
+
+            ZoneManager.Instance.HideShowArrows(ZoneManager.Instance.currentZone);
+
             _dialogueConfig?.StartDialogue();
         }
 

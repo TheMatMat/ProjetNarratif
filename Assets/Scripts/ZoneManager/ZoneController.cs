@@ -16,6 +16,7 @@ namespace TeamSeven
         [Header("NAVIGATION")]
         public bool canGoPrevious;
         public bool canGoNext;
+        public bool isLocked;
 
         public ZoneController previousZone;
         public ZoneController nextZone;
