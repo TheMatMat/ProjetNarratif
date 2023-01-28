@@ -10,7 +10,8 @@ namespace TeamSeven
     {
         [Header("ZONE DETAILS")]
         public int zoneId;
-        public string zoneName;
+        public string zoneFrName;
+        public string zoneEnName;
         public Image zoneSprite;
 
         [Header("NAVIGATION")]

@@ -119,11 +119,8 @@ namespace TeamSeven
                 textBG.transform.position = textBGInvisiblePos.position;
                 speakerNameBG.transform.localScale = new Vector3(1, 0, 1);
 
-                if(icons?.Count > 0)
-                {
-                    foreach (GameObject icon in icons)
-                        icon.transform.DOMoveY(iconsInvisible.position.y, 1f);
-                }
+                foreach (GameObject icon in icons)
+                    icon?.transform.DOMoveY(iconsInvisible.position.y, 1f);
 
                 textBoxEntrance.Append(textBG.transform.DOMove(textBGVisiblePos.position, 0.7f));
                 textBoxEntrance.Append(speakerNameBG.transform.DOScaleY(1.0f, 0.4f));
@@ -471,11 +468,9 @@ namespace TeamSeven
 
             textBG.transform.DOMove(textBGInvisiblePos.position, 0.7f).OnComplete(() => gameObject.SetActive(false));
 
-            if(icons?.Count > 0)
-            {
-                foreach (GameObject icon in icons)
-                    icon.transform.DOMoveY(iconsVisible.position.y, 1f);
-            }
+
+            foreach (GameObject icon in icons)
+                icon?.transform.DOMoveY(iconsVisible.position.y, 1f);
         }
 
         /*

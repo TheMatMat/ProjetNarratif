@@ -119,8 +119,7 @@ namespace TeamSeven
                 arrowLeft.GetComponent<Image>().DOFade(1f, 0.2f).OnComplete(
                     () => arrowLeft.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.3f).SetLoops(6, LoopType.Yoyo)
                     );
-            }
-                
+            } 
         }
 
         public void LoadPreviousZone()
@@ -131,7 +130,7 @@ namespace TeamSeven
             if (currentZone.previousZone.isLocked)
                 return;
 
-            TransitionScreen(currentZone.previousZone.zoneName, TRANSITION_WAY.PREVIOUS);
+            TransitionScreen(GameManager.instance?.language == GameManager.LANGUAGE.FR ? currentZone.previousZone.zoneFrName : currentZone.previousZone.zoneEnName, TRANSITION_WAY.PREVIOUS);
         }
 
         public void LoadNextZone()
@@ -142,7 +141,7 @@ namespace TeamSeven
             if (currentZone.nextZone.isLocked)
                 return;
 
-            TransitionScreen(currentZone.nextZone.zoneName, TRANSITION_WAY.NEXT);
+            TransitionScreen(GameManager.instance?.language == GameManager.LANGUAGE.FR ? currentZone.previousZone.zoneFrName : currentZone.previousZone.zoneEnName, TRANSITION_WAY.NEXT);
         }
     }
 }

@@ -1679,6 +1679,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneEnName
+      value: DETECTIVE'S OFFICE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneFrName
+      value: "BUREAU DU D\xC9TECTIVE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: canGoPrevious
       value: 0
       objectReference: {fileID: 0}
@@ -2574,6 +2582,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2267372214979556216, guid: 3d455be49233e2348a287ccb76d6cae8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2267372215533193986, guid: 3d455be49233e2348a287ccb76d6cae8, type: 3}
       propertyPath: m_Name
       value: SceneManager
@@ -2784,6 +2796,14 @@ PrefabInstance:
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: canGoNext
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneEnName
+      value: 'CASE : PRECIEU'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneFrName
+      value: 'AFFAIRE : PRECIEU'
       objectReference: {fileID: 0}
     - target: {fileID: 5412972091857277055, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: m_Pivot.x
@@ -4686,6 +4706,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneEnName
+      value: JEWELRY STORE - BEDROOM
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneFrName
+      value: JOAILLERIE - CHAMBRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: previousZone
       value: 
       objectReference: {fileID: 1928626533}
@@ -6461,6 +6489,14 @@ PrefabInstance:
       value: JOAILLERIE - ???
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneEnName
+      value: JEWELRY STORE - ???
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneFrName
+      value: JOAILLERIE - ???
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: previousZone
       value: 
       objectReference: {fileID: 1928626533}
@@ -6606,6 +6642,14 @@ PrefabInstance:
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: canGoNext
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneEnName
+      value: JEWELRY STORE - INDOOR
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneFrName
+      value: "JOAILLERIE - INT\xC9RIEUR"
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: previousZone
@@ -8768,6 +8812,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneEnName
+      value: JEWELRY STORE - STORE FRONT
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
+      propertyPath: zoneFrName
+      value: JOAILLERIE - DEVANTURE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343019854933076109, guid: 4e5e022a469b89446a3bde7daa840902, type: 3}
       propertyPath: previousZone
       value: 
       objectReference: {fileID: 1607264417}
@@ -9492,6 +9544,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2007182981}
     m_Modifications:
+    - target: {fileID: 637283635, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 636855efdad51a24087c40fccde01c4e, type: 2}
+    - target: {fileID: 637283635, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4021038732618305876, guid: 636855efdad51a24087c40fccde01c4e, type: 2}
+    - target: {fileID: 1948943846, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 330
+      objectReference: {fileID: 0}
     - target: {fileID: 1948943846, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 106
@@ -9500,10 +9564,42 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1297211635}
+    - target: {fileID: 1948943848, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1948943848, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de7cbf7db43f6e44492e2f7e7cd228ab, type: 3}
+    - target: {fileID: 3052953590459939385, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052953590459939385, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de7cbf7db43f6e44492e2f7e7cd228ab, type: 3}
+    - target: {fileID: 3052953590459939391, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3052953590459939391, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 106
       objectReference: {fileID: 0}
+    - target: {fileID: 3052953590714850960, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_text
+      value: Inventaire
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052953590714850960, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 636855efdad51a24087c40fccde01c4e, type: 2}
+    - target: {fileID: 3052953590714850960, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4021038732618305876, guid: 636855efdad51a24087c40fccde01c4e, type: 2}
     - target: {fileID: 3052953592021406864, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9598,3 +9694,47 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+--- !u!1 &3052953591061915933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 637283633, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+  m_PrefabInstance: {fileID: 3052953591061915932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3052953591061915934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3052953591061915933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd1dd565b3df024c95e0773cb8b14e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrTraduction: Rendre son verdict
+  EnTraduction: Deliver your verdict
+  img: {fileID: 0}
+  francaisSprite: {fileID: 0}
+  englishSprite: {fileID: 0}
+--- !u!1 &3052953591061915935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3052953590714850966, guid: 28b91ff24cb074843b75f7896f0f4e9c, type: 3}
+  m_PrefabInstance: {fileID: 3052953591061915932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3052953591061915936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3052953591061915935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd1dd565b3df024c95e0773cb8b14e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrTraduction: Inventaire
+  EnTraduction: Inventory
+  img: {fileID: 0}
+  francaisSprite: {fileID: 0}
+  englishSprite: {fileID: 0}
