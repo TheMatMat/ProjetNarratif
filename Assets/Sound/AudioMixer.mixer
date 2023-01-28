@@ -47,7 +47,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Voice
+  m_Name: VOICE
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 3d12e99ab39f28c4d8b3b5f59b7db6f2
   m_Children: []
@@ -56,7 +56,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -3795522979665847658}
-  m_UserColorIndex: 8
+  m_UserColorIndex: 5
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -198,7 +198,13 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 49d902296547dbc4d930debd474d6f57
+    name: MusicVolume
+  - guid: 0d3b89099cdf7754586c38edb40fd838
+    name: SfxVolume
+  - guid: aa1b901b5f2ea4f49a17c3514e041ede
+    name: VoiceVolume
   m_AudioMixerGroupViews:
   - guids:
     - 51f8cb4ae50ecf54f841b78fb6caa46a
@@ -212,7 +218,7 @@ AudioMixerController:
     - b96e6edaa9a68eb4a91aa40c2591feaa
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: -967027390460432277}
+  m_TargetSnapshot: {fileID: 6561963109319925943}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -225,6 +231,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: -8440663000123542323}
   - {fileID: 3660976670841710783}
+  - {fileID: -7731711694590625723}
   m_Volume: b6e2f7bfe3cb5c64986a71a4401126db
   m_Pitch: 1d25d3847651d494d9acb176fd1f87bc
   m_Send: 00000000000000000000000000000000
@@ -311,7 +318,6 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 3ec8d157ef5b91d49a3f350c07e8fc4b
   m_Children:
-  - {fileID: -7731711694590625723}
   - {fileID: 2000734209383201984}
   - {fileID: -9085331479996297416}
   m_Volume: 0d3b89099cdf7754586c38edb40fd838
