@@ -5873,6 +5873,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1479216075}
     m_Modifications:
     - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: choiceDialogue
+      value: 
+      objectReference: {fileID: 1466050099}
+    - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: allSubDialogs.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -8802,6 +8806,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 370411577}
     m_Modifications:
+    - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: choiceDialogue
+      value: 
+      objectReference: {fileID: 2073195002}
     - target: {fileID: 2455391376636566044, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: allSubDialogs.Array.size
       value: 3
