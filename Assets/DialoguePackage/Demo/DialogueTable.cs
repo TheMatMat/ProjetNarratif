@@ -50,6 +50,7 @@ namespace TeamSeven
 		{
 			rowList.Clear();
 			string[][] grid = CsvParser2.Parse(csv.text);
+
 			for (int i = 1; i < grid.Length; i++)
 			{
 				Row row = new Row();

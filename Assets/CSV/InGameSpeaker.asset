@@ -41,3 +41,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: a19e004fa7f66bf44a568973df276eda, type: 3}
     audioClip: []
     status: []
+  - name: Roger
+    sprite: {fileID: 0}
+    audioClip: []
+    status: []

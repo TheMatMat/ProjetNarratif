@@ -8,8 +8,8 @@ namespace TeamSeven
 
     public class CsvParser2
     {
-        private const char CommaCharacter = ',';
-        private const char QuoteCharacter = '"';
+        private const char CommaCharacter = ';';
+        private const char QuoteCharacter = '$';
 
         #region Nested types
 
