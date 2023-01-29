@@ -26,15 +26,15 @@ MonoBehaviour:
     audioClip: []
     status: []
   - name: Wade
-    sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+    sprite: {fileID: 21300000, guid: 84100ded964534845906c8b336149b64, type: 3}
     audioClip: []
     status: []
   - name: Eliza
-    sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+    sprite: {fileID: 21300000, guid: e1ca42cdc81b0434880f19ffe079e7e4, type: 3}
     audioClip: []
     status: []
   - name: Emma
-    sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+    sprite: {fileID: 21300000, guid: e1ca42cdc81b0434880f19ffe079e7e4, type: 3}
     audioClip: []
     status: []
   - name: Ryker

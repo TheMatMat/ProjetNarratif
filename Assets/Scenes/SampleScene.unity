@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &142136318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5228785008797667380, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+  m_PrefabInstance: {fileID: 1980948518}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2451192fceee53f49b7669ebcf27b4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &196705607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5344,25 +5355,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.EN
-      value: '"You can make out the face of a little girl. It is written on the back
-        ""Hang in there my darling I will do anything to make you better."" Strange
-        I though it was his mother who was sick and not his daughter..."'
+      value: "This is a photo of Mr.Pr\xE9cieu's late wife. At the bottom of the
+        picture it is written 'I will always be with you'."
       objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.FR
-      value: "On peut apercevoir le visage d\u2019une petite fille. Il est \xE9crit
-        au dos \u201CTiens bon ma ch\xE9rie je ferais tout pour que tu aille mieux\u2019.\u201D
-        Bizarre je croyais que c\u2019\xE9tait sa m\xE8re qui \xE9tait malade et
-        non sa fille\u2026"
+      value: "C\u2019est une photo de la d\xE9funte femme de Mr.Pr\xE9cieu. En bas
+        de la photo il est \xE9crit \u2018Je serais toujours avec toi\u2019."
       objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.ID
-      value: Desc_Photo
+      value: Desc_CMP
       objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
@@ -6106,6 +6118,10 @@ PrefabInstance:
       propertyPath: allDialogueEvents.Array.data[10].sentenceConfig.talking.Array.data[0].sentence.ID
       value: Det_DEMMA_5
       objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566240, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ed9ffeb6eb9676d45b5a861faae32626, type: 3}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6136,11 +6152,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6473,6 +6489,10 @@ PrefabInstance:
       propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.ID
       value: Prcieu_DB_5
       objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566240, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 187e43a1e1fa4574a82dc56f1d79979d, type: 3}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6503,11 +6523,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 239
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 354.25
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8193,6 +8213,10 @@ PrefabInstance:
       propertyPath: allDialogueEvents.Array.data[11].sentenceConfig.talking.Array.data[0].sentence.ID
       value: Eliza_DB_7
       objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566240, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 22e6bec8ead52614d8fca16979818402, type: 3}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8223,11 +8247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8674,6 +8698,34 @@ PrefabInstance:
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[1].sentence.ID
       value: Desc_JMP_2
       objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 142136318}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: EnableItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TeamSeven.IndiceHandle, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810514830486147055, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
       value: Journal
@@ -8948,6 +9000,10 @@ PrefabInstance:
       propertyPath: allDialogueEvents.Array.data[9].sentenceConfig.talking.Array.data[0].sentence.ID
       value: Wade_DB_4
       objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566240, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 187e43a1e1fa4574a82dc56f1d79979d, type: 3}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8978,11 +9034,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 239
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 354.25
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9660,6 +9716,10 @@ PrefabInstance:
       propertyPath: allDialogueEvents.Array.data[7].sentenceConfig.talking.Array.data[0].sentence.ID
       value: Ryker_DB_3
       objectReference: {fileID: 0}
+    - target: {fileID: 2455391376636566240, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 187e43a1e1fa4574a82dc56f1d79979d, type: 3}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9690,11 +9750,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 239
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 354.25
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9726,11 +9786,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 445
+      value: 447
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -175
+      value: -155
       objectReference: {fileID: 0}
     - target: {fileID: 2455391376636566246, guid: 2fd05b6d90b48924288c04243f237076, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
