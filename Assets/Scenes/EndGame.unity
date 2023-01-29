@@ -579,17 +579,17 @@ RectTransform:
   m_GameObject: {fileID: 281277573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 978723378}
-  m_Father: {fileID: 1525878106}
-  m_RootOrder: 2
+  m_Father: {fileID: 1759861839}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 500, y: -613}
-  m_SizeDelta: {x: 800, y: 150}
+  m_AnchoredPosition: {x: 0, y: -801}
+  m_SizeDelta: {x: 800, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281277575
 MonoBehaviour:
@@ -734,7 +734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &397868049
@@ -881,14 +881,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 828940402}
   m_Father: {fileID: 1525878106}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -500, y: 207.99998}
-  m_SizeDelta: {x: 847, y: 847}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 450, y: -275}
+  m_SizeDelta: {x: 700, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &486146573
 MonoBehaviour:
@@ -1090,19 +1091,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828940401}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 46095416}
-  m_Father: {fileID: 1525878106}
-  m_RootOrder: 3
+  m_Father: {fileID: 486146572}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -500, y: -613}
-  m_SizeDelta: {x: 800, y: 150}
+  m_AnchoredPosition: {x: -0.000061035156, y: -801}
+  m_SizeDelta: {x: 800, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828940403
 MonoBehaviour:
@@ -2012,8 +2013,6 @@ RectTransform:
   m_Children:
   - {fileID: 486146572}
   - {fileID: 1759861839}
-  - {fileID: 281277574}
-  - {fileID: 828940402}
   - {fileID: 1900772993}
   m_Father: {fileID: 397868048}
   m_RootOrder: 0
@@ -2044,7 +2043,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525878105}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -2165,6 +2164,106 @@ PrefabInstance:
       propertyPath: icons.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bc11620d5464104e9b60ba64fd3eb1d, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1505fc067073de7428371647f788b82f, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 655a4dd619a49d54db319fcb6cbbb8dc, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 26e5c0f9ad9301e4b8421ab087e47a65, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: f45d9d96b6ccf0e45a13b98e0a9aed4d, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2433c4bddcad82746b91581bc0e243d1, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a6134d7e5172eb45bef37581a7ad968, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 047bc44a321dbdf4dbbcf83c4b05e20c, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e1c34f19932df54aa729edc1cb9685a, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3379ddf136664de4b83ef5f2e02393bd, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 48aa27ffef049914abd1a98e2e823469, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6303b8d75f5352341a438ef14a9f47cc, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bc11620d5464104e9b60ba64fd3eb1d, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1505fc067073de7428371647f788b82f, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: 655a4dd619a49d54db319fcb6cbbb8dc, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: 26e5c0f9ad9301e4b8421ab087e47a65, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[16]
+      value: 
+      objectReference: {fileID: 8300000, guid: f45d9d96b6ccf0e45a13b98e0a9aed4d, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[17]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2433c4bddcad82746b91581bc0e243d1, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a6134d7e5172eb45bef37581a7ad968, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: 047bc44a321dbdf4dbbcf83c4b05e20c, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[20]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e1c34f19932df54aa729edc1cb9685a, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[21]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3379ddf136664de4b83ef5f2e02393bd, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[22]
+      value: 
+      objectReference: {fileID: 8300000, guid: 48aa27ffef049914abd1a98e2e823469, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[23]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6303b8d75f5352341a438ef14a9f47cc, type: 3}
     - target: {fileID: 2655295700701011190, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2255,7 +2354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2655295700701011191, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
@@ -2396,14 +2495,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 281277574}
   m_Father: {fileID: 1525878106}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: 207.99998}
-  m_SizeDelta: {x: 847, y: 847}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -450, y: -275}
+  m_SizeDelta: {x: 700, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759861840
 MonoBehaviour:
@@ -2579,12 +2679,12 @@ RectTransform:
   m_Children:
   - {fileID: 1967116637}
   m_Father: {fileID: 1525878106}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 184}
-  m_SizeDelta: {x: 900, y: 150}
+  m_AnchoredPosition: {x: 0, y: 171}
+  m_SizeDelta: {x: 900, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1900772994
 MonoBehaviour:
