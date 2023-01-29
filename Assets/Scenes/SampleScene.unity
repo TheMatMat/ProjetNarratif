@@ -4532,23 +4532,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.EN
-      value: We can observe several dream catchers that adorn the room. They are
-        all of different colors but the feathers of each are white and black.
+      value: What is a Thompson doing in this room, I didn't think Mr.Precieu was
+        the kind of man to have such a big gun in his house. The barrel is still
+        warm...
       objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.FR
-      value: "On peut observer plusieurs attrape-r\xEAves qui ornent la salle. Ils
-        sont tous de diff\xE9rentes couleurs mais les plumes de chacun sont blanches
-        et noires."
+      value: "Que fait une Thompson dans cette chambre, je ne croyais pas Mr.Pr\xE9cieu
+        le genre d\u2019homme \xE0 avoir une arme de si gros calibre chez lui. Le
+        canon est encore ti\xE8de..."
       objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.ID
-      value: Desc_AR
+      value: Desc_Thom
       objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
@@ -6487,7 +6492,7 @@ MonoBehaviour:
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 2
-    isColapse: 1
+    isColapse: 0
     idSpeeker: 0
     autoPass: 0
     sentenceConfig:
@@ -7190,7 +7195,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0e6e170434376f04baaf2e3199698b65, type: 3}
     - target: {fileID: 5692217297725007402, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: nameID
-      value: Name_Thom
+      value: Name_AR
       objectReference: {fileID: 0}
     - target: {fileID: 5692217297725007402, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: csvFile
@@ -7206,7 +7211,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0e6e170434376f04baaf2e3199698b65, type: 3}
     - target: {fileID: 5692217297725007402, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: descriptionID
-      value: Inv_Thom
+      value: Inv_AR
       objectReference: {fileID: 0}
     - target: {fileID: 5692217297725007402, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: evidenceData.evidenceName
@@ -7224,6 +7229,10 @@ PrefabInstance:
       propertyPath: csvFile.Array.data[0]
       value: 
       objectReference: {fileID: 4900000, guid: 41a9ffc3064db1d4bbb37533b0336589, type: 3}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].isColapse
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
       value: 1
@@ -8465,23 +8474,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.EN
-      value: What is a Thompson doing in this room, I didn't think Mr.Precieu was
-        the kind of man to have such a big gun in his house. The barrel is still
-        warm...
+      value: "It is an old diary yellowed by time, it is written that it belongs
+        to the deceased wife of Mr.Pr\xE9cieu. Many pages are illegible, some torn
+        and one page is completely crossed out... "
       objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.FR
-      value: "Que fait une Thompson dans cette chambre, je ne croyais pas Mr.Pr\xE9cieu
-        le genre d\u2019homme \xE0 avoir une arme de si gros calibre chez lui. Le
-        canon est encore ti\xE8de..."
+      value: "C\u2019est un vieux journal jauni par le temps, il est \xE9crit qu\u2019il
+        appartient \xE0 la d\xE9funte femme de Mr.Pr\xE9cieu. Un grand nombre de
+        pages sont illisibles, certaines d\xE9chir\xE9es et une page est enti\xE8rement
+        ratur\xE9e ... "
       objectReference: {fileID: 0}
     - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[0].sentence.ID
-      value: Desc_Thom
+      value: Desc_JMP_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[1].sentence.EN
+      value: But I found a few pages still readable talking about spirit summoning.
+        He also explains that the feathers of dream catchers lose their colors in
+        the presence of spirits!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[1].sentence.FR
+      value: "Mais j\u2019ai trouv\xE9 quelques pages encore lisibles parlant d\u2019invocation
+        d\u2019esprit. Il explique aussi que les plumes des attrapes r\xEAves perdent
+        leurs couleurs en pr\xE9sence d\u2019esprits !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665107097244496974, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
+      propertyPath: allDialogueEvents.Array.data[0].sentenceConfig.talking.Array.data[1].sentence.ID
+      value: Desc_JMP_2
       objectReference: {fileID: 0}
     - target: {fileID: 8478163598545499336, guid: d0062d23fb884f04099eb0714f19d0c0, type: 3}
       propertyPath: m_Name
