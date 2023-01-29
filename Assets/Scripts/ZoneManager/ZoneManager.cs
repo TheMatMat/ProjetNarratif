@@ -20,6 +20,9 @@ namespace TeamSeven
         public GameObject arrowLeft, arrowRight;
         public Image transitionBlackScreen;
         public Text transitionZoneName;
+        public AudioClip[] charSound;
+
+        private AudioSource audioSource;
 
         private enum TRANSITION_WAY
         {
@@ -42,6 +45,8 @@ namespace TeamSeven
 
         public void Start()
         {
+            audioSource = gameObject.GetComponent<AudioSource>();
+
             currentZone = firstZone;
             foreach (ZoneController zone in zones)
                 zone.gameObject.SetActive(false);
@@ -59,6 +64,7 @@ namespace TeamSeven
 
             zoneTransitionSequence.Append(transitionBlackScreen.DOFade(1.0f, 0.7f));
             zoneTransitionSequence.Append(transitionZoneName.DOFade(1.0f, 0.2f).OnComplete(() => ActivateZone(transitionWay)));
+            zoneTransitionSequence.AppendCallback(() => StartCoroutine(LetterTypeSound(nameToDisplay, 0.125f)));
             zoneTransitionSequence.Append(transitionZoneName.DOText(nameToDisplay, writingTime));
             zoneTransitionSequence.AppendInterval(0.5f);
             zoneTransitionSequence.Append(transitionZoneName.DOFade(0.0f, 0.5f));
@@ -120,6 +126,17 @@ namespace TeamSeven
                     () => arrowLeft.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.3f).SetLoops(6, LoopType.Yoyo)
                     );
             } 
+        }
+
+        private IEnumerator LetterTypeSound(string sentence, float deltaTime)
+        {
+            foreach(char letter in sentence.ToCharArray())
+            {
+                if (letter != ' ' && charSound.Length > 0)
+                    audioSource.PlayOneShot(charSound[Random.Range(0, charSound.Length)]);
+
+                yield return new WaitForSeconds(deltaTime);
+            }
         }
 
         public void LoadPreviousZone()
