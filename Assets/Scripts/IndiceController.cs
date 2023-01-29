@@ -101,12 +101,8 @@ namespace TeamSeven
 
         public void InitSprite(int mode = 0)
         {
-            Debug.Log("bite1");
-
             if (_image == null)
                 return;
-
-            Debug.Log("bite2");
 
             switch (mode)
             {

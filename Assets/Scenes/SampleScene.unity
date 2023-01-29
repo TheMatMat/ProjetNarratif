@@ -2643,6 +2643,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2007182981}
     m_Modifications:
+    - target: {fileID: 2655295700701011184, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655295700701011184, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -7731711694590625723, guid: 3fde75d32dd3f0046a00f0899d5e52e9, type: 2}
     - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
       propertyPath: iconHide
       value: 
@@ -2667,6 +2675,90 @@ PrefabInstance:
       propertyPath: icons.Array.data[1]
       value: 
       objectReference: {fileID: 1948943845}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bc11620d5464104e9b60ba64fd3eb1d, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1505fc067073de7428371647f788b82f, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 655a4dd619a49d54db319fcb6cbbb8dc, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 26e5c0f9ad9301e4b8421ab087e47a65, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: f45d9d96b6ccf0e45a13b98e0a9aed4d, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2433c4bddcad82746b91581bc0e243d1, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a6134d7e5172eb45bef37581a7ad968, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 047bc44a321dbdf4dbbcf83c4b05e20c, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e1c34f19932df54aa729edc1cb9685a, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3379ddf136664de4b83ef5f2e02393bd, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 48aa27ffef049914abd1a98e2e823469, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6303b8d75f5352341a438ef14a9f47cc, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8030892ff5030684390ea53b1cf8d4e2, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: be0fa2eeee1bb1443a8f77900679201b, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: 38c008a1b09adc24da454ca20401fb0a, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4155ed3829693f74787795e84d91a357, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[16]
+      value: 
+      objectReference: {fileID: 8300000, guid: 713e8c9c7bc0e7d4d98ed6226fa4ec55, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[17]
+      value: 
+      objectReference: {fileID: 8300000, guid: f3407dc198462ff4aa94a0aca826a8dc, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: c450ca3d1b3f05743ba5ed2f00ff0730, type: 3}
+    - target: {fileID: 2655295700701011185, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
+      propertyPath: speakingSound.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: fe7d19660b2fffc40a635cd9f4de04bf, type: 3}
     - target: {fileID: 2655295700701011190, guid: 7937d46fa0bf38c45a54841f1929b733, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4948,7 +5040,7 @@ MonoBehaviour:
     choiceConfig:
       allChoices: []
   - <source>k__BackingField: 1
-    isColapse: 1
+    isColapse: 0
     idSpeeker: 0
     autoPass: 0
     sentenceConfig:

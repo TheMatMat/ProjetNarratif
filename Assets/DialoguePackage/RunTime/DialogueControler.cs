@@ -36,6 +36,7 @@ namespace TeamSeven
         public List<GameObject> icons = new List<GameObject>();
         public Transform iconsInvisible, iconsVisible;
 
+        public AudioClip[] speakingSound;
         private int eventCount = -1;
 
         private List<GameObject> speakerInScene = new List<GameObject>();
@@ -99,14 +100,12 @@ namespace TeamSeven
             // Start a dialogue with an other DialogueConfig
             if (_dialog != null)
             {
-                Debug.Log("RESTART NEW DIALOGUE");
                 eventCount = -1;
                 _dialog = dialogue;
                 _speekerConfig = speekers;
             }
             else
             {
-                Debug.Log("new dialogue");
                 // initialisation
                 _dialog = dialogue;
                 _speekerConfig = speekers;
@@ -220,8 +219,19 @@ namespace TeamSeven
             // ------------------------------------------------ TO DO ------------------------------------------------ //
             // ANIMATION
 
+            int sound = 0;
             foreach (char letter in traductSentence.ToCharArray())
             {
+                if (sound == 3)
+                {
+                    sound = 0;
+                    if (letter != ' ')
+                        _audioSource.PlayOneShot(speakingSound[Random.Range(0, speakingSound.Length)]);
+                }
+                else
+                    sound ++;
+
+
                 txtSentence.text += letter;
                 yield return new WaitForSeconds(0.01f);
             }
@@ -415,8 +425,6 @@ namespace TeamSeven
 
         public void OnClickButton(GameObject button)
         {
-            Debug.Log("TU ME PRESSE");
-            
             alowInput = true;
 
             int index = 0;
@@ -425,11 +433,6 @@ namespace TeamSeven
                 if (choiceButtonParent.GetChild(index).name == button.name)
                     break;
             }
-
-            if (_dialog.allDialogueEvents[eventCount].choiceConfig.allChoices[index].OnClick != null)
-                Debug.Log("non null " + choiceButtonParent.GetChild(index).name);
-            else
-                Debug.Log("NULL " + choiceButtonParent.GetChild(index).name);
 
             if(_dialog.allDialogueEvents[eventCount].choiceConfig.allChoices[index].OnClick != null)
                 _dialog.allDialogueEvents[eventCount].choiceConfig.allChoices[index].OnClick?.Invoke();
@@ -442,8 +445,6 @@ namespace TeamSeven
         private void DialogueEnd()
         {
             eventCount = -1;
-
-            Debug.Log("FIN DU DIALOGUE");
 
             _dialog = null;
             _speekerConfig = null;

@@ -141,7 +141,7 @@ namespace TeamSeven
             if (currentZone.nextZone.isLocked)
                 return;
 
-            TransitionScreen(GameManager.instance?.language == GameManager.LANGUAGE.FR ? currentZone.previousZone.zoneFrName : currentZone.previousZone.zoneEnName, TRANSITION_WAY.NEXT);
+            TransitionScreen(GameManager.instance?.language == GameManager.LANGUAGE.FR ? currentZone.nextZone.zoneFrName : currentZone.nextZone.zoneEnName, TRANSITION_WAY.NEXT);
         }
     }
 }
